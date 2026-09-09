@@ -1,512 +1,808 @@
 <!DOCTYPE html>
-<html lang="en" data-page-node-id="hkzRQEUvsG6CL5pSUDcVKL">
-<head data-page-node-id="R6QXf6CXiUb7OuJGUQTyov">
-<meta charset="utf-8" data-page-node-id="AGDtOnS5mE3IATXyAXD9wF">
-<meta name="viewport" content="width=device-width, initial-scale=1" data-page-node-id="Ptm5T6bsMCdGjjxFc1Y5X0">
-<title>IYPT 2027 — Problem Briefs &amp; Ranking</title>
+<html lang="en" data-page-node-id="7pvMYDySuoOsdr6GFJFAtT">
+<head data-page-node-id="9TXCOIyGMwFFc4TX4XWpzZ">
+<meta charset="utf-8" data-page-node-id="UBW970wLh0gyxi65QH3iGt">
+<meta name="viewport" content="width=device-width, initial-scale=1" data-page-node-id="SIg6sDtfGs2zlNFBdJxQmF">
+<title>IYPT 2027 — Full Problem Briefs</title>
 <style>
   :root{
-    --ink:#1c1c1a; --ink2:#55554e; --ink3:#8a8a80;
-    --line:#e4e2da; --line2:#cfccc2;
-    --bg:#fbfaf7; --card:#ffffff;
-    --good:#3B6D11; --goodbg:#EAF3DE;
-    --mid:#854F0B; --midbg:#FAEEDA;
-    --bad:#A32D2D; --badbg:#FCEBEB;
-    --acc:#185FA5; --accbg:#E6F1FB;
+    --ink:#1b1b19; --ink2:#52524b; --ink3:#8b8b81;
+    --line:#e6e4dc; --line2:#cdcabf;
+    --bg:#fbfaf7; --card:#fff;
+    --good:#3B6D11; --goodbg:#EAF3DE; --goodbd:#C0DD97;
+    --bad:#A32D2D; --badbg:#FCEBEB; --badbd:#F7C1C1;
+    --acc:#185FA5;
+    --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
   }
   *{box-sizing:border-box}
   body{
-    margin:0; padding:0 24px 80px;
-    background:var(--bg); color:var(--ink);
-    font:15px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    margin:0;padding:0 22px 90px;background:var(--bg);color:var(--ink);
+    font:15px/1.62 -apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
     -webkit-font-smoothing:antialiased;
   }
-  .wrap{max-width:940px;margin:0 auto}
-  header{padding:56px 0 28px;border-bottom:1px solid var(--line2)}
-  h1{font-size:26px;font-weight:600;margin:0 0 8px;letter-spacing:-.01em}
-  .sub{color:var(--ink2);font-size:14px;margin:0}
-  h2{margin:0}
-  .rule{
-    margin:28px 0 0;padding:18px 20px;background:var(--card);
-    border:1px solid var(--line);border-left:3px solid var(--acc);border-radius:6px;
-  }
+  .wrap{max-width:980px;margin:0 auto}
+  header{padding:52px 0 26px;border-bottom:1px solid var(--line2)}
+  h1{font-size:25px;font-weight:600;margin:0 0 10px;letter-spacing:-.015em}
+  .sub{color:var(--ink2);font-size:14px;margin:0 0 6px}
+  .legend{display:flex;gap:16px;flex-wrap:wrap;margin-top:14px;font-size:12.5px;color:var(--ink3)}
+  .legend b{color:var(--ink2);font-weight:600}
+  .rule{margin:26px 0 0;padding:16px 20px;background:var(--card);border:1px solid var(--line);border-left:3px solid var(--acc);border-radius:6px}
   .rule p{margin:0 0 8px;font-size:14px;color:var(--ink2)}
   .rule p:last-child{margin:0}
   .rule strong{color:var(--ink);font-weight:600}
-  .tier-head{
-    display:flex;align-items:center;gap:10px;
-    margin:44px 0 4px;padding-bottom:8px;border-bottom:1px solid var(--line2);
-  }
+  .tier-head{display:flex;align-items:center;gap:10px;margin:46px 0 2px;padding-bottom:8px;border-bottom:1px solid var(--line2)}
   .tier-head .dot{width:10px;height:10px;border-radius:50%;flex:none}
-  .tier-head h2{font-size:17px;font-weight:600;letter-spacing:-.01em}
+  .tier-head h2{font-size:17px;font-weight:600;margin:0;letter-spacing:-.01em}
   .tier-head span{font-size:13px;color:var(--ink3);margin-left:auto}
-  .card{
-    background:var(--card);border:1px solid var(--line);border-radius:8px;
-    padding:20px 22px;margin:14px 0;
-  }
+  .card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:20px 24px;margin:14px 0}
   .card.t-a{border-left:3px solid #639922}
   .card.t-b{border-left:3px solid #378ADD}
   .card.t-c{border-left:3px solid #EF9F27}
   .card.t-d{border-left:3px solid #E24B4A}
-  .top{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:2px}
-  .num{
-    font:600 12px/1 ui-monospace,SFMono-Regular,Menlo,monospace;
-    color:#fff;background:var(--ink);border-radius:4px;padding:4px 6px;flex:none;
-  }
-  .name{font-size:17px;font-weight:600;letter-spacing:-.01em}
-  .val{margin-left:auto;font:600 13px/1 ui-monospace,SFMono-Regular,Menlo,monospace;padding:4px 8px;border-radius:4px;flex:none}
+  .top{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+  .num{font:600 12px/1 var(--mono);color:#fff;background:var(--ink);border-radius:4px;padding:4px 6px;flex:none}
+  .name{font-size:17.5px;font-weight:600;letter-spacing:-.01em;margin:0}
+  .val{margin-left:auto;font:600 13px/1 var(--mono);padding:4px 8px;border-radius:4px;flex:none}
   .val.p{background:var(--goodbg);color:var(--good)}
   .val.n{background:var(--badbg);color:var(--bad)}
-  .scores{display:flex;gap:14px;flex-wrap:wrap;margin:12px 0 14px;padding-bottom:14px;border-bottom:1px solid var(--line)}
-  .sc{font-size:12px;color:var(--ink3);display:flex;align-items:center;gap:5px}
-  .sc b{color:var(--ink2);font-weight:600;font-variant-numeric:tabular-nums}
-  .bar{display:inline-block;width:34px;height:4px;border-radius:2px;background:var(--line2);position:relative;overflow:hidden}
-  .bar i{position:absolute;left:0;top:0;bottom:0;border-radius:2px}
-  .bar.d i{background:#A32D2D}
-  .bar.a i{background:#BA7517}
-  .bar.t i{background:#0F6E56}
-  .bar.v i{background:#185FA5}
-  h4{margin:16px 0 6px;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink3)}
-  .why{margin:0;font-size:14.5px;color:var(--ink2)}
-  .why b{color:var(--ink);font-weight:600}
-  ul{margin:0;padding-left:18px}
+  blockquote{
+    margin:12px 0 0;padding:11px 15px;background:#f7f6f2;border-left:2px solid var(--line2);
+    border-radius:0 5px 5px 0;font-size:13.5px;line-height:1.6;color:var(--ink2);
+  }
+  blockquote b{color:var(--ink);font-weight:600}
+  table.sc{width:100%;border-collapse:collapse;margin:16px 0 4px;font-size:13px}
+  table.sc th{text-align:left;font-weight:600;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--ink3);padding:0 10px 6px 0;border-bottom:1px solid var(--line)}
+  table.sc td{padding:8px 10px 8px 0;border-bottom:1px solid var(--line);vertical-align:middle}
+  table.sc td.m{font-weight:600;white-space:nowrap;color:var(--ink2)}
+  table.sc td.n{font:600 14px/1 var(--mono);text-align:right;width:34px}
+  .subs{display:flex;gap:12px;flex-wrap:wrap;font-size:12px;color:var(--ink3)}
+  .subs span{display:inline-flex;align-items:center;gap:4px}
+  .mb{display:inline-block;width:26px;height:4px;border-radius:2px;background:var(--line);overflow:hidden;position:relative}
+  .mb i{position:absolute;left:0;top:0;bottom:0;border-radius:2px}
+  .mb.d i{background:#A32D2D}.mb.a i{background:#BA7517}.mb.t i{background:#0F6E56}.mb.v i{background:#185FA5}
+  h4{margin:18px 0 7px;font-size:11.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink3)}
+  ul{margin:0;padding-left:19px}
   li{margin:5px 0;font-size:14px;color:var(--ink2)}
   li b{color:var(--ink);font-weight:600}
-  .killer{
-    margin:14px 0 0;padding:11px 14px;border-radius:6px;
-    background:var(--badbg);border:1px solid #F7C1C1;font-size:13.5px;color:#791F1F;
-  }
+  ol.atk{margin:0;padding-left:22px}
+  ol.atk li{margin:7px 0;font-size:13.8px;color:#791F1F;font-style:italic}
+  ol.atk li b{font-style:normal;font-weight:600;color:#501313}
+  .killer{margin:14px 0 0;padding:11px 14px;border-radius:6px;background:var(--badbg);border:1px solid var(--badbd);font-size:13.5px;color:#791F1F}
   .killer b{color:#501313;font-weight:600}
-  .defense{
-    margin:8px 0 0;padding:11px 14px;border-radius:6px;
-    background:var(--goodbg);border:1px solid #C0DD97;font-size:13.5px;color:#27500A;
-  }
+  .defense{margin:10px 0 0;padding:11px 14px;border-radius:6px;background:var(--goodbg);border:1px solid var(--goodbd);font-size:13.5px;color:#27500A}
   .defense b{color:#173404;font-weight:600}
-  footer{margin-top:52px;padding-top:18px;border-top:1px solid var(--line2);font-size:12.5px;color:var(--ink3)}
+  .defense ul,.defense li{color:#27500A;font-size:13.2px}
+  .defense li b{color:#173404}
+  code{font:12.5px var(--mono);background:#f2f1ec;padding:1px 5px;border-radius:3px;color:#3a3a35}
+  footer{margin-top:54px;padding-top:18px;border-top:1px solid var(--line2);font-size:12.5px;color:var(--ink3)}
   @media print{body{background:#fff;padding:0}.card{break-inside:avoid}}
 </style>
 </head>
-<body data-page-node-id="e10ByNYYPlSeLBD7AXZ9hQ">
-<div class="wrap" data-page-node-id="AjyxCSxqczKmCqlaKWvDEw">
+<body data-page-node-id="e8BF6eJUpB7U2j9ZaTAIfy">
+<div class="wrap" data-page-node-id="TOKzodQWP90m8yIeOPqBlG">
 
-<header data-page-node-id="Glzx48LssWXAzfA3LBvbwN">
-  <h1 data-page-node-id="YTuTLq85UqDCEY12GqLlI6">IYPT 2027 — Problem Briefs</h1>
-  <p class="sub" data-page-node-id="fZ3dn6YsSy4BIJYzCDsh9t">All 17 problems, ranked, with the reasoning and the specific weaknesses an opponent will use. Scored 0–10.</p>
-  <p class="sub" style="margin-top:10px" data-page-node-id="foT7iyicZjmvA3NJyAHS9F">
-    <b style="color:var(--ink)" data-page-node-id="5INkB0tVBRFdy4iVM9EQ4S">D</b> difficulty · <b style="color:var(--ink)" data-page-node-id="WfDIrgJuIcs5sZYHpTR6xQ">A</b> attack surface (higher = easier to disprove) ·
-    <b style="color:var(--ink)" data-page-node-id="8auYrTMtm242XXMeblFei3">T</b> theoretical anchoring · <b style="color:var(--ink)" data-page-node-id="t3YXmTN5SXYqR7zicRq8V5">V</b> visual payload<br data-page-node-id="HwvAOmbQRsFuKHHiaQnNCh">
-    <b style="color:var(--ink)" data-page-node-id="240EUxVPMeH2hMTeflLxMR">Pick value = (T + V) − (D + A)</b>
-  </p>
+<header data-page-node-id="wQNmszLa4Psa2Mhnd5oPlJ">
+  <h1 data-page-node-id="oWjceoCM8uTrLw7QP34LYj">IYPT 2027 — Full Problem Briefs</h1>
+  <p class="sub" data-page-node-id="Wl81QzvjX6m23pzlN0BZrG">All 17 problems. Verbatim statement, sub-score breakdown, the findings you should expect, and every attack an opponent can land.</p>
+  <div class="legend" data-page-node-id="Im0xB5Kk0ZZmCuCYISNQHJ">
+    <span data-page-node-id="Vl3u6urOAaYffoOaecmt5G"><b data-page-node-id="J70EnSZpdtYyHwIqWNC4tC">D</b> Difficulty = apparatus · reproducibility · measurement</span>
+    <span data-page-node-id="OXeJuirnm2sYeLlFPGlHS0"><b data-page-node-id="4XlyPlymLog2c0yfL875sO">A</b> Attack surface = confound count · severity · shield penetration</span>
+    <span data-page-node-id="aSLjRkMsPMw56juh9KoEhB"><b data-page-node-id="RLKIB9AOhZ0l9LxQ9C1k5g">T</b> Theory = closed-form · literature · falsifiable signature</span>
+    <span data-page-node-id="B2bZsIe2SLssiIeebdUKul"><b data-page-node-id="3tiy1UL0ElGguNGG4CC29J">V</b> Visual = impact · reliability in a fight · narrative</span>
+  </div>
+  <div class="legend" style="margin-top:8px" data-page-node-id="MzQy9rvpEnBhId4XXCpAFa">
+    <span data-page-node-id="5hjsiCiQzpra4ehCrnHM6W"><b data-page-node-id="gkcLWvDktUO4U2FekmPOGP">Pick value = (T + V) − (D + A)</b></span>
+  </div>
 </header>
 
-<div class="rule" data-page-node-id="EHjC9MfdltICmFQ406xuDS">
-  <p data-page-node-id="Mt1K5kIyOEsUBanS5up1jX"><strong data-page-node-id="9AKEZFkkvqmsrFZFFvVGsh">The one rule that predicts the ranking.</strong> Attack surface is set by <strong data-page-node-id="ORqPbDBrY4PvpEV4HwpDEt">what your subject is made of</strong>.</p>
-  <p data-page-node-id="Hglmm7IfcUn98SJYtGsCC5">Problems whose subject is <strong data-page-node-id="BKEoTntD2LV6pFwN1c0ZWA">geometry</strong> — a grating pitch, two string lengths, an aperture shape — have almost nothing to argue about, because the prediction falls out of a ruler measurement and cannot be hand-waved away.</p>
-  <p data-page-node-id="TYPhu0MCwJuOItbChFkHN3">Problems whose subject is an <strong data-page-node-id="vXi2WXKZUl3UYb7jPzoRdQ">ill-defined material</strong> — chalk, cornflour, ice, a frictional contact, a book spine — hand your opponent a dozen uncontrolled variables for free, and usually have no clean theory to hide behind. <strong data-page-node-id="0KpEp1WBr97BaKhexTX8rG">Every Tier-D problem is a materials problem. That is not a coincidence.</strong></p>
+<div class="rule" data-page-node-id="IMZKBEtO21xfvXZRCisXCK">
+  <p data-page-node-id="P4ZwMopC81uiX0CgisVC25"><strong data-page-node-id="MzFLEdE5SCe7Sx39rErEXT">The rule that predicts this entire ranking.</strong> Attack surface is set by <strong data-page-node-id="nqKGzSqUzdEcC9909D88Yr">what the subject is made of</strong>.</p>
+  <p data-page-node-id="RsQBaDa3OyGxCp8SpEGf22">Problems whose subject is <strong data-page-node-id="FLrpOgqMqvbFIShdk21myq">geometry</strong> — a grating pitch, two string lengths, an aperture shape — generate their prediction from a ruler measurement. There is no room to argue, and the theory shields you.</p>
+  <p data-page-node-id="s2eqSOkjqnL3ifY6tE4bt9">Problems whose subject is an <strong data-page-node-id="G5L36TB9pOAwE04qfTmLr3">ill-defined material</strong> — chalk, cornflour, ice, a friction contact, a book spine — hand your opponent a dozen uncontrolled variables for free, and have almost no theory to hide behind. <strong data-page-node-id="Tj0FU6KJFabaIBAMBSwCHZ">All five Tier-D problems are materials problems.</strong></p>
 </div>
 
-<!-- TIER A -->
-<div class="tier-head" data-page-node-id="qdbHCNMV4iHHdD8ooydJEy"><span class="dot" style="background:#639922" data-page-node-id="DvfYqP9h9Y3UFWrnvfGWh6"></span><h2 data-page-node-id="GFHMJA5xpwG4Rcb6vgDajS">Tier A — take it</h2><span data-page-node-id="UEOBk5t6S6GFNsxqAajb0G">low D, low A, deep theory</span></div>
+<!-- ===== TIER A ===== -->
+<div class="tier-head" data-page-node-id="kHTEMiBnn9IYB9YK6lRO4y"><span class="dot" style="background:#639922" data-page-node-id="riAxKWwOCaw9QQgYCbs9qo"></span><h2 data-page-node-id="AKbutYkFPPzbfXGv9NjFVm">Tier A — take it</h2><span data-page-node-id="X7HJlChrPRmo6cW3xDQlTg">low D, low A, deep theory</span></div>
 
-<div class="card t-a" data-page-node-id="WvgY92O1AJfbTIOoWrkrJ8">
-  <div class="top" data-page-node-id="JeDnwdYGFNXA2gMMhXmUP0"><span class="num" data-page-node-id="6FYGgh7zN8C8L8cDGlnpk9">05</span><h2 class="name" data-page-node-id="bI1SLNVQpP5kOxbj8Jssxz">Y-shaped pendulum</h2><span class="val p" data-page-node-id="S99FxLv0oE2ggg1anDCHu6">+12</span></div>
-  <div class="scores" data-page-node-id="hOIrEzG1eId0urbrudCN8H">
-    <span class="sc" data-page-node-id="D9KT6arjZOU915H8SPrEJ0">D <span class="bar d" data-page-node-id="pTwlQrCFlw3P7MtOR79g05"><i style="width:30%" data-page-node-id="uUFoWTa09jtHIuFrAylQeu"></i></span> <b data-page-node-id="qpYGryv8O393jegNQioSpo">3</b></span>
-    <span class="sc" data-page-node-id="CuiUBGv6OqsVOF9pAUjo4e">A <span class="bar a" data-page-node-id="45f8kUylgKAqlqe2jXmv73"><i style="width:30%" data-page-node-id="vDjR1ge12cG7yj1sscQMDM"></i></span> <b data-page-node-id="s8RPpM9XfvJHegvnahWPKf">3</b></span>
-    <span class="sc" data-page-node-id="YDXrYgtPXgD4Eb8KPiWXkJ">T <span class="bar t" data-page-node-id="IDU5i4lCppmdBHosHir94P"><i style="width:90%" data-page-node-id="Nmi4tL3AXuMtsgYJl2f766"></i></span> <b data-page-node-id="PHtD7yK87Z0bnam53v5k9m">9</b></span>
-    <span class="sc" data-page-node-id="wngJEfsBBpYI67TmfBdszN">V <span class="bar v" data-page-node-id="eegRMGxqwzfvkIGhwxPfLh"><i style="width:90%" data-page-node-id="fy2XQenjyLPMKtNcuVqMok"></i></span> <b data-page-node-id="IvnFtuIGurD52ivG3JKDKT">9</b></span>
-  </div>
-  <h4 data-page-node-id="buWGlZ6zsmm2QfP2Ru6lGR">Why it ranks first</h4>
-  <p class="why" data-page-node-id="kBBxVg3qtCd6nRFBaofkhG">The junction J is held by two strings of length L₁ from supports A and B separated by d, so J is constrained to the intersection of two spheres — a circle of radius <b data-page-node-id="7H0zfM7viSnF6nbnMEHDRy">h = √(L₁² − d²/4)</b> in the plane perpendicular to AB. That gives two clean normal modes: swinging in J's plane gives a simple pendulum of length <b data-page-node-id="wKuPTi4g2qsvlEqPkkqAd0">h + L₂</b>, so ω₁ = √(g/(h+L₂)); swinging perpendicular, J cannot move to first order, so the bob swings about J with ω₂ = √(g/L₂). <b data-page-node-id="dPEX0aLLJuosE1zfCDvcND">Both frequencies are predicted from a ruler.</b> Set the geometry, predict the Lissajous figure, then show it. There is nothing for an opponent to attack.</p>
-  <p class="why" style="margin-top:8px" data-page-node-id="VEu5KyGwuvEb6kW2fNlwjv">The depth ceiling is real: true pendulum period is T₀(1 + θ₀²/16 + …), so as damping bleeds off amplitude the two frequencies drift at different rates and <b data-page-node-id="H5AibAj386CNKiAstQHbA4">the figure precesses</b>. That is the "we went further" slide.</p>
-  <h4 data-page-node-id="ESruPwW7DWNemj1CybHCot">Key weaknesses</h4>
-  <ul data-page-node-id="8rCSnfCEGAnSIsat6N3uZD">
-    <li data-page-node-id="Btd7jhfPOKtIxpZY4TU23U"><b data-page-node-id="V8fZHXVDprPMRKXlWxAvEW">String mass</b> is not negligible — shifts both frequencies. Use a heavy bob and a light string, and verify.</li>
-    <li data-page-node-id="Hy5AAqV2mkjanKPxaVabmq"><b data-page-node-id="QvgLVU3I27j0WtBdiHYJjd">Support compliance</b> — if the clamps flex, your effective lengths change.</li>
-    <li data-page-node-id="djLUxQBCNZTRoDHFLhkMfr"><b data-page-node-id="hE85EM4vib6F5sIwsO62lI">Finite amplitude</b> — measure the anharmonic correction rather than hiding it.</li>
-    <li data-page-node-id="zVX3Ep6CjJ5smob0EABhQR"><b data-page-node-id="JdxnqbfPnw0LIzhAeEAMjJ">Out-of-plane motion</b> — the two modes are only clean at small amplitude; large amplitude becomes 3D.</li>
-    <li data-page-node-id="xJ381Knn5djAwLw2jqyLCh"><b data-page-node-id="pPIgv5DlGVKxO3CBZccbiP">Friction at the junction</b> couples the two modes and blurs the frequency ratio.</li>
-    <li data-page-node-id="IhzlRcOyyJ0sBguJhKNQX7"><b data-page-node-id="p8ErJ6N1IIC4CUkQpKwN2O">Bob is not a point mass</b> — it has moment of inertia and can spin.</li>
+<div class="card t-a" data-page-node-id="EH6XVGClBzbGTLMrD9pdGc">
+  <div class="top" data-page-node-id="aUtbqBH8clcCmMznSa4DH8"><span class="num" data-page-node-id="oDUWR1tVJIrDyq4Inu5pcb">05</span><h2 class="name" data-page-node-id="qE7MPwZG08ztfBHBKElSEX">Y-shaped pendulum</h2><span class="val p" data-page-node-id="fOiRnsgIY8fm8ZNEzyJ97N">+12</span></div>
+  <blockquote data-page-node-id="oDxgjGtPqbMZmX4MlMiQ5I"><b data-page-node-id="mdhttyd8UE92PTLS2peQFg">5. Y-shaped pendulum.</b> Construct a Bowditch pendulum (a pendulum whose strings form a “Y” shape). Investigate how the Lissajous patterns generated by the bob depend on the relevant parameters.</blockquote>
+  <table class="sc" data-page-node-id="HBDpnnkPfQGuOqa9unEMYi">
+    <tr data-page-node-id="jAq6LV10WlMLHsXUBch6Hh"><th data-page-node-id="YMB9nSuTAnGqun2E36DzX0">Metric</th><th data-page-node-id="pRLZCLQ7UztL2NIEdtAzAA">Sub-scores</th><th data-page-node-id="EWoadcPkUgGggq5MVEHcam"></th></tr>
+    <tr data-page-node-id="IYx36m69ohgALHgBnhwzfU"><td class="m" data-page-node-id="x0L7MrTB68VWwbzPvhddBq">D Difficulty</td><td class="subs" data-page-node-id="zafe4CNHDYywPBKjDfFG5e"><span data-page-node-id="miDFIS5kMAg2BhBMchjNhr">apparatus <span class="mb d" data-page-node-id="JWAM9PVmqVG1jpMOCydlM5"><i style="width:20%" data-page-node-id="JpBVyswbDrBgD98hTTrxua"></i></span> 2</span><span data-page-node-id="IbpoNRhOkkwrhcf6soCQgo">reproducibility <span class="mb d" data-page-node-id="XGmLsrm5OtfLvY20Bc6Sv1"><i style="width:20%" data-page-node-id="l3LatAjwyxIgb69361wo5m"></i></span> 2</span><span data-page-node-id="grpsTE0R3ZWrOQMIMnYOA0">measurement <span class="mb d" data-page-node-id="hvlY5aTx5T7wEj02LLa6bB"><i style="width:40%" data-page-node-id="xNDRggOIcaz0TPmWTWZG78"></i></span> 4</span></td><td class="n" data-page-node-id="hkWNkA49mULSFAyKnxoO8o">3</td></tr>
+    <tr data-page-node-id="0JPAnWgzyCc9AKV5vi8VAc"><td class="m" data-page-node-id="tc8IloLQRSF1mj0GVrHmCN">A Attack</td><td class="subs" data-page-node-id="z2MFHp9QerwUJ0anwviDzn"><span data-page-node-id="TecYjLsdTJ7MtQzLj3VFR4">confounds <span class="mb a" data-page-node-id="TYQeaUHRfEarY0x4zSJBaH"><i style="width:30%" data-page-node-id="MrLF4hlNiNoHkHLt7QB2Mo"></i></span> 3</span><span data-page-node-id="N4zQXWe4J4ibfTjF2UP6IG">severity <span class="mb a" data-page-node-id="zpiJop7sMKxiN0JbIA8FOa"><i style="width:30%" data-page-node-id="bFyabzmFetZd6XTe2MQ3m4"></i></span> 3</span><span data-page-node-id="XSltNnlsfKpojzny4QzjOc">penetration <span class="mb a" data-page-node-id="PsluHD6IqMGU63Lc5gCZUk"><i style="width:30%" data-page-node-id="puqj7BnHMcBgiZTvvMMu2D"></i></span> 3</span></td><td class="n" data-page-node-id="kgfyYheEVBFIIKAmiFj5mr">3</td></tr>
+    <tr data-page-node-id="f2GeLjkoEW9fkCpCsDBtWp"><td class="m" data-page-node-id="zi13F8N7enhK9dSZB78wGh">T Theory</td><td class="subs" data-page-node-id="DhPElgWZzzrFX8FTzc9mx7"><span data-page-node-id="rGwCv15CpRHRayjAl6kpEe">closed-form <span class="mb t" data-page-node-id="52XjCBAoggi1KomXDuBLmZ"><i style="width:100%" data-page-node-id="sjejryhkZcrTqIs6hri3EI"></i></span> 10</span><span data-page-node-id="RAYGw8uwQlYzVyg8fpUciL">literature <span class="mb t" data-page-node-id="xCOhSXXnKfJiSmdI7td8gD"><i style="width:80%" data-page-node-id="oxMllCpCY9jfmJBUUgCSDH"></i></span> 8</span><span data-page-node-id="KDf71xW4muy3YGqQYYn3LO">falsifiable <span class="mb t" data-page-node-id="fdiGN9Cdz4wFVhmb5rTnhN"><i style="width:100%" data-page-node-id="nczNJaOVEDvWDD6bX7Ih6J"></i></span> 10</span></td><td class="n" data-page-node-id="kw4TUMzgw9C4CrLcR0qYRk">9</td></tr>
+    <tr data-page-node-id="gcFDIxo0GZgqb64TACUcTo"><td class="m" data-page-node-id="ssZU2RNIYgSp0wzyIm46kx">V Visual</td><td class="subs" data-page-node-id="nc4J44PCL8Y9h7X1Xbv0of"><span data-page-node-id="JyJDJXKSdUbUVw9gufN8BZ">impact <span class="mb v" data-page-node-id="NLSEX2x2D5njaD0mZRlydT"><i style="width:100%" data-page-node-id="mq9aH1a76EulhTM0Q8NnaS"></i></span> 10</span><span data-page-node-id="BYEDD1dBuv2T1eRyM3eA0T">reliability <span class="mb v" data-page-node-id="Rk07PPlTuxW34XaRqDW05E"><i style="width:90%" data-page-node-id="7Am9z2YSZg5OOmZwZQaLBK"></i></span> 9</span><span data-page-node-id="otthl0V9Q0CQBMVa1zuArJ">narrative <span class="mb v" data-page-node-id="FrfUGwCZaU5WvpMjVN2UoJ"><i style="width:80%" data-page-node-id="Xu9K7ikBpsOqOiDyuDoQwH"></i></span> 8</span></td><td class="n" data-page-node-id="g9Noe0LLujCGIE2iRZQRWn">9</td></tr>
+  </table>
+  <h4 data-page-node-id="FwXtF6ttz1Xo7CNc2gu2Gy">Likely findings</h4>
+  <ul data-page-node-id="BdGhipCgaezHvRjVi1XiZQ">
+    <li data-page-node-id="OtU7Dsft9N5WDfHD0VPXGq">Junction J sits on the circle where two spheres of radius L₁ about A and B intersect, so <b data-page-node-id="Sg3uD2Be5f21lgRX57QgRP">h = √(L₁² − d²/4)</b>. Two normal modes fall out: <b data-page-node-id="OpjKYBIDSg9REYjL0ges3j">ω₁ = √(g/(h+L₂))</b> in J's plane, <b data-page-node-id="q92h5okBTPXqtdGAfwyYFF">ω₂ = √(g/L₂)</b> perpendicular to it.</li>
+    <li data-page-node-id="CNZhH9LdlPgccMn3GhrSEM">Frequency ratio <b data-page-node-id="GP62lNnvbngEVfFNLVletW">ω₂/ω₁ = √((h+L₂)/L₂)</b> — fully set by geometry. With L₁ = 0.50 m, d = 0.30 m, L₂ = 0.30 m: h = 0.477 m, ratio = <b data-page-node-id="zcAoUiLaAPeEENHDIDZ5B6">1.61</b> (a clean 8:5 figure), T₂ = 1.10 s, T₁ = 1.77 s. Tunable across roughly <b data-page-node-id="EQeFDDFFpBpymMe9LJKd3i">1.1 to 3</b> by varying d and L₂.</li>
+    <li data-page-node-id="zrrBRwhk2ypMUa2PwNcjfd"><b data-page-node-id="fu8j3ByYHrQQsC04YDvpzr">Precession.</b> Real period is T₀(1 + θ₀²/16 + …). At 30° amplitude that is a 1.7% period shift, and because the two modes decay at different rates the ratio drifts and <b data-page-node-id="7JRMvy5BrvWG8w1saC2PYs">the figure rotates slowly</b> — precession period of order tens of seconds. This is your depth slide.</li>
+    <li data-page-node-id="UxP4Et36cshbBNMLzXzkaz">Amplitude decays with Q ≈ 100–1000, so the show lasts 1–3 minutes. Long enough to film, short enough to run live.</li>
   </ul>
-  <div class="killer" data-page-node-id="R8E1G28oL9WuIANJ0tr1R2"><b data-page-node-id="Qi8yrZGQzaBfr2IU26OxCP">Killer attack:</b> "You showed pretty pictures. You never predicted the pattern from the geometry beforehand." If you only photograph Lissajous figures without the a-priori prediction, you have done nothing.</div>
-  <div class="defense" data-page-node-id="X1BJ7dpyfO9iyNLHfWYicm"><b data-page-node-id="9793AdnvZ9YqxONJKUrnix">Defense:</b> Tabulate predicted ω₂/ω₁ vs measured, across five geometries. That table is unarguable and takes one afternoon.</div>
-</div>
-
-<div class="card t-a" data-page-node-id="amuSIePprZOVqGUrYk0CB8">
-  <div class="top" data-page-node-id="hhohA2a7FhJaP6qKBlQ8cJ"><span class="num" data-page-node-id="Kp1k9bZ7RU7aGGIwMniFMw">09</span><h2 class="name" data-page-node-id="rsgPRSbaQRKaygC6jUlVVf">Photographic bokeh</h2><span class="val p" data-page-node-id="xbVHZHhJgjiOieYoHeRtX5">+8</span></div>
-  <div class="scores" data-page-node-id="26xbe6KTEPG1g6rmDT80D0">
-    <span class="sc" data-page-node-id="vjITV5c65Iu7PTwv89qK9K">D <span class="bar d" data-page-node-id="sDOAtkQ9sngPEBmRSESAm6"><i style="width:40%" data-page-node-id="zQ1lsPX1dugppNYbzC31b2"></i></span> <b data-page-node-id="KOW7fwSefWM9gHZdIWpNoK">4</b></span>
-    <span class="sc" data-page-node-id="glNezFoEFQLXFFZiiOvKFq">A <span class="bar a" data-page-node-id="3ZL40er5DUnJKWLghzcVZG"><i style="width:40%" data-page-node-id="MDswuwAFrAawdAmGplIwv5"></i></span> <b data-page-node-id="RRpe7kULWtUJ6iKsVgjcsO">4</b></span>
-    <span class="sc" data-page-node-id="5AtniAluvKu5nYGhAum0fO">T <span class="bar t" data-page-node-id="XpxhE9StqDaBGMNrq1fbz9"><i style="width:80%" data-page-node-id="eH8ol7GtZfTqg4gujAxlLy"></i></span> <b data-page-node-id="AUBn3feqL32jJgfkzqzRwV">8</b></span>
-    <span class="sc" data-page-node-id="VQBwyahwBPW1chFHTt2psY">V <span class="bar v" data-page-node-id="ML6QVMD6DKUl8LI0W3GOX6"><i style="width:80%" data-page-node-id="QxRsQoxV2IYvZwxHedRQlw"></i></span> <b data-page-node-id="fLU2uz7YEiMvfqPezDZRxF">8</b></span>
+  <h4 data-page-node-id="aMjvs1hEhsU0j6tKgrKaqN">Attacks</h4>
+  <ol class="atk" data-page-node-id="nFz1XbAgYMinJcDqjmZOtj">
+    <li data-page-node-id="MEmCVVXdteu3K2POmAk0pL"><b data-page-node-id="PQnembxO0iLkWyqYAJ90BE">"You showed pretty photographs. You never predicted the pattern from the geometry before you ran it."</b> If there is no a-priori prediction, you have done nothing.</li>
+    <li data-page-node-id="uIatCqFrqpsYPSsdBxHZUs"><b data-page-node-id="iYDin0aCtISDFJhZYXyuHy">"Your string has mass."</b> A non-zero string mass shifts both frequencies, and by different amounts, so your ratio is systematically off.</li>
+    <li data-page-node-id="CsIppEIMl30cd9qS07paCL"><b data-page-node-id="0WnsHoq9F5BIRuC4P5TsRO">"Your supports flex."</b> Any compliance in the clamps changes the effective length, and you never measured it.</li>
+    <li data-page-node-id="oSIYWhhxrZdYn4YdKGK2Vp"><b data-page-node-id="Fu95LVGWObPgbMx7SM6sYO">"Finite amplitude."</b> The small-angle formula is not valid at the amplitudes you actually ran; you have an uncorrected systematic error.</li>
+    <li data-page-node-id="4BmxnHNcy12wjudQV3BbeL"><b data-page-node-id="KjKt4NXdU5053WY3pHDHWd">"Your two modes are coupled by friction at the knot."</b> The junction is not a frictionless constraint; it bleeds energy between modes and blurs both frequencies.</li>
+    <li data-page-node-id="VkOLUNzVHviBWqi5kSCGf1"><b data-page-node-id="2o6rmSFvL04YQ8r04Jkkik">"Your bob is not a point mass."</b> It has rotational inertia and can spin about the string — a third degree of freedom you ignored.</li>
+    <li data-page-node-id="wM1TalMwIQh6eDO4QcIY4T"><b data-page-node-id="vVhIs1GM2pozLjGZyYIrBX">"Your motion is three-dimensional, not planar."</b> At large amplitude the two "modes" are not clean, so a 2D Lissajous description is not actually valid.</li>
+    <li data-page-node-id="HygPEOGi4RxA1Y6STequdi"><b data-page-node-id="rGfwmJX6wqAwburAs83inm">"Air drag acts on the string as well as the bob."</b> Your damping model only accounted for one of them.</li>
+  </ol>
+  <div class="killer" data-page-node-id="RtCKcQsSdmoFFo1EkAEDtC"><b data-page-node-id="QKad9w0xsAIySjmACOT5YB">Worst attack:</b> #1. Everything else is a percent-level correction; #1 invalidates the whole presentation.</div>
+  <div class="defense" data-page-node-id="FE5z77CO6xUM29tJvu23Dd"><b data-page-node-id="TUqQbl6UanUh5v68HgKFFO">Countermeasures</b>
+    <ul data-page-node-id="yeqabaHBShDg1Opk4Rmn2J">
+      <li data-page-node-id="bCi1sSyUM9bGCJqrRRkyqX"><b data-page-node-id="nHMnJvO7Yqh4GqqvV30t2q">Pre-register.</b> Write down the predicted ω₂/ω₁ for five geometries <i data-page-node-id="vL3R6BMiOS4j3Z0468tBgf">before</i> building, then tabulate predicted vs measured. Unarguable, and takes an afternoon.</li>
+      <li data-page-node-id="QOnxZimPPpJJWkOe6vgL4f">Heavy bob (≥200 g) on light braided fishing line — makes string mass negligible; state the ratio.</li>
+      <li data-page-node-id="IQUhfsreDLP5171L6FPInX">Measure the amplitude decay and <b data-page-node-id="IqCrNz2raNMAMDgUx8JYRL">fit the anharmonic correction</b>, then show the residual — converts attack #4 into a second result.</li>
+      <li data-page-node-id="sYGH8n5iJ69sbP8hOwzBA8">Rigid supports bolted to a wall, not clamped to a bench; verify by pushing on them.</li>
+    </ul>
   </div>
-  <h4 data-page-node-id="6npyp3DXYcnZgChtVDZHOQ">Why it ranks here</h4>
-  <p class="why" data-page-node-id="s5e8mMDCu1pj0TwmFsQUnH">To a very good approximation <b data-page-node-id="JF4sU6xS1jSPjBUIaWeRn0">the bokeh IS the aperture shape</b>, scaled by defocus. A slit aperture produces an elongated blur kernel, so out-of-focus highlights become streaks. In-focus regions stay sharp because there the PSF is the diffraction-limited Airy/sinc pattern, not the aperture silhouette. This is textbook Fourier optics — convolution, PSF, OTF/MTF — and you can <b data-page-node-id="4vkb5C0K1NoKegY0NQG08J">measure the PSF directly</b> by imaging a point source at known defocus. That hard anchor is what keeps A low.</p>
-  <h4 data-page-node-id="Z7vTEbeFxFdNgp3JTOKeBx">Key weaknesses</h4>
-  <ul data-page-node-id="scWMahG1Z5x1NBePDCrQOQ">
-    <li data-page-node-id="UPcHAATmH4FIUOsq9822Zi"><b data-page-node-id="cThbIzoPEH0SNLSIg42qb6">Real lenses are not thin lenses.</b> Vignetting, field curvature, coma and especially <b data-page-node-id="SKkmb6XpJqC3M4c5fSDCHw">astigmatism</b> vary across the frame — your "anisotropy" may be the lens, not the slit.</li>
-    <li data-page-node-id="kQstPE2nFrH60vavHL7VgL"><b data-page-node-id="OO5C7HLshcaS4qKL6Ap2wr">Chromatic aberration</b> — white LEDs give a wavelength-dependent blur. Use narrowband light or a single colour channel.</li>
-    <li data-page-node-id="qD4Bo9F9KgA90r9WZXaMTx"><b data-page-node-id="wF8otPBBNNpMbQNAG2AW1o">In-camera processing</b> (sharpening, demosaicing, JPEG) will corrupt your PSF. Shoot RAW, everything manual.</li>
-    <li data-page-node-id="mN1ufYSwwS6yhCurhIimId"><b data-page-node-id="4ANJ6gdcQ7F3lRpWMGg0kl">Exposure confound</b> — adding a slit changes the aperture area, hence exposure. Normalise or you conflate shape with brightness.</li>
-    <li data-page-node-id="N2oYugZDf2eYUuXIECa0k6"><b data-page-node-id="uz4ksjppnyTo8Q8rrwWNrg">Diffraction regime</b> — at small effective apertures the PSF is diffraction-limited and the geometric model fails. State which regime you are in.</li>
-    <li data-page-node-id="dHQvasF606kjhHSYwwBIAO"><b data-page-node-id="cjdG9ppFNjxOv44O0I5kZ8">Slit has finite thickness</b> and its edges diffract.</li>
-  </ul>
-  <div class="killer" data-page-node-id="ngMG275vNkDNOGsGfHKdDV"><b data-page-node-id="H5lNQw57CTC39Td3rDQ0EF">Killer attack:</b> "How do you know that anisotropy is the slit and not astigmatism in your lens?"</div>
-  <div class="defense" data-page-node-id="8GxBlIqbInfrAEXFASyF2w"><b data-page-node-id="Ow9QaBvyi8wSF9KhDmQQkL">Defense:</b> Shoot with and without the slit at the identical field position, and <b data-page-node-id="5CWmiDvPuloPyEYp19GXed">rotate the slit 0°/45°/90°</b> and show the anisotropy rotates with it. That single sequence kills the objection dead.</div>
 </div>
 
-<div class="card t-a" data-page-node-id="eDjypG2ncXbW59XSz9d1qq">
-  <div class="top" data-page-node-id="Yu2PADaH7FX34NJZHHncJ5"><span class="num" data-page-node-id="4M8VQv6lKTujn5HDiDxTXl">02</span><h2 class="name" data-page-node-id="OXyPtBCEDiUHbTE8Fub3CM">Disc spectrometer</h2><span class="val p" data-page-node-id="1Pl8hcj2Fz8H0AYy0q1BT2">+6</span></div>
-  <div class="scores" data-page-node-id="FkcPkTV9nr1lk0r1BqjPAk">
-    <span class="sc" data-page-node-id="hmZBeGlChRITwii54ZPSrs">D <span class="bar d" data-page-node-id="CAd52u3K2rG1lESlzaseJM"><i style="width:60%" data-page-node-id="gM31IDhIkuzXbn4DPLRhmL"></i></span> <b data-page-node-id="Ud7Owz7H537KBu3HAjtQp8">6</b></span>
-    <span class="sc" data-page-node-id="7sVf2nJkpslbEeekThnLxf">A <span class="bar a" data-page-node-id="NbG8eKDS20TCUJBbQhAqnO"><i style="width:40%" data-page-node-id="8yxXR4KFx5nuQ4vt692Cj5"></i></span> <b data-page-node-id="62664cYBJoxUtkwvzapO6k">4</b></span>
-    <span class="sc" data-page-node-id="3796b90W6EXFS2s50TrPxS">T <span class="bar t" data-page-node-id="uWJquU0H2O8UnjDYOyRiAJ"><i style="width:90%" data-page-node-id="hHdHF6AvB5hM0fPIxMnCYh"></i></span> <b data-page-node-id="MdadtgoEpCkQl9KcKqpSQK">9</b></span>
-    <span class="sc" data-page-node-id="cNwofs6kDrDHqb9fXVzSmD">V <span class="bar v" data-page-node-id="fUrWt4GPIX4trNYcq3qIsA"><i style="width:70%" data-page-node-id="0SJ9wapPGT7ADPec2wskqY"></i></span> <b data-page-node-id="km0mAhPSEmyROCCT8VDHtg">7</b></span>
+<div class="card t-a" data-page-node-id="ZiiCBA5DvgUjqg4XzoINPb">
+  <div class="top" data-page-node-id="6T4BF5sw06LxfpuHol6fKx"><span class="num" data-page-node-id="BabGCmyAjy1DcZ0VHIB2L0">09</span><h2 class="name" data-page-node-id="ICZk8GRG7l89pnivwCSwhZ">Photographic bokeh</h2><span class="val p" data-page-node-id="XZus9ImXXpBRfHjuK4GE2j">+8</span></div>
+  <blockquote data-page-node-id="Dbz1T0vInzsCPrsVFQtsAW"><b data-page-node-id="5SggAcpcmGII5Hm16fGjml">9. Photographic bokeh.</b> Bokeh is an effect observed in photographs that show objects at different distances from the camera and have both sharp and out-of-focus areas. If a slit is placed in front of the lens of the camera, the image may have unusual anisotropic distortions in out-of-focus areas, while in-focus areas remain undistorted and sharp. Investigate how the properties and sharpness of resulting images depend on relevant parameters.</blockquote>
+  <table class="sc" data-page-node-id="DfNFZUkO6UpTvhlDgAZHXb">
+    <tr data-page-node-id="GPjsJfXf3rUP3WBrhAFaG6"><th data-page-node-id="BoYp8z2RuKlX6eJ5j4wqyl">Metric</th><th data-page-node-id="193XSqViA88IRLzYg7KVLt">Sub-scores</th><th data-page-node-id="SnvNdU0RzMHObGbqWEVRV7"></th></tr>
+    <tr data-page-node-id="1BhCLYIU1CXU0g1zlDXd5t"><td class="m" data-page-node-id="llrk6MFrUAwvGZUcAYhzz9">D Difficulty</td><td class="subs" data-page-node-id="9lBPqBopK7nfrswaASs9hP"><span data-page-node-id="7u43BHBujgSNiQr4cy0YlJ">apparatus <span class="mb d" data-page-node-id="eSs09si2womyya1jGyRGEO"><i style="width:40%" data-page-node-id="ZSEpF3XaBjGfeeG1Fk8omH"></i></span> 4</span><span data-page-node-id="n3cNaXeFKU2ra1PZ04crRf">reproducibility <span class="mb d" data-page-node-id="TjJBnmWHommUDiLJ9ENvsw"><i style="width:30%" data-page-node-id="clvOb8WHgXF7Iv1TSIwouN"></i></span> 3</span><span data-page-node-id="eL9PBdV9h4pVPchkCeDRb2">measurement <span class="mb d" data-page-node-id="amLV9IxZmBRfaG4ywhvOUj"><i style="width:40%" data-page-node-id="OZ0dvnEgcAewgS04ucbFWY"></i></span> 4</span></td><td class="n" data-page-node-id="UNALGJgXAF9YrAgJhKcWFs">4</td></tr>
+    <tr data-page-node-id="5IgFNiC2iGsH1BD2vB18It"><td class="m" data-page-node-id="9FCi5BH8Pr5v1Z72FcdYfV">A Attack</td><td class="subs" data-page-node-id="6n3tuPG6LsrCub4L4TvCEp"><span data-page-node-id="LW1jUYbBIyIuElGp4U2O09">confounds <span class="mb a" data-page-node-id="WjzEtnwXyIcGZTJ8cZAMn0"><i style="width:50%" data-page-node-id="6GEej1gEs5MBaWUaWhbsi8"></i></span> 5</span><span data-page-node-id="7TVfLVmh3pCW7np6zsoaIv">severity <span class="mb a" data-page-node-id="S6AHwN31I9kgeg5nV0TNCH"><i style="width:40%" data-page-node-id="0O2CnAcQwEAqplWDztLOBt"></i></span> 4</span><span data-page-node-id="ZE0rg9IVmtv1t46AD0SrzG">penetration <span class="mb a" data-page-node-id="TIfRt1E6do42XV6jj5oevT"><i style="width:30%" data-page-node-id="20hh0N1Qi5Sjo8dz6kq26E"></i></span> 3</span></td><td class="n" data-page-node-id="olBZie0bZ4mRO8GGWfRfF0">4</td></tr>
+    <tr data-page-node-id="QIFCL1Q5W4MhfGkyri603n"><td class="m" data-page-node-id="rKhM8GqkYz77qa3iqJb8i0">T Theory</td><td class="subs" data-page-node-id="DLW0SeQJvW9jncvMc1nGaj"><span data-page-node-id="xzMEQtF0DYrtnOt3r12dyz">closed-form <span class="mb t" data-page-node-id="uBisDj0gUynmLZ723BVowB"><i style="width:80%" data-page-node-id="RFowkM8JcVeHuFFmFG5aHc"></i></span> 8</span><span data-page-node-id="mYR9JoxCFk5MdnL8y6llK8">literature <span class="mb t" data-page-node-id="ClIArjJnVuDHrNtlE0hDIk"><i style="width:80%" data-page-node-id="1tepDXHDNVgcA4IkluLS6M"></i></span> 8</span><span data-page-node-id="p6ycTivhMHpsaek5XJUgOQ">falsifiable <span class="mb t" data-page-node-id="1lp52kzqZYs3inXMVIXHWp"><i style="width:90%" data-page-node-id="3SLIPq06EjnKGajYi90jHG"></i></span> 9</span></td><td class="n" data-page-node-id="wZlbb3ZebhAkfzwCkzsn2Q">8</td></tr>
+    <tr data-page-node-id="BD9LPrbui24c6lMWj4MaZq"><td class="m" data-page-node-id="LTNx4ddlALhEXj1cQyDaEC">V Visual</td><td class="subs" data-page-node-id="7tbgeTSIs5o8X0ouUOzVDs"><span data-page-node-id="3aHPMGPE8EimL5iDEgNAZb">impact <span class="mb v" data-page-node-id="LJHeZLUKY1wd5XVmeIVcM6"><i style="width:90%" data-page-node-id="uRIygsFEEZTH3YfCFXrDtZ"></i></span> 9</span><span data-page-node-id="zXZhBWKvtfYIhHy5ZC5qou">reliability <span class="mb v" data-page-node-id="BMmyvjq2JuHHskzEu5WFBz"><i style="width:80%" data-page-node-id="o0a8YJ4ZtQglnRVH2L92Yc"></i></span> 8</span><span data-page-node-id="lJz8GCtL9djudZ7i6EZtul">narrative <span class="mb v" data-page-node-id="mB5En2NHvEcCQHkvVx03Sf"><i style="width:80%" data-page-node-id="tAN15Cxi8E6t9TFC6Ryo9x"></i></span> 8</span></td><td class="n" data-page-node-id="KjnlsTdVHqFqmHgSSsLCDk">8</td></tr>
+  </table>
+  <h4 data-page-node-id="KiTMtB0LbigRINlsZQIs71">Likely findings</h4>
+  <ul data-page-node-id="3yKt7jq8HNAnZt3A3WJJpn">
+    <li data-page-node-id="XNQ5w38SumFAaKf2P8tGs6">Headline result: <b data-page-node-id="MImLBBpdQ6LyAvtIUkFTH5">the blur kernel IS the aperture shape</b>, scaled by defocus. Defocus blur width <b data-page-node-id="VGgC8oAe7CoxyjV3bLpHNc">c ≈ A·|S₂−S₁|/S₂</b> with A = f/N.</li>
+    <li data-page-node-id="Bx70EU3quRfQH9PyS6R9Dv">For a slit of width w and length L: blur streak length ≈ (L/f)·defocus, width ≈ (w/f)·defocus, so the <b data-page-node-id="nM8r5l1ac0HvfklcwHZJDu">anisotropy ratio of the blur equals the slit aspect ratio L/w</b> — independent of defocus. That is the crisp prediction to build the whole talk on.</li>
+    <li data-page-node-id="6AxKkwlkChP3BvQvxIlNHy">In MTF terms: the OTF is the pupil's autocorrelation, so a slit pupil gives a triangular OTF across the slit and a broader one along it. <b data-page-node-id="kRfkCJmLflRtCi87PT8hhv">The ratio of the two MTF null frequencies = L/w, independent of defocus.</b> Measurable with a slanted-edge target.</li>
+    <li data-page-node-id="7tQteCzxxNEk2l16QK77AX">In-focus regions stay sharp because the in-focus PSF width is <b data-page-node-id="K8AGsN3if9usvxyZOCzLmH">2.44λN</b> (Airy/sinc), set by diffraction, not by the aperture silhouette — so slit length does not degrade in-focus sharpness, only slit width does, and only in one axis.</li>
+    <li data-page-node-id="Uz3La9Lo18sUEFHLT69f4u">Expect measurable anisotropy for <b data-page-node-id="icZM4uoAR3kLIMfz1oXuek">L/w ≥ ~3</b>; below that it washes out.</li>
+  </ul>
+  <h4 data-page-node-id="g7Gut3N2SROWICb1VIK0FD">Attacks</h4>
+  <ol class="atk" data-page-node-id="aV6guAqW9i3yEagPIXAxjG">
+    <li data-page-node-id="RikNWzmviDqOQXnHZRNhhc"><b data-page-node-id="jp50oHZrJ2ycso5aLxFFhG">"How do you know that anisotropy is your slit and not astigmatism in your lens?"</b> Real lenses have field-dependent astigmatism, coma and curvature.</li>
+    <li data-page-node-id="znO44EOkRaB5V11kkiUPGr"><b data-page-node-id="8uP4A3GIT1T73OWqFEYZYp">"Your camera applied sharpening."</b> In-camera processing, demosaicing and JPEG compression all alter the PSF; your kernel is partly an artefact of your sensor pipeline.</li>
+    <li data-page-node-id="o8vYGwmbuu3fzE1HwkUt74"><b data-page-node-id="Yu5fnyHMcBdNVB1CdDWCwo">"You used a white LED."</b> Chromatic aberration means your blur is wavelength-dependent, so your "single" PSF is actually an average over colour.</li>
+    <li data-page-node-id="IvStcjcYHGmUmoyeb0WjAR"><b data-page-node-id="MaLXjPsFazPdO1zELANE77">"Adding the slit changed your exposure."</b> You changed the aperture area, so you conflated a <i data-page-node-id="SyV84kD4GM95pkLC4KNZig">shape</i> effect with a <i data-page-node-id="I9NZje01lTo65VvFjtEfB2">brightness</i> effect — and noise scales with brightness, so your sharpness metric changed for two reasons at once.</li>
+    <li data-page-node-id="R2Yg0wDuRU4l3FChwBJxMj"><b data-page-node-id="Gam80fwVqVH5e1xRZbv4IH">"You are in the diffraction-limited regime."</b> At small effective apertures the geometric blur model fails outright.</li>
+    <li data-page-node-id="ao4lFUofGycYqrwI1NWUlK"><b data-page-node-id="LleCNW9FtT90gCgI1Y4jj0">"Your slit has finite thickness and its edges diffract."</b> You modelled a 2D aperture but built a 3D object.</li>
+    <li data-page-node-id="XrkDALdpAz9UpOVWPcEowE"><b data-page-node-id="Xdz8r7pmjmVtL1JeoZSP9D">"Vignetting."</b> Off-axis your effective pupil is clipped by the barrel, so the blur shape changes across the frame and you averaged over it.</li>
+    <li data-page-node-id="hAJGI19frJmU1DKF5wqKdX"><b data-page-node-id="r2FMYTiIJ6rWVBaR6aPltM">"You never measured the PSF directly."</b> Everything you claim is inferred from scene photographs rather than from a point source.</li>
+  </ol>
+  <div class="killer" data-page-node-id="UYmwQDFdIFwFi7O5PmRFgk"><b data-page-node-id="CKnPt7JBt38M0jewckeQSu">Worst attack:</b> #1, followed closely by #2. Both strike at whether the effect you measured is the one you think it is.</div>
+  <div class="defense" data-page-node-id="5bDau16uDPoaxgc8uOk9Sw"><b data-page-node-id="cDYQMOP4m5LV44WAi0jLY3">Countermeasures</b>
+    <ul data-page-node-id="GjJ80v5OJH4DFZsUjwlNLd">
+      <li data-page-node-id="ZhrhOk3E3HtIYcCHbfKwA7"><b data-page-node-id="WTBhDOsSxAdB2INpSFCufI">Rotate the slit 0° / 45° / 90°</b> and show the anisotropy rotates with it. Nothing else in the system rotates, so this cleanly separates slit from lens.</li>
+      <li data-page-node-id="RwHVw0mH1YkQF9tr0VeFIL">Shoot with and without the slit at the <b data-page-node-id="JhqD2I1h22PfGPzBfkAfwI">identical field position</b> — same pixels, same aberration.</li>
+      <li data-page-node-id="FZdwDbfbGEo95JbvCJlq92"><b data-page-node-id="qfRVrr9h6wGFE1NKv4k8BO">Shoot RAW, all processing off</b>, manual focus, fixed ISO — and say so explicitly.</li>
+      <li data-page-node-id="05Mku4mF6txYsvdPSaq5fW">Narrowband source (green LED or colour filter) to kill chromatic aberration.</li>
+      <li data-page-node-id="JNxFmcdXuJbp5QOP1PxAIe">Normalise exposure across conditions; shoot a dark frame for noise subtraction.</li>
+      <li data-page-node-id="xq5KdouRmHaG1JH3jPXMze">Measure the PSF twice: directly from a point source <i data-page-node-id="HzMTvFshb6XQusP9i3g59h">and</i> from a slanted edge. Two independent routes to the same number.</li>
+    </ul>
   </div>
-  <h4 data-page-node-id="0XcNxvKJ2Syyrkldz2M7Gw">Why it ranks here</h4>
-  <p class="why" data-page-node-id="VUyNeimatEihMRXfVC8S6G">Track pitch CD 1.6 µm, DVD 0.74 µm, Blu-ray 0.32 µm. Grating equation mλ = d(sinθᵢ + sinθₘ); resolving power <b data-page-node-id="qqmetf05eCm01LrSWzXGLq">R = λ/Δλ = mN</b>. So to maximise R you want many illuminated grooves N and high order m — but the tracks are <b data-page-node-id="SLTfss77aFlLKZ8SFqaGvt">circular</b>, so a large illuminated patch brings curvature-induced aberration that eats the resolution you gained. <b data-page-node-id="tP5xfgE1TLvgzjUC6O5Bj9">That tension is the actual problem</b>, and it is a genuine optimisation, not busywork. Best theory armor on the board: calibrate on a known line and there is nothing to argue with.</p>
-  <h4 data-page-node-id="FuKeo9pGt0FF5av6GM5ROp">Key weaknesses</h4>
-  <ul data-page-node-id="LKHx85ih2TwD2pmzTjStKN">
-    <li data-page-node-id="wkV9aIOvFEaGhcuCLTjzI8"><b data-page-node-id="q3UUSu3s7IDMdX3IfH4u8A">Slit-limited, not grating-limited.</b> You must show R saturates as you narrow the slit — otherwise your resolution is your slit width.</li>
-    <li data-page-node-id="XafSsP7bdvXP7cizJZNSKA"><b data-page-node-id="Vw16ZVWC2CgYTIaPeOcqqO">The polycarbonate overcoat.</b> The beam refracts at the plastic before reaching the tracks; modelling it as a bare grating is a systematic error.</li>
-    <li data-page-node-id="K9m2cfA8h0hMxNSylYiAgg"><b data-page-node-id="eCq7UHH9k7KexESZoXAzzP">Track pitch</b> — measure it by diffracting a known laser, do not assume the spec value.</li>
-    <li data-page-node-id="Gfvze6Iamku1UtX22aFO4W"><b data-page-node-id="V0t6FaJa32HBH2GZAAWIHn">"Minimise aberrations" is vague.</b> You need a figure of merit: FWHM of a line, or Strehl ratio.</li>
-    <li data-page-node-id="rzCJSe7OVnFB9TYitoo0FG"><b data-page-node-id="VjCZBmEnfPHCw7rqYLWLLx">Order overlap</b> — m=2 and m=3 overlap at different λ. You need order sorting.</li>
-    <li data-page-node-id="u0LVNcsXc2Rtfjfw3BDcMG"><b data-page-node-id="bpBqgyczkGsvOQ9CgU7KNj">Detector</b> pixel pitch limits spectral sampling.</li>
-  </ul>
-  <div class="killer" data-page-node-id="mNhL4as1HTbBzazoGLqjAY"><b data-page-node-id="5xUFnixcuCuB7HH8nucjGR">Killer attack:</b> "Your resolution is limited by your slit, not your grating."</div>
-  <div class="defense" data-page-node-id="Q52ZETudggTcwIv0UYBQJX"><b data-page-node-id="WRbwpLsXNdu8IdfbgcGIkm">Defense:</b> Resolve the sodium D doublet (589.0 / 589.6 nm, Δλ = 0.6 nm) — that is R ≈ 1000, demonstrated, and ends the conversation.</div>
 </div>
 
-<!-- TIER B -->
-<div class="tier-head" data-page-node-id="L2AFbjPGRjw7KjjTahrW14"><span class="dot" style="background:#378ADD" data-page-node-id="FcUUmoktDkbWLB37sRIOcF"></span><h2 data-page-node-id="LFqBpdTBuuvRskGpz76phr">Tier B — strong, but costly or riskier</h2><span data-page-node-id="vO34hACNUHSIXOWRDjodXC">good theory, real cost</span></div>
-
-<div class="card t-b" data-page-node-id="bE1xyg2puVSJHX8927xt79">
-  <div class="top" data-page-node-id="E8r2TScsLHhiAn8Lqf98Yx"><span class="num" data-page-node-id="iLNAR8ezLtdaNNvaCAvH0S">04</span><h2 class="name" data-page-node-id="Ei02u3eTrYnpXj87Ny6BFK">Singing capacitor</h2><span class="val p" data-page-node-id="WfYg7DVc3V2sZGSuLYtyHq">+5</span></div>
-  <div class="scores" data-page-node-id="RYnRgaQFnJBnVbBe5lRBf7">
-    <span class="sc" data-page-node-id="0LUih2WZe7PRdgwJwQoP8i">D <span class="bar d" data-page-node-id="BKd3of5iKKyCL77LfvUiR1"><i style="width:40%" data-page-node-id="8T3Z6wvEBDzK13v6Q5zgL2"></i></span> <b data-page-node-id="cZuXehw82zpadanVUFOPuC">4</b></span>
-    <span class="sc" data-page-node-id="FLZXpTECxDfeiPh1zHz1wt">A <span class="bar a" data-page-node-id="ybXQ6CevorQdQmjo3Fr6jD"><i style="width:40%" data-page-node-id="BZDE9rgb7tOKpO3sJ2Fiqx"></i></span> <b data-page-node-id="nFgjD40A16Sc7XLDlN0oiq">4</b></span>
-    <span class="sc" data-page-node-id="3AR93p9QJmgFLPKhAFvmrg">T <span class="bar t" data-page-node-id="BiDfYZyxuviVhfjXzwEIHy"><i style="width:80%" data-page-node-id="9grlEWfrHoffP0nOmwDeaL"></i></span> <b data-page-node-id="TPwr1ilpOTILu3LS6HymUz">8</b></span>
-    <span class="sc" data-page-node-id="cE8D519KFMIUZrD6O6dKHX">V <span class="bar v" data-page-node-id="Y3IZ4bkpV2op3G76pZs4lj"><i style="width:50%" data-page-node-id="wqCSDAsf4K0EXODliNVZ2j"></i></span> <b data-page-node-id="2BgwJyy4w8z1CtKa6CyEnn">5</b></span>
+<div class="card t-a" data-page-node-id="ptkP8pwFinQVnIrrFb26tE">
+  <div class="top" data-page-node-id="ZwKYSNYg4wCJBElZK3zzpI"><span class="num" data-page-node-id="wFXXXEIAjnde0zv5lzg2ii">02</span><h2 class="name" data-page-node-id="P3fPNEsAPExBtKeeilnRnf">Disc spectrometer</h2><span class="val p" data-page-node-id="cTTuaXgUu7vQbcNPsEDK8S">+6</span></div>
+  <blockquote data-page-node-id="TsTKoutxoUAVLxb4kboAIf"><b data-page-node-id="ZZZtaYB1uJaH7BVFrHnlql">2. Disc spectrometer.</b> Data tracks on optical media (e.g. CDs / Blu-ray discs) behave as high-quality reflection-diffraction gratings. When illuminated, these discs can disperse light into its spectral components. Construct a spectrometer using a digital optical disc. Optimise the design to maximise the resolving power and minimise optical aberrations.</blockquote>
+  <table class="sc" data-page-node-id="q7kwyCy3WCQHrl5hlNCTE2">
+    <tr data-page-node-id="sWl7tpKceKQl6BwgPa7A7A"><th data-page-node-id="kNdmJ7NhDLbtwGN0GLbr7F">Metric</th><th data-page-node-id="Vfub3xb4Ode7GNTsEvapyV">Sub-scores</th><th data-page-node-id="7a0tLigRGlY91ssLbEOnjy"></th></tr>
+    <tr data-page-node-id="8TnBicuv7c2bP6JtKZFhTz"><td class="m" data-page-node-id="4s6PHBDgjkwetDASIAY8hF">D Difficulty</td><td class="subs" data-page-node-id="BF7vv2F8PViwpY7U1NYPWF"><span data-page-node-id="qmVv8doQlhvKSecCcO29iB">apparatus <span class="mb d" data-page-node-id="R49YtUX9djMguuSwj9DlFs"><i style="width:70%" data-page-node-id="hY4oKjZVEQF2h7o5cnzKUU"></i></span> 7</span><span data-page-node-id="QUdKYDGnVOG7NBpHdIz7V0">reproducibility <span class="mb d" data-page-node-id="3afDPBhmcbFoHpanXEkPf0"><i style="width:40%" data-page-node-id="U4eUr39FoO6zw4uUgRqVpz"></i></span> 4</span><span data-page-node-id="BdsaCHmz18oZYD1G1oOR1w">measurement <span class="mb d" data-page-node-id="C8inqkcJ2UrtkYwLD0q9SS"><i style="width:70%" data-page-node-id="Pmi8qt6Zv5HJpZCVjaJ44h"></i></span> 7</span></td><td class="n" data-page-node-id="HKup7JYiFxflzbLDQ3eSUt">6</td></tr>
+    <tr data-page-node-id="0jZYEbnBBvsL0NFN7SvF4O"><td class="m" data-page-node-id="vguFn1faT3LhSjLXuFTwW6">A Attack</td><td class="subs" data-page-node-id="E55kPUvpGDbzCsL7Xgon4K"><span data-page-node-id="uaQLjNeK18CrL9Gk4zYgCS">confounds <span class="mb a" data-page-node-id="HKfk6D2nwNxLBZesxjyAXM"><i style="width:40%" data-page-node-id="viIGGbUs8wqjFvRVm22dPG"></i></span> 4</span><span data-page-node-id="M6tsC3UqOpCJM0XbjS6mtl">severity <span class="mb a" data-page-node-id="N6wAXH9ulAtMes0xtHJlPb"><i style="width:40%" data-page-node-id="JNxg9JI9C8tOhZW7UNTDPM"></i></span> 4</span><span data-page-node-id="Zy5iCxXYt14SBBdHIQXgyK">penetration <span class="mb a" data-page-node-id="nVkGEeSeNlnVS5DhDl2lSc"><i style="width:40%" data-page-node-id="X4KsTAYrQ32SRPsb0FkZOm"></i></span> 4</span></td><td class="n" data-page-node-id="mOod1aNWftnGxVVwuuE5Z2">4</td></tr>
+    <tr data-page-node-id="VBP5WBeLCVuerxTovxRYA9"><td class="m" data-page-node-id="JKJCUcPoqRhsoAFtnImPX7">T Theory</td><td class="subs" data-page-node-id="o8HXCPIiHyIQWhkgHZDgos"><span data-page-node-id="uO2hLnbok1YG7RIASHOF0b">closed-form <span class="mb t" data-page-node-id="Gv3cOfvS95zowrCeGjZC81"><i style="width:100%" data-page-node-id="JvEQCnjuDcLdoSNr68sDSP"></i></span> 10</span><span data-page-node-id="nJicVMonzRRC8XvJvs7CIn">literature <span class="mb t" data-page-node-id="HZRuoF9binJyVhL35JQkd6"><i style="width:90%" data-page-node-id="JGEbv840RH6OFOIHF0lbMX"></i></span> 9</span><span data-page-node-id="pUwFtGOFSSgAGkDRsG29v5">falsifiable <span class="mb t" data-page-node-id="AG9rKaC1YM9bMREhBFHBGU"><i style="width:90%" data-page-node-id="Jn749f8plCASjdsBYIPiFW"></i></span> 9</span></td><td class="n" data-page-node-id="pBcZUABc5Omimfab1BTPbU">9</td></tr>
+    <tr data-page-node-id="X0Oi6bBPyTIcZwHjH8ZO76"><td class="m" data-page-node-id="tIGHhitOsXcHGi6sbgRZEi">V Visual</td><td class="subs" data-page-node-id="Bgqe5pwBZslcZP3YMX3M9y"><span data-page-node-id="JVvaQtWEXStOu26m0IPNRM">impact <span class="mb v" data-page-node-id="41Sf2pcFpUmskYXxkOBAcW"><i style="width:70%" data-page-node-id="RAxAHOwl0S051lV7RgTpY5"></i></span> 7</span><span data-page-node-id="jsfVDnAa4rG213SvKzB7Ec">reliability <span class="mb v" data-page-node-id="SgVKK9I8FCBGqsnVrzHnqF"><i style="width:70%" data-page-node-id="Rp65Wo2fWHFOEFEclfsUHU"></i></span> 7</span><span data-page-node-id="XNDpleZgrJDTkrzSdoDsAM">narrative <span class="mb v" data-page-node-id="mUlx8JEjhAKok6yf5YVWuK"><i style="width:70%" data-page-node-id="3x4xHZrk6S1JPrpAddp5oF"></i></span> 7</span></td><td class="n" data-page-node-id="Ppk0OM6iv2FZeEmF2jo57e">7</td></tr>
+  </table>
+  <h4 data-page-node-id="9y1Yb4w9DZsaU8J2FkeKws">Likely findings</h4>
+  <ul data-page-node-id="2GlVAP282ofWUIEGNB7O22">
+    <li data-page-node-id="lhVvigBxbSpbeit0YYUGBG">Track pitch: CD 1.6 µm, DVD 0.74 µm, Blu-ray 0.32 µm. Grating equation <code data-page-node-id="4GENpsiEbrWOtdFAtzz37b">mλ = d(sinθᵢ + sinθₘ)</code>; resolving power <b data-page-node-id="3sQGayO6hrAClXgozYzPeH">R = λ/Δλ = mN</b>.</li>
+    <li data-page-node-id="Zmrcmda3KDnzjtFyIaeE3F">First-order deviation at λ = 550 nm, normal incidence: CD sinθ = 0.34 → <b data-page-node-id="BqmhN3D5F9yQ4GwPhyb7xb">20°</b>; DVD → <b data-page-node-id="9qMpDtmsb7beXhWgbxV1J8">48°</b>; <b data-page-node-id="6LPa4FVwfbvVHo5CSvKNEa">Blu-ray has no first order at all</b> (sinθ = 1.72 &gt; 1) — you must go to oblique incidence. A genuine, non-obvious finding.</li>
+    <li data-page-node-id="TMj557Yn4gFWtGxhLKxdyb">The tension that IS the problem: R grows with illuminated width W (N = W/d), but the tracks are <b data-page-node-id="dXF2n8EB4fVtADE7cxLlRo">circular</b>, so the sagitta over width W is W²/(8r). At r = 40 mm, W = 10 mm the sag is 0.31 mm ≈ 195 groove spacings — comparable to the resolution you are trying to buy. So <b data-page-node-id="djtT1L1hf4AHGmSNrntLmz">R peaks at an optimum W</b>, and that is what "optimise" actually means here.</li>
+    <li data-page-node-id="SmsX2mDwwjj34GJ1aW52W8">Expect a measured <b data-page-node-id="teazfoDEqhNOaJ030BnHs1">R of a few hundred to ~2000</b>, well below the ideal mN, limited by slit width and curvature aberration.</li>
+    <li data-page-node-id="ZBCGef8jyBp2EJMJayc92x">Secondary findings: using the <b data-page-node-id="qvS68fwqt8qkLJHIeIAuAY">outer radius</b> (larger r) reduces curvature and improves R; higher orders buy R but cost intensity and suffer order overlap.</li>
+  </ul>
+  <h4 data-page-node-id="FJ3j19kuAK6LVfw2at4Bwx">Attacks</h4>
+  <ol class="atk" data-page-node-id="D1PuUh6cyc6UiX2yyEwpfo">
+    <li data-page-node-id="blp6edvU5mppwOGaLdfHQ1"><b data-page-node-id="QFSgD7cwDwAlGIw38xZ5T6">"You are slit-limited, not grating-limited."</b> Your resolution is set by your slit width, so nothing you say about the grating is demonstrated.</li>
+    <li data-page-node-id="l4VlhaagBBy8dxZE03zXl6"><b data-page-node-id="dwA0jiC7mvDjg6DfGSXaT9">"You ignored the polycarbonate."</b> The beam refracts at the disc's protective layer before reaching the tracks; treating it as a bare grating is a systematic error in d.</li>
+    <li data-page-node-id="SFzRzY5Dmz2CcvfkZ0XNKL"><b data-page-node-id="zzdQqTi2ByHnW9jTraQvvd">"You assumed the track pitch from the spec sheet."</b> Manufacturing tolerance is real and you never measured it.</li>
+    <li data-page-node-id="6CsbcjvusaAOMIQlMTrX9U"><b data-page-node-id="xPUcI0Fhg1x6ra8AeUuXBJ">"'Minimise aberrations' — you never defined a metric."</b> Without a figure of merit (line FWHM, Strehl ratio) the optimisation is unfalsifiable.</li>
+    <li data-page-node-id="SOL4ob7aJamEhNes7STBks"><b data-page-node-id="IydhBBtWE6dAY6pvsDi4jH">"Order overlap."</b> m = 2 at 400 nm lands on m = 1 at 800 nm; you did not sort orders, so your spectrum is contaminated.</li>
+    <li data-page-node-id="Kz6gPEyFllIxzoEim2TyK6"><b data-page-node-id="rB4ih5MQXdDVLFvwVy33Gc">"Your detector pixel pitch is your resolution limit."</b> You are undersampling.</li>
+    <li data-page-node-id="DKWd2ystepi5F0SjZEZsl8"><b data-page-node-id="r44LBVr8fLtrZjYx7Wbi7o">"Your collimation is imperfect."</b> A divergent incident beam broadens every line and you never characterised the divergence.</li>
+    <li data-page-node-id="xKMAiqphLnnuRjUFlJFvp2"><b data-page-node-id="F3UrLl6jPTu8iyouGh0dC9">"You only tested one radius on the disc."</b> Your whole argument is about track curvature, so you needed a radius scan — one data point cannot support an optimisation claim.</li>
+  </ol>
+  <div class="killer" data-page-node-id="RCI0bFFWFqBbiNJNFRE59k"><b data-page-node-id="Z6Gh2CXfWO7okHHfloyEt0">Worst attack:</b> #1. It collapses "optimise the resolving power" into "you measured your slit."</div>
+  <div class="defense" data-page-node-id="98XtHE29c6kEAQBT9zDlGG"><b data-page-node-id="ghC7UaLNaZvnHAGP8Y4pYb">Countermeasures</b>
+    <ul data-page-node-id="zC48rwREgEfBjFEHynuKIq">
+      <li data-page-node-id="8nPr546A7BigI3NcF1RTn1"><b data-page-node-id="8cligjTSVOY8d3pFiCp3Wv">Resolve the sodium D doublet</b> (589.0 / 589.6 nm, Δλ = 0.6 nm ⇒ R ≈ 1000). Demonstrated resolution ends the argument.</li>
+      <li data-page-node-id="j3VhJxau2otAEpPHgH6yQc">Plot R vs slit width for three widths and <b data-page-node-id="nMpdS0rRA2NQX8kEyAxDcz">show saturation</b> — proves grating-limited.</li>
+      <li data-page-node-id="YhxVC7EQZYCMw3B9znxbay">Measure d yourself by diffracting a known laser (532 or 632.8 nm) and back out the pitch.</li>
+      <li data-page-node-id="FO2nnpCnEqtIjCMb7vRj8Z">Define the merit function up front (line FWHM in nm) and state it in the intro.</li>
+      <li data-page-node-id="xhGYiyKETH2GdGtonvNuC8">Scan radius and report R(r) — turns #8 into your central figure.</li>
+    </ul>
   </div>
-  <h4 data-page-node-id="Hks05UFbwAW4D7sbCzkgmq">Why it ranks here</h4>
-  <p class="why" data-page-node-id="Og3EP9etJtGcuI07p7sM5r">Class II/III MLCCs (X7R, Y5V — BaTiO₃ ferroelectric) show <b data-page-node-id="WVLcC6cdxgzOw65ln6u3xT">electrostriction: strain ∝ E²</b>. Under AC the body changes thickness periodically, the PCB acts as a soundboard, you hear it. The signature is crisp and falsifiable: <b data-page-node-id="ZZzT1k62kVv9XUpYbY72pG">drive at f, hear 2f</b> (cos²ωt has a 2ω term). You also get a perfect control — <b data-page-node-id="ZNfk5XJVmsT0B31BUcGxo3">C0G/NP0 paraelectrics barely sing, X7R/Y5V sing loudly</b>. MLCC acoustic noise is a real industry reliability problem, so there is genuine literature to anchor to.</p>
-  <h4 data-page-node-id="MgqigBfpaGH0bIT2nH21aI">Key weaknesses</h4>
-  <ul data-page-node-id="bkbAZVrCCqcW0NfL50PUqI">
-    <li data-page-node-id="ax8PLY2m8iC5E877MqZkQ4"><b data-page-node-id="43X377qhsZbx9yrUx8mtUk">Mic calibration.</b> An uncalibrated or phone mic has unknown frequency response, so your SPL spectrum is wrong. This is the main attack.</li>
-    <li data-page-node-id="DIklInLmezVxdiYzHxA0IO"><b data-page-node-id="Q3cnwfQopFP8LL1biforJJ">Room acoustics</b> — reflections and standing waves make SPL position-dependent.</li>
-    <li data-page-node-id="eROyOiGBroAEUWydFamCGF"><b data-page-node-id="IFMAXExSxDxGu2B98opsrd">Is the source the capacitor or the PCB?</b> You must vary board size / suspend the part to prove it.</li>
-    <li data-page-node-id="tnLIEzqdZO8ExwuVTDv6SJ"><b data-page-node-id="7xQb2QZZottl5eW3PcrhUt">Actual voltage across the part</b> — ESR and ESL matter at high frequency. Measure, do not assume.</li>
-    <li data-page-node-id="31tU5Z7bDt9CXlkEr2CozY">DC bias lowers Class II permittivity, so amplitude ∝ V² is only approximate.</li>
-    <li data-page-node-id="0FiX97B7HFNaZrqhseK30j"><b data-page-node-id="d1FUdmv9pddrH27YN5yFtO">Safety:</b> tens of volts at audio frequency — use a proper driver, not a bare signal generator.</li>
-  </ul>
-  <div class="killer" data-page-node-id="JBLCUvaONI70dVr4aB4iLw"><b data-page-node-id="eJso7JaElRQAgG96db2dLu">Killer attack:</b> "Your microphone was never calibrated, so your spectrum is meaningless."</div>
-  <div class="defense" data-page-node-id="2ysqdQsgMSCJi2fTJIPxur"><b data-page-node-id="zKOqm96zgHnqNHvH9Ppcl5">Defense:</b> Lead with the 2f result measured on a calibrated mic, and with the C0G-vs-X7R control. Both are mechanism-level, not amplitude-level, so they survive a calibration argument.</div>
 </div>
 
-<div class="card t-b" data-page-node-id="DsKm9laOicgVGW3Du2wldA">
-  <div class="top" data-page-node-id="VuYjfh2g6dVfWctSzH5K4S"><span class="num" data-page-node-id="QkhJ5OHeuvZT3UkhFywUNH">06</span><h2 class="name" data-page-node-id="4dBeC3DKUhHJFFMHkRFe9N">Seeing sound</h2><span class="val p" data-page-node-id="4jm09W8rt0KBR2hlWD0ufc">+4</span></div>
-  <div class="scores" data-page-node-id="spGHTGy5mB6onSANBDgVMg">
-    <span class="sc" data-page-node-id="Pj9AsVibMl0r20NnRGfGwl">D <span class="bar d" data-page-node-id="bC59ztJVTFAaZuWmGGTCBc"><i style="width:60%" data-page-node-id="DAtMbCkCgVNKPNqPcEN8b1"></i></span> <b data-page-node-id="eaEsEQYwSZkTVCVoBHUmJC">6</b></span>
-    <span class="sc" data-page-node-id="D6FZ1wJIpwcRyC8hv52XFY">A <span class="bar a" data-page-node-id="ws5CHtBN0rCrcIS6eVgRav"><i style="width:60%" data-page-node-id="eAFdRyMqLmxwdwFTSdzym1"></i></span> <b data-page-node-id="jCcmrr8KC2ECNl4aetykk3">6</b></span>
-    <span class="sc" data-page-node-id="l9aMHhZEMEiCwCZ3jp8dpo">T <span class="bar t" data-page-node-id="tX3pgWCrKO2qJn92C8hVrv"><i style="width:70%" data-page-node-id="hsyWHdV9IL8lRDRJJVJPuX"></i></span> <b data-page-node-id="LSXCzd0yZpDwLdF80Hzr4R">7</b></span>
-    <span class="sc" data-page-node-id="4DHxxKbOETYnb1KK1LXoGT">V <span class="bar v" data-page-node-id="L9SIpCZLC1tTNSoA2qlCfr"><i style="width:90%" data-page-node-id="8A97abmqP3BjW17lvoR8S0"></i></span> <b data-page-node-id="DaoQCM5uxoet7kUrfjtQbh">9</b></span>
+<!-- ===== TIER B ===== -->
+<div class="tier-head" data-page-node-id="axIdnCcTO8Z3JA337iVZil"><span class="dot" style="background:#378ADD" data-page-node-id="Tdqur1e5vWSqOwtC7CYthw"></span><h2 data-page-node-id="OU4pWfIeHfFjTmaEQfn9p6">Tier B — strong, but costly or riskier</h2><span data-page-node-id="AHFcgiCEJQyYfPKr3AsabL">good theory, real cost</span></div>
+
+<div class="card t-b" data-page-node-id="xX7w4j3q1Z7GD8SiAGkdGT">
+  <div class="top" data-page-node-id="m1HftmG7GqbRZQHp2CH7Jb"><span class="num" data-page-node-id="DQaC2LG4lS6mJaXSGf75TR">04</span><h2 class="name" data-page-node-id="S5YdgyliEGHXA3zB9FenBk">Singing capacitor</h2><span class="val p" data-page-node-id="08WPZQsiY16GzFAYdaxvaI">+5</span></div>
+  <blockquote data-page-node-id="T4O2eEE0wKMTgPeY4zgHeo"><b data-page-node-id="nyTqpuYh88846mFeQoYsAC">4. Singing capacitor.</b> Certain types of ceramic capacitors emit an audible sound when an alternating voltage is applied across them. Investigate the characteristics of the sound produced and how they depend on relevant parameters, such as voltage, frequency, and capacitor properties.</blockquote>
+  <table class="sc" data-page-node-id="LLFp8j70dyCMHRcI2pS6Jw">
+    <tr data-page-node-id="0HY4nmxBPZc3qAtPjICR2i"><th data-page-node-id="N60sbaMwVc8PUz3E0qTVbk">Metric</th><th data-page-node-id="Ll7aUHmHDG6JejKx0X3C5p">Sub-scores</th><th data-page-node-id="GSs8nyzjGnlWYUow7DQUzf"></th></tr>
+    <tr data-page-node-id="LT6Wbqj5pPGEynOqPVcDwh"><td class="m" data-page-node-id="kCRYaZVWtE4KRJI2sw6YTD">D Difficulty</td><td class="subs" data-page-node-id="dFRXpbZKTx4JUkao3oOZCp"><span data-page-node-id="jzHwWVeqxE4wf6vqcWz8EQ">apparatus <span class="mb d" data-page-node-id="Bo2H2e9qI3OAEUAojLtcgu"><i style="width:50%" data-page-node-id="dJ8RKcpYhBfMEfOzhGmw1d"></i></span> 5</span><span data-page-node-id="OYcXjLEIrInHozN0GqB50Z">reproducibility <span class="mb d" data-page-node-id="v5zuMGHHFsYZSL7uJbWPEH"><i style="width:40%" data-page-node-id="bdBG1btCRI1WFCv4pIfodf"></i></span> 4</span><span data-page-node-id="iDH0d5B1GJDxHI9x8uX8CY">measurement <span class="mb d" data-page-node-id="t5SvWwVbvgQqjsut5uKXMC"><i style="width:40%" data-page-node-id="4m6ODXaB66RqvMnAdZxklD"></i></span> 4</span></td><td class="n" data-page-node-id="jfydMY2FgIk1jLuc73zKFZ">4</td></tr>
+    <tr data-page-node-id="ZvlLmGRH3rggMQTBvzWMLs"><td class="m" data-page-node-id="EZoznI3CVWLONw6ZNLk0p8">A Attack</td><td class="subs" data-page-node-id="c3U5K2DqDjql1LSLwLloOC"><span data-page-node-id="6hPClKOUWyMSG17glAGAE2">confounds <span class="mb a" data-page-node-id="uX3FAoFkTFlu1YyDtPciNA"><i style="width:50%" data-page-node-id="5wBvrej94d9QXOvlo3Mo8r"></i></span> 5</span><span data-page-node-id="6AbS7FlmA3vPJLv7Z3Bhpj">severity <span class="mb a" data-page-node-id="p9Fo4kEWV9rWF6DKVASaVF"><i style="width:40%" data-page-node-id="hPY4DkA0fb791BWPIMmnED"></i></span> 4</span><span data-page-node-id="MqHMFQ1m7oC5GpXrlHSrkD">penetration <span class="mb a" data-page-node-id="SgOwBlGorTAxuPfFu1MH65"><i style="width:30%" data-page-node-id="sBTGDobmqBb1M3S4zARDUc"></i></span> 3</span></td><td class="n" data-page-node-id="p10lsyrzvt9O9kJHukrvHg">4</td></tr>
+    <tr data-page-node-id="HOLl3RdA34NYtNEvCVVLA0"><td class="m" data-page-node-id="0a4wNy8Cd9ySPOFPLstMGK">T Theory</td><td class="subs" data-page-node-id="b2u33jQ0Fdgosb1vo6hcZy"><span data-page-node-id="KWA1TB9N9Nq2IC7PkGJIFI">closed-form <span class="mb t" data-page-node-id="KHRkOfSgeWsnjdDvidmCc3"><i style="width:80%" data-page-node-id="VSQ5AjXnQglDK7UDpxjF89"></i></span> 8</span><span data-page-node-id="wFClv6dkJWJAdxLpaUWddC">literature <span class="mb t" data-page-node-id="DNpEE8wQHXonNdqJv5hPOc"><i style="width:80%" data-page-node-id="zq0y1qMIS8dD56PEoK5Xtk"></i></span> 8</span><span data-page-node-id="qQVDqIuFsRh21xfIzQy6zX">falsifiable <span class="mb t" data-page-node-id="iwWYFFQOcKGM5S7Ol2k5Dd"><i style="width:90%" data-page-node-id="DVhBmE9eMIUbF9T1JRStoR"></i></span> 9</span></td><td class="n" data-page-node-id="v4Gr1tbYUOzELqJMGAiXl6">8</td></tr>
+    <tr data-page-node-id="SL2SbwN1IgFSVEuZbBSTEI"><td class="m" data-page-node-id="syBPxR1iIRWZCCPhmONCWf">V Visual</td><td class="subs" data-page-node-id="qb2TiEgO8BJhKTFuTT72UP"><span data-page-node-id="ZB0xwQ3J9rzKEWaNN6XbQq">impact <span class="mb v" data-page-node-id="AT1pauE3unmG9hfOHnIIfh"><i style="width:40%" data-page-node-id="vEN1PInKZSX07DHlcBHLBM"></i></span> 4</span><span data-page-node-id="BcGvFKY6h3fGXXCfX2nJhe">reliability <span class="mb v" data-page-node-id="dmR5DhKj7bQu6u0tCkQK0y"><i style="width:60%" data-page-node-id="H7mNXmrqsN75gH6ss9IE9h"></i></span> 6</span><span data-page-node-id="9eklLWOk0iq7unptDZ2RQt">narrative <span class="mb v" data-page-node-id="DRGodi1K2XnPdO3DX6pSqk"><i style="width:60%" data-page-node-id="GFx7mR0sYKZ3TqMcVURfZK"></i></span> 6</span></td><td class="n" data-page-node-id="Wp0hFuuBOiAF0vF4S76viD">5</td></tr>
+  </table>
+  <h4 data-page-node-id="MhSgIlBBVFlMhGbtIcrYT0">Likely findings</h4>
+  <ul data-page-node-id="hRyNHEZRGQmWBsmuco27qz">
+    <li data-page-node-id="H71KZ2dXK5biz28mL40pHc"><b data-page-node-id="pFzYS07E57wATQJGGoCJNE">Headline: drive at f, hear 2f.</b> Electrostriction gives strain ∝ E², and cos²ωt contains a 2ω term. Crisp, falsifiable, memorable.</li>
+    <li data-page-node-id="5j2GN07z9SSxSSObI6LA56">Displacement ∝ V²; sound pressure ∝ f·V², with strong amplification at the mechanical resonances of the capacitor-plus-PCB system — typically <b data-page-node-id="44VJFr5fpiuk6K2NAONEbu">1–10 kHz</b>, which is exactly why you can hear it.</li>
+    <li data-page-node-id="Ph8fbHkmaR5sJCxUkckonW"><b data-page-node-id="dFYoQPvWbaZJN9hRdAmi80">Dielectric-class control:</b> X7R / Y5V (ferroelectric BaTiO₃) sing loudly; C0G / NP0 (paraelectric) are essentially silent. Expect a <b data-page-node-id="UNVbeKzzOC5vXCldSishj9">30–40 dB</b> difference.</li>
+    <li data-page-node-id="Y6h89c6xdKtPv1Bqb7ha05">Package size: 1210 and 1812 are far louder than 0402 and 0603.</li>
+    <li data-page-node-id="dqPrGAGQtu1IiiBkDA5JYT">DC bias lowers Class II permittivity, so SPL falls monotonically with added DC bias — a second clean parameter.</li>
+    <li data-page-node-id="SIdvr9ckMAFAHr9Wav1sJE">MLCC acoustic noise is a real industry reliability problem (Murata, TDK and KEMET all publish on it), so there is literature to cite.</li>
+  </ul>
+  <h4 data-page-node-id="sWdBzASyaEtHlFNNFgxz9N">Attacks</h4>
+  <ol class="atk" data-page-node-id="vRkTmmE4kkZMrHFv9ywTqh">
+    <li data-page-node-id="12KYG3nwDMsctkQIpzDw71"><b data-page-node-id="GiAttiDe0icDD4PniLIp3I">"Your microphone was never calibrated."</b> An uncalibrated or phone mic has unknown frequency response, so your SPL spectrum is meaningless.</li>
+    <li data-page-node-id="gKIVLHg0tSnq2NRb2wPCkG"><b data-page-node-id="uqNDBveGpy5p2yFsFGWp9M">"You measured the room, not the capacitor."</b> Reflections and standing waves make SPL position-dependent; move the mic and you get a different answer.</li>
+    <li data-page-node-id="Vk5UyUggUTgCn05wwIvGN2"><b data-page-node-id="JtbVSr5HwWltpMLuQTWeFO">"The sound comes from the PCB, not the capacitor."</b> The board is the soundboard — you never isolated the source.</li>
+    <li data-page-node-id="kgiBF9eHdHkObeolcpfGpD"><b data-page-node-id="pTBH5FWYLZdCxFnefIIHgD">"You assumed the voltage across the part."</b> ESR and ESL matter at these frequencies; the actual terminal voltage is not your signal-generator setting.</li>
+    <li data-page-node-id="FIaPQVU7cEUPjvcTo6MJAk"><b data-page-node-id="kLPLzJB4asGFseMXLPsES4">"You did not rule out alternative mechanisms."</b> Magnetostriction in the leads, Lorentz force, loose solder joints — you picked electrostriction without eliminating rivals.</li>
+    <li data-page-node-id="4ST92NzgfXDJudz8B5uVHR"><b data-page-node-id="MQ1dKYXpCjmHR4qWc6Ze2B">"Amplitude ∝ V² is only approximate."</b> DC-bias-dependent permittivity and mechanical nonlinearity mean your scaling law has unmodelled corrections.</li>
+    <li data-page-node-id="NKqZksqAbjcSBCO4Nvo61b"><b data-page-node-id="p6Ngxj2uwZne4A0u4CL9PY">"You changed the value and the package at the same time."</b> Two variables moved, one conclusion drawn.</li>
+    <li data-page-node-id="7CzA31k7wzQC9EbDfgcEGe"><b data-page-node-id="jqpDSPaZq2ZJA1gqv7yRIF">"Class II dielectrics age logarithmically and are temperature-dependent."</b> Your capacitor changed during the session.</li>
+  </ol>
+  <div class="killer" data-page-node-id="dqvVnnLgoCNfwWJG0Ik9Rz"><b data-page-node-id="81zoDkmBnNso9rDxEsZT7K">Worst attack:</b> #1. If your SPL axis is uncalibrated, every quantitative claim collapses. Lead with the frequency-domain result instead.</div>
+  <div class="defense" data-page-node-id="z8ECoBrG6r1rFNv85KbwiX"><b data-page-node-id="WQKIWlhUsZkaSHjdWUiPwb">Countermeasures</b>
+    <ul data-page-node-id="h4FjSxBDqzyEyggDX0TI8a">
+      <li data-page-node-id="5Fgmhje9s71trSTEBiEzix">Lead with <b data-page-node-id="v58zideqz5AbBEMoBiWpFa">2f</b> and the <b data-page-node-id="b9b5vHW2bYVFNsSWDvf2Su">C0G vs X7R control</b>. Both are mechanism-level and frequency-domain, so they survive a calibration argument entirely.</li>
+      <li data-page-node-id="C0NwijPgA17f76k2q8eBQV">Calibrate against a reference mic, or at minimum report relative SPL and say so plainly.</li>
+      <li data-page-node-id="gYAiZuKV72gJNYPeWhzygQ">Vary board size, or suspend the capacitor on fine wires, to show the board is an amplifier and not the source.</li>
+      <li data-page-node-id="Afqma1FOx6zG2smHwPLnIL">Measure the true terminal voltage with a scope probe at the part.</li>
+      <li data-page-node-id="tPCcxtazTwd4HJt1PBO2AZ">Fix the package and vary only the dielectric, then fix the dielectric and vary only the package.</li>
+    </ul>
   </div>
-  <h4 data-page-node-id="c54O62H4123Ntcv5kFqPaY">Why it ranks here</h4>
-  <p class="why" data-page-node-id="3dCwOd9Ob6yDsP7vAk0DL6">Circular membrane modes are J_n(kr)cos(nθ) with <b data-page-node-id="EgNk5vdWPVcSdHiVC8lNul">f_nm = (α_nm / 2πa)·√(T/σ)</b>, α_nm the Bessel zeros — predictable. Best-looking demo on the whole list. Note the subtlety that makes it interesting: the mirror reports the local <b data-page-node-id="HUW7P5gwkT0Rjfb1lKD5lZ">slope</b>, not the displacement, so your laser pattern is the gradient field of the mode, related to but not the same as a Chladni figure.</p>
-  <h4 data-page-node-id="ooTCS1I34mfZtX4r9UKQFv">Key weaknesses</h4>
-  <ul data-page-node-id="4no5i351YQctiAVBqC6T9t">
-    <li data-page-node-id="G7FduTcmY5XhxrGqMLZtVW"><b data-page-node-id="Jm9xiN0raBxCiKD1HDfBxN">Rubber creeps.</b> Tension drifts over minutes, so your mode frequencies drift. Re-measure tension each run.</li>
-    <li data-page-node-id="GbpJCGbahRtdd8ZmBvTcat"><b data-page-node-id="gLaNx8vpqDoDFtB59v5SlB">Mirror mass loading</b> — a "small" mirror is not small next to a thin rubber membrane. This is the best single attack here.</li>
-    <li data-page-node-id="S3yZg2oQAMdgeZpDFMiKJg"><b data-page-node-id="ipB6Z3vR0fjPNQNkDHBrZC">Acoustic or mechanical coupling?</b> If the frame is shaking, "driven by a loudspeaker" is really "driven by the bench."</li>
-    <li data-page-node-id="mGcYK3nxmyZNBDEd8Bq55i"><b data-page-node-id="a7rQDK07qNTkRCD7OCTHGc">Rubber is viscoelastic</b>, so Q is low and modes are broad and overlap.</li>
-    <li data-page-node-id="PhLY6R44DE42YMYRxq9t4m">Bessel theory assumes uniform tension and a perfectly clamped circular edge — you have neither.</li>
-    <li data-page-node-id="0nIcPIPpJGy0XXz7TUVq4O">Air currents; laser spot size vs deflection.</li>
-  </ul>
-  <div class="killer" data-page-node-id="XCdvYxVBmPVPbc6L3o4e4F"><b data-page-node-id="wLT30pS44j7grHCwqLWLNv">Killer attack:</b> "That mirror is a significant fraction of your membrane's mass. You measured the mirror, not the membrane."</div>
-  <div class="defense" data-page-node-id="RY84E6ItACB8Qs4M30S0Ut"><b data-page-node-id="cKRBNZpGNVKWJMnK4zbcwE">Defense:</b> Measure mode frequency for three mirror masses and <b data-page-node-id="zBhJf7QmbKlJgsexkWKLRE">extrapolate to zero mass</b>. Turns the attack into a result.</div>
 </div>
 
-<div class="card t-b" data-page-node-id="09ESGBHiltNwsdQcVRT31l">
-  <div class="top" data-page-node-id="bRKFTZZPu1V0ms8ImGm4n1"><span class="num" data-page-node-id="Pjf6ne89GDORyBiv0gPOQv">13</span><h2 class="name" data-page-node-id="iL9BWcWnBEU5ahsFOG905R">Vortex pendulum</h2><span class="val p" data-page-node-id="N6oYPLw9kvxFJiuifEAN4C">+3</span></div>
-  <div class="scores" data-page-node-id="S2sn0egsFHMXegGvDMcRzo">
-    <span class="sc" data-page-node-id="baPSwbSJWva5gek5sDrtzL">D <span class="bar d" data-page-node-id="EQ5LBtWyC2iFEoTEjLQSqy"><i style="width:80%" data-page-node-id="NxEfCGuhJSCp8hTdJZ7wQK"></i></span> <b data-page-node-id="1gHf2DDWmAkTrWCw79JEbZ">8</b></span>
-    <span class="sc" data-page-node-id="xzcAG0OY39NCPPVKhzPwIj">A <span class="bar a" data-page-node-id="cWigrBQlaxURs6cnQ0WIFy"><i style="width:50%" data-page-node-id="lUGBfTgJHJrVNKy0NPRDJt"></i></span> <b data-page-node-id="FKXK4vVEsExXLtv8Ezl4AG">5</b></span>
-    <span class="sc" data-page-node-id="Vy3EMnCh0c5DkXqhIEHRTg">T <span class="bar t" data-page-node-id="ymtQz42hxlGQzqbI4vyQom"><i style="width:90%" data-page-node-id="ldMjTbqQTqHeM8eRIvCdqX"></i></span> <b data-page-node-id="82ZJnYB6teWpylzF3ynhfG">9</b></span>
-    <span class="sc" data-page-node-id="0P6qwNhRZhnQjwK2GuipgK">V <span class="bar v" data-page-node-id="zr7MjMHaZ0aYGrioOnB5zA"><i style="width:70%" data-page-node-id="oDXnv0tWE5iDrJwZQsG53f"></i></span> <b data-page-node-id="PSNsWcFHCWeHaZLFNAXux1">7</b></span>
+<div class="card t-b" data-page-node-id="iO5lEn6wVMP2hEIOfMrNdf">
+  <div class="top" data-page-node-id="lTaTYF0ZqfPAKVQvB9Zd6V"><span class="num" data-page-node-id="xSQIDBaCCavT2dJjURODkr">06</span><h2 class="name" data-page-node-id="afJ019AfBUqSxqw4lgfMRk">Seeing sound</h2><span class="val p" data-page-node-id="TVkrkNYlQ0jtTRuRnkLNa4">+4</span></div>
+  <blockquote data-page-node-id="89wEKE8F6I166rhDfdDgZV"><b data-page-node-id="QT3Fg8gNbm2ye0YBEqSd1f">6. Seeing sound.</b> A thin rubber membrane is stretched over a circular frame and driven into vibration by a loudspeaker. A small mirror is attached to the membrane, and a laser beam is reflected off it onto a distant screen. Under certain conditions, the laser spot traces out complex, steady, or evolving geometric patterns. Investigate the relationship between the driving parameters, the membrane’s properties, and the resulting light patterns.</blockquote>
+  <table class="sc" data-page-node-id="1DFV8PjDcjuZP7cDPXAKde">
+    <tr data-page-node-id="AT9vyj69fCv7Dhjn84FG4e"><th data-page-node-id="HSIUfUgLpptvMT1w8rkfTQ">Metric</th><th data-page-node-id="FqXsfxUL6FAU3ht6WF9EX0">Sub-scores</th><th data-page-node-id="uvVyIczovTx6qsnC0s9F2z"></th></tr>
+    <tr data-page-node-id="hRoWEcfK3FbrHlpPo4jAkf"><td class="m" data-page-node-id="HYqz0FFMAIB0PAALlSyfLR">D Difficulty</td><td class="subs" data-page-node-id="6Mvr5VKGazN0tHl9qe07hB"><span data-page-node-id="1psa6xEPqriziBlz6eHJrC">apparatus <span class="mb d" data-page-node-id="mU8JCIkEKDC5VknzjPSWic"><i style="width:60%" data-page-node-id="gEatvYOP0vY03MvGGlu58M"></i></span> 6</span><span data-page-node-id="zbALAY3U3oG0P0V7fXIBIe">reproducibility <span class="mb d" data-page-node-id="yZYZGA0R2apuGXPydAVhyA"><i style="width:60%" data-page-node-id="qzGjrrWsUfxdzCEcmx6hvz"></i></span> 6</span><span data-page-node-id="AEsTO4FdILLnLJbiF3Gq4V">measurement <span class="mb d" data-page-node-id="lVpNjhcRlsII8p1mRvOmlu"><i style="width:60%" data-page-node-id="7sCKxIm0njtKpSchzhRvNm"></i></span> 6</span></td><td class="n" data-page-node-id="wW8z4EVcjfz29GCOZuNtMp">6</td></tr>
+    <tr data-page-node-id="2xNQpuJKGVcorZvUiaSk9E"><td class="m" data-page-node-id="EB77BRSwTWavDsdY0DVZaa">A Attack</td><td class="subs" data-page-node-id="TLby5LiL6sANjrhfzQRDMg"><span data-page-node-id="SsrDQAc9txSpm8K6RStDHb">confounds <span class="mb a" data-page-node-id="KGJQIYhFmbiEJOONfRLMwI"><i style="width:60%" data-page-node-id="6rWTtIjDxRTXVOxgYKP7ZI"></i></span> 6</span><span data-page-node-id="TFUNzDU9d0cz8oFNYbMq3J">severity <span class="mb a" data-page-node-id="YxOCpZgc1RDAFFU1VG49GR"><i style="width:60%" data-page-node-id="D7CNmjL2KaaGAlI9w17HNj"></i></span> 6</span><span data-page-node-id="KQEaCNVCVpeOCuhwJBRMzW">penetration <span class="mb a" data-page-node-id="LsXLfiUWBasXmS1zUj2H5U"><i style="width:50%" data-page-node-id="q4xluqh9EM4IO7DvdiKXgO"></i></span> 5</span></td><td class="n" data-page-node-id="g1DPSkDDFy9oCZq0hrCqK3">6</td></tr>
+    <tr data-page-node-id="I8Wx1uxBiltfShDikzFF3O"><td class="m" data-page-node-id="xHXC4PHYo9CpDt2LZBJ9Fl">T Theory</td><td class="subs" data-page-node-id="UYqZbmQ37atr32s9TiSSa8"><span data-page-node-id="SCPqIzF0CB7tPx6rLyG7gB">closed-form <span class="mb t" data-page-node-id="nh6x7kN8lWGEJCcb0RjXeN"><i style="width:80%" data-page-node-id="gSZH1E8RJJMmVrV5ItH6wR"></i></span> 8</span><span data-page-node-id="nBS0x7D6cTxb2Z2SucKFHD">literature <span class="mb t" data-page-node-id="DA05WFhjC0Xs85dqd0dJg7"><i style="width:60%" data-page-node-id="9iracFdrI7tNP48RC1zAs2"></i></span> 6</span><span data-page-node-id="mUIdy3ZpQpcOcIZIxu2Z3J">falsifiable <span class="mb t" data-page-node-id="Xmw7R0MlzUNMcy43GgHAHM"><i style="width:70%" data-page-node-id="wsoUWyIAX4zy6P1XfFpKnW"></i></span> 7</span></td><td class="n" data-page-node-id="4reS4PzIB5dcGctRuMVQ7C">7</td></tr>
+    <tr data-page-node-id="4hyJnE9ziRTEpPNypIJpgV"><td class="m" data-page-node-id="xQi9IRxghXLcBS0E41LwPT">V Visual</td><td class="subs" data-page-node-id="mQap0edi1H5LjMv2xSDoTb"><span data-page-node-id="O7agFXPP58UPHytxNBCcze">impact <span class="mb v" data-page-node-id="F2MD92XwJJR2Ir5b4t5xe7"><i style="width:100%" data-page-node-id="DO5wW1sSaECSa4MOcfOl9I"></i></span> 10</span><span data-page-node-id="uwYSGGyPlVO4SxWdfUFpN9">reliability <span class="mb v" data-page-node-id="wywWulmvjauEeOA2Z5avZS"><i style="width:80%" data-page-node-id="6Pvfoi30IGLRzCu3dstbT3"></i></span> 8</span><span data-page-node-id="s8BIChuz3NekqKCTC3VcHR">narrative <span class="mb v" data-page-node-id="63pjoDokOHevuNWdNMGdX6"><i style="width:90%" data-page-node-id="IrDLkNh4KS3kTmelUCuGe6"></i></span> 9</span></td><td class="n" data-page-node-id="2Cr0JT5PMfB6vCzpSaTAGQ">9</td></tr>
+  </table>
+  <h4 data-page-node-id="HqT45n06ugBNGAoRVBH9XM">Likely findings</h4>
+  <ul data-page-node-id="hsAYvjDy3xmA6BS2vhWOBU">
+    <li data-page-node-id="20WylUkCf3jQ0TtVWzXRWu">Circular membrane modes: <b data-page-node-id="riTx6PtRBeI2xdBhmkNVFT">f_nm = (α_nm / 2πa)·√(T/σ)</b>, α_nm the Bessel zeros. For a = 5 cm, σ ≈ 0.1 kg/m², T ≈ 10 N/m the fundamental is <b data-page-node-id="jiPRu1lfcTMZeq1aRWwODx">≈ 77 Hz</b>.</li>
+    <li data-page-node-id="sT5sUWeGvyCZtsEOXFvg7G"><b data-page-node-id="E46df2TFd8MuscxSipBWmx">Mode frequency ratios are fixed:</b> α_nm/α₀₁ = 1 : 1.59 : 2.14 : 2.30 : 2.65 : 2.92 : 3.16 : 3.50 : 3.60. Measuring these ratios is a strong, specific test of the membrane model — and their deviation is your measure of non-ideality.</li>
+    <li data-page-node-id="2BOTPKxacIP1fSvyVUnykb">Subtlety worth the talk: the mirror reports the local <b data-page-node-id="OC67WwxbsHfUyPbAcsyuXA">slope</b>, not the displacement, so the traced figure is the <b data-page-node-id="hC1HaZcmwvf2nEDfJe59tR">gradient field</b> of the mode — related to a Chladni figure but not the same thing. Explaining why is a differentiator.</li>
+    <li data-page-node-id="BEAySGGS2ZSpW6Ah1EM1j1">Off resonance or at high drive: mode mixing, beating, period-doubling and evolving/chaotic patterns — that is the "evolving" regime the problem names.</li>
+    <li data-page-node-id="QA8z3l0aCxtTDY6BNtNDzC">Rubber is viscoelastic, so Q is low (order 10–50) and modes are broad and overlap; expect difficulty separating close modes.</li>
+  </ul>
+  <h4 data-page-node-id="P6Ue3RsWdGkPGrKzz7HVFP">Attacks</h4>
+  <ol class="atk" data-page-node-id="G8KFPJbna0IfWSMZ4F9UYc">
+    <li data-page-node-id="jeZke2rYnQqd2sb6atkeYA"><b data-page-node-id="7NxWQ7LXHABbpGfLe3eUB3">"That mirror is a significant fraction of your membrane's mass."</b> You measured the mirror-loaded membrane, not the membrane.</li>
+    <li data-page-node-id="MahqOLgORS7pl5n6v7q0lf"><b data-page-node-id="55dTmUqrayovKaiURuNOzk">"Rubber creeps."</b> Tension drifts over minutes, so your mode frequencies drift and your repeat measurements are at different tensions.</li>
+    <li data-page-node-id="9E9GtWFvhuYNHIZdgVt4JL"><b data-page-node-id="3nRripq9glI43MS8iwsvsv">"Acoustic or mechanical coupling?"</b> If the frame is shaking, this is "driven by the bench," not by a loudspeaker.</li>
+    <li data-page-node-id="nScw3NsODqNoCtgtLxbMek"><b data-page-node-id="etW5kcXaf8NEOOMpZvCRMj">"Bessel theory assumes uniform tension and a perfectly clamped circular edge."</b> You have neither — clamping is uneven and tension is never uniform in a hand-stretched sheet.</li>
+    <li data-page-node-id="5edBquXcSLOEWskdgsI5YR"><b data-page-node-id="ORZMJXbteHDKWsEQnPIAgM">"Your laser spot has finite size."</b> Your resolution limit is the beam, and the small deflections sit inside it.</li>
+    <li data-page-node-id="y7LLID2CXxc1HtFnDT9EsX"><b data-page-node-id="Dz7L4ebaJfCi0qnrxdLkWs">"Air currents."</b> The room is not still, and the speaker is moving air across your beam.</li>
+    <li data-page-node-id="waslTs6itcM38PFIpJsY5N"><b data-page-node-id="OPSFNEf0IMCTWRihm3q68o">"You never measured T or σ."</b> Your whole prediction depends on two numbers you estimated rather than measured.</li>
+    <li data-page-node-id="YDNOAYyZEh7uAu00OV2Xl0"><b data-page-node-id="APFksqhBOMnfMIL20t5o7u">"The mirror rocks on its glue joint."</b> You never verified it is rigidly coupled to the membrane.</li>
+  </ol>
+  <div class="killer" data-page-node-id="sRMBjh0YfW3gZquEweA3eX"><b data-page-node-id="SxqmwwcTJ8WTumuMAxfzN4">Worst attack:</b> #1. It is quantitative, easy to raise, and hard to wave away without having done the work.</div>
+  <div class="defense" data-page-node-id="Kp0xcNFhX6bi0IKO6Xz99S"><b data-page-node-id="m9jXBW4DcSRqDHwX5sE4KV">Countermeasures</b>
+    <ul data-page-node-id="vEtepgd4W5hGUmcYvmVIEj">
+      <li data-page-node-id="WQPtrAdPrZSK3wQAtSN1Oa"><b data-page-node-id="nVDy5xuYEGQtYsaEMVU7Dr">Measure f₀₁ for three mirror masses and extrapolate to zero mass.</b> Converts the attack into a result and gives you the unloaded frequency.</li>
+      <li data-page-node-id="KcVho7YQJc62UQ9GxnUiSz">Measure T directly (a small force gauge on the rim, or a calibrated deflection) and σ by weighing a known area.</li>
+      <li data-page-node-id="ofTrXNEx4B033By6Pl2TSc">Isolate the speaker mechanically from the frame (separate tables) to prove the coupling is acoustic; then test with the speaker touching to show the difference.</li>
+      <li data-page-node-id="2NxaUo7OFIsYjmXNouxNOh">Re-tension or replace the membrane on a fixed schedule and log time-since-stretching.</li>
+    </ul>
   </div>
-  <h4 data-page-node-id="R1qExt3PshwI7IF2iYqKYw">Why it ranks here</h4>
-  <p class="why" data-page-node-id="iBEUYQ0F0WJIC1646dXrmm">This is <b data-page-node-id="d6jpDRmqV2VCS2s4zR8K4T">vortex-induced vibration</b>. Flow past the cylinder sheds alternately at <b data-page-node-id="OlFAkCKT0DjR8Nc2P2XxtQ">f_s = St·U/D with St ≈ 0.2</b>; when f_s meets the pendulum's natural frequency you get <b data-page-node-id="uYX8GGftxoKJglrITGCDy5">lock-in</b>and large cross-flow oscillation. Theory armor is excellent — Strouhal, lock-in, wake-oscillator models (Facchinetti et al.). <b data-page-node-id="bG6o3OPpZd946dyIOKAfNT">The only reason it is not Tier A is infrastructure:</b> it needs a recirculating flume with controlled, uniform, measured flow. If your school has one, D drops to ~4 and this jumps to #2.</p>
-  <h4 data-page-node-id="8WzJ6Z3OTE9xhzEHuKW5tP">Key weaknesses</h4>
-  <ul data-page-node-id="dL2HA37qPzqeDI6wwzVCWP">
-    <li data-page-node-id="QjhDt0Ete33QyDyWMSKiSs"><b data-page-node-id="poyPdpWFXv8pyL1QcMk15G">Blockage.</b> The bob is large relative to a lab channel, so the walls change the shedding. Needs a correction you may not be able to make.</li>
-    <li data-page-node-id="pHMJpKd1r1EcQkmqzrZVOq"><b data-page-node-id="pEp1eKwqHcZpcDb6LDdd8X">Free surface.</b> Partially submerged means Froude number matters too — two dimensionless groups, not one.</li>
-    <li data-page-node-id="pFRGaO7QMQTUF9iZH6bcxN">Flow uniformity and turbulence intensity in a DIY channel are poor; U is hard to measure well.</li>
-    <li data-page-node-id="5BnayfPwDhGOdM4FqoHCdO">Bob roughness and the waterline contact angle.</li>
-    <li data-page-node-id="SUzbjzaXeWfDfReFShJxXT">Bottom end effects; Re may be in a range where St ≠ 0.2.</li>
-  </ul>
-  <div class="killer" data-page-node-id="VpKY1JoH3aHBcVwnvMHwbh"><b data-page-node-id="g2h0SUK2tYQDXvrgEyHurO">Killer attack:</b> "Your channel is barely wider than your bob — you measured the walls."</div>
-  <div class="defense" data-page-node-id="HyAdGWt9hQUkgMkRNj7Qvt"><b data-page-node-id="flHDsXWf4E6zzFwxGZDZhf">Defense:</b> Run two bob diameters and show the Strouhal scaling collapses onto St ≈ 0.2 in both. Blockage then becomes a correction, not a refutation.</div>
 </div>
 
-<div class="card t-b" data-page-node-id="BPID0GR8pvqNxcG6fW22qL">
-  <div class="top" data-page-node-id="gl2EMTeIKTAAuDgF3JqQyg"><span class="num" data-page-node-id="o6MSQ6bNOG1V5BpX25Pg3J">16</span><h2 class="name" data-page-node-id="YV8n1hkonrNK3mK0H6s2Db">Magnetic carousel</h2><span class="val p" data-page-node-id="aPvHjgwDSoK2Ozx24lgHSX">+2</span></div>
-  <div class="scores" data-page-node-id="mMA8DaRWBYkZqXBYhWgWRw">
-    <span class="sc" data-page-node-id="gdnGiTb35MUD4TtyyvCxw9">D <span class="bar d" data-page-node-id="g4bkKHuw3MmDtIkkmXBfR5"><i style="width:50%" data-page-node-id="CqPhYfUmcQ75q68lEsDwcK"></i></span> <b data-page-node-id="GyoFZM3DeGcDxAe2PdHpkE">5</b></span>
-    <span class="sc" data-page-node-id="FlVM55H9feH4sICzkygJDc">A <span class="bar a" data-page-node-id="JdNUO35MUyDpxq053HlwIk"><i style="width:60%" data-page-node-id="qDi8H989EbXBRDuvpilhC5"></i></span> <b data-page-node-id="LOe3HsNhZGBpX4eRCrFXDI">6</b></span>
-    <span class="sc" data-page-node-id="k5OXkmBNvl6HOLzSOoE9sF">T <span class="bar t" data-page-node-id="AWuh5di01o1unBnTasOeOh"><i style="width:50%" data-page-node-id="dgA6tR0xG6ppIQfjsSX5Yj"></i></span> <b data-page-node-id="QLS5NLzqQhopHjAFCxBl99">5</b></span>
-    <span class="sc" data-page-node-id="YIcPAMMc51SjsE1l8pYIn9">V <span class="bar v" data-page-node-id="9VVuosn6SF3UDR6o4tKcLI"><i style="width:80%" data-page-node-id="7v8a3UG5g2e0Hz2HCTvsnl"></i></span> <b data-page-node-id="CPTv6ghbU8DVL81WjJlqud">8</b></span>
+<div class="card t-b" data-page-node-id="DqWNsKfNeViG3BBzS9frxG">
+  <div class="top" data-page-node-id="f2hh1NaBOnQSlYnELOksLt"><span class="num" data-page-node-id="Zcw7rSkX3UPDESbs0eTxEM">13</span><h2 class="name" data-page-node-id="ppNH764EqqQfNjpPRU8qUH">Vortex pendulum</h2><span class="val p" data-page-node-id="WShyubIsHwFisRhuzZBWHe">+3</span></div>
+  <blockquote data-page-node-id="kvVgPjfXeRaectPqg15Ctn"><b data-page-node-id="5RgYCMgnYX7DsLACamkJBj">13. Vortex pendulum.</b> A pendulum with a vertically oriented cylindrical bob is suspended above a channel of flowing water. When the bob is partially submerged, the flow may cause the pendulum to oscillate in a direction perpendicular to the flow. Explain this phenomenon and determine how it depends on relevant parameters.</blockquote>
+  <table class="sc" data-page-node-id="X50F1qKCs9mjinjZmH8ME8">
+    <tr data-page-node-id="wfdmbw5EcVb6TYnPv9DatF"><th data-page-node-id="M0CzkUdJAl39aAGaZXKJ4Q">Metric</th><th data-page-node-id="dGoqE1p3YV8Hm1abmUiD43">Sub-scores</th><th data-page-node-id="jyT8c7sMB4uQrSJ1zOurAa"></th></tr>
+    <tr data-page-node-id="2ZeEvvi1PqOWtxaJig8OBO"><td class="m" data-page-node-id="ytMzBW9lDzN15Hw618dpiA">D Difficulty</td><td class="subs" data-page-node-id="EnHrkUBC23iI14RD0FaCq9"><span data-page-node-id="eebNa9KlDnWOHYf2TSFFSy">apparatus <span class="mb d" data-page-node-id="lEgIUagmxAHLmoDDaenhDU"><i style="width:90%" data-page-node-id="RtldAS9J5FisJ4yw5bfFvg"></i></span> 9</span><span data-page-node-id="yHrEhSqWuC7J5p0aCxHQ9c">reproducibility <span class="mb d" data-page-node-id="8xFd3B3MWc24SYCVusot13"><i style="width:60%" data-page-node-id="YqxqXvh3WNijSuEoOfp57U"></i></span> 6</span><span data-page-node-id="9r7C541gp7w6p7EpPauRzU">measurement <span class="mb d" data-page-node-id="wWLC3yT4siM72mR4x08oNW"><i style="width:80%" data-page-node-id="B333fWK1ysLypDUpM7HvwB"></i></span> 8</span></td><td class="n" data-page-node-id="IIP6glb5fCTUUvI9QM96OC">8</td></tr>
+    <tr data-page-node-id="VGDZv8mkYchYOt0A5DyZxO"><td class="m" data-page-node-id="0LrMNEpgwsjyZzDgUWuqQO">A Attack</td><td class="subs" data-page-node-id="OLn1EGtVXbMzF0pDPwXkZB"><span data-page-node-id="TFfrDWvcu2BcslPVhAMbOC">confounds <span class="mb a" data-page-node-id="hca7bGQtXOFNETLEhHgq34"><i style="width:50%" data-page-node-id="90JS2s4tZ89QoCGRss9zFj"></i></span> 5</span><span data-page-node-id="ponOTYTdYatDJTC5cBHTTL">severity <span class="mb a" data-page-node-id="PGFrod2qpzv3IAAWqKJ5xj"><i style="width:50%" data-page-node-id="XyJuKALfZ4JrQvru5Abk62"></i></span> 5</span><span data-page-node-id="qMkBUdC3MzhtMkP9dJUgCZ">penetration <span class="mb a" data-page-node-id="Npqu6ZG38iCw2qFz41sESL"><i style="width:40%" data-page-node-id="szrKgLxV4F21ifswvJhQLr"></i></span> 4</span></td><td class="n" data-page-node-id="6208hCxQ71XDB2JyhE572s">5</td></tr>
+    <tr data-page-node-id="fy0ecmUtDC3EjJvpPTyzkP"><td class="m" data-page-node-id="vytEN4fuAeZ9G6RG6U4Rvp">T Theory</td><td class="subs" data-page-node-id="1DZK3mrJxDIqQA3oDjbjek"><span data-page-node-id="PUumDBlR1ieG8iCEmJ0X0S">closed-form <span class="mb t" data-page-node-id="hDgmrmRiWfzYS9ifBcU4GL"><i style="width:90%" data-page-node-id="Cu9Hatd3ruC8yQ4B9w8jto"></i></span> 9</span><span data-page-node-id="lLoTOp4YJIkj3LQdUBJRd2">literature <span class="mb t" data-page-node-id="x78t4u4TRiEdlxEy5qE0Bo"><i style="width:90%" data-page-node-id="aWEAXPT3g0su7aV5Abvizo"></i></span> 9</span><span data-page-node-id="4Ba7F87l4mriyWYFqKo5ii">falsifiable <span class="mb t" data-page-node-id="CDgEg8lsufOtmIyan6Y1kV"><i style="width:90%" data-page-node-id="ywKl7o21O6x1Qj7h9evphg"></i></span> 9</span></td><td class="n" data-page-node-id="L1AD355A1kkT7FCVVzNNUs">9</td></tr>
+    <tr data-page-node-id="a8yvQv7kOCUu5LZZtOdMvP"><td class="m" data-page-node-id="vHFDEXMVCLddCDZjWDDRpR">V Visual</td><td class="subs" data-page-node-id="EKFxDir4pHhkepEnvM5FFc"><span data-page-node-id="mgiiNkSvtZF5rN2LqNBpSK">impact <span class="mb v" data-page-node-id="h51yzTQQA0KHMPtJbK0AAw"><i style="width:70%" data-page-node-id="k0KU4NYxEwWAIBxdORUTF2"></i></span> 7</span><span data-page-node-id="qiLKZzlGqxBVjO6ynSEgrY">reliability <span class="mb v" data-page-node-id="zj1fX4fCWNqqLB2BigxFDU"><i style="width:60%" data-page-node-id="We1083N5zqqjl55mlgaGC2"></i></span> 6</span><span data-page-node-id="aaADlKKGrdZ1GHn5vxtzGD">narrative <span class="mb v" data-page-node-id="UX2qxh4J964qgTvZGa4pvI"><i style="width:80%" data-page-node-id="W86kKblLi5wPy7NijCIFEJ"></i></span> 8</span></td><td class="n" data-page-node-id="SpVMnKtPxhSAPCcqhOdfAT">7</td></tr>
+  </table>
+  <h4 data-page-node-id="fTn2krYQIuGaVfCygLOul2">Likely findings</h4>
+  <ul data-page-node-id="KQSnhwhNTB7J7MtnnktT9h">
+    <li data-page-node-id="HYys3KiG33RNJBbEez3DEj">This is <b data-page-node-id="Zm2iLqOFFRDqcEFKORd3EN">vortex-induced vibration</b>. Shedding frequency <b data-page-node-id="cb5aJHLyDtrZIc2xdggWkk">f_s = St·U/D</b> with <b data-page-node-id="HribAkm4VDZQor4MCdsVjX">St ≈ 0.2</b> for 300 &lt; Re &lt; 2×10⁵.</li>
+    <li data-page-node-id="I96iINWhz0mAS1Wq5Gcmoh">Numbers: D = 3 cm, U = 0.2 m/s ⇒ f_s = 1.33 Hz. Matching f_n = (1/2π)√(g/L) = 1.33 Hz needs <b data-page-node-id="z6jUNcnWVt7ffI6veWRq0o">L ≈ 14 cm</b>. Entirely buildable.</li>
+    <li data-page-node-id="6QZWOSvVKxgyaVBslzE7vT"><b data-page-node-id="urgWyOCi2eofBnH4oHsaLd">Lock-in:</b> amplitude peaks when f_s/f_n ≈ 1, over a band roughly 0.8–1.3. Peak amplitude of order <b data-page-node-id="AAHM2EThjogjL3mISFeYOq">0.5–1.5 D</b> (1.5–4.5 cm).</li>
+    <li data-page-node-id="3FWdjQygEyJuffCK9qUxax"><b data-page-node-id="0AfncXAXWVUI3v9qgu1wCJ">Hysteresis:</b> the lock-in band differs when you sweep U upward versus downward. A classic VIV signature and an excellent "we went further" result.</li>
+    <li data-page-node-id="tCLrAswG2o7GzqAXwKu5Cx">Submersion depth matters — only the wetted length sheds vortices, so expect an <b data-page-node-id="doquW2xLuEMGnDLeaIM8xe">optimum submersion</b>.</li>
+    <li data-page-node-id="oX4G4lgE5ktEUoZqHnOsA8">Theory armor is excellent: Strouhal, lock-in, wake-oscillator models (Facchinetti et al.). <b data-page-node-id="xnRqFyVGwDYTp83KiZtazp">The only reason this is not Tier A is the flume.</b> With a channel available, D drops to ~4 and this becomes #2.</li>
+  </ul>
+  <h4 data-page-node-id="8Cc3QZXCEenDszPyj6s7UE">Attacks</h4>
+  <ol class="atk" data-page-node-id="dzfCaDDmFt4UO3WFy57B2D">
+    <li data-page-node-id="Qc9A8hJDtDlTeMKXWykbLX"><b data-page-node-id="rTd7nT6ojOajqRpyZuPocg">"Your channel is barely wider than your bob — you measured the walls."</b> Blockage changes the shedding entirely.</li>
+    <li data-page-node-id="PKS6d2IZK74K7VhTfl9b5z"><b data-page-node-id="RmAAZZUwIls8JkxwFMTLIq">"Free surface."</b> Partially submerged means Froude number matters too; you have two dimensionless groups and varied only one.</li>
+    <li data-page-node-id="s6iyrHmDyZX4yn6qBEjh6e"><b data-page-node-id="BKsNBb4o8dl4jGaNCLzDyP">"Your flow is not uniform and you do not know its turbulence intensity."</b> A DIY channel has a developing, sheared profile.</li>
+    <li data-page-node-id="5K05ADfRKbMAPkCM7DiU5F"><b data-page-node-id="XEAfVEOtaYofh6e5cpeRr6">"How did you measure U?"</b> A propeller meter in a 10 cm channel perturbs the flow it measures.</li>
+    <li data-page-node-id="mo6bbBKXdXR2ObCU26GZu0"><b data-page-node-id="xBGlfoQJlKhACKrJbOju3c">"Bottom end effects."</b> The bob's lower face is near the floor; the tip vortex and gap flow are unmodelled.</li>
+    <li data-page-node-id="d99hXenD8FQQ4bB09t3tW2"><b data-page-node-id="Gly9iJG6cdwtH5QVppcax1">"Your Re is outside the range where St ≈ 0.2."</b> In a small channel you may be at Re of a few hundred, where Strouhal is strongly Re-dependent.</li>
+    <li data-page-node-id="GAQFJ1pMC8Xdmp5k0swjvk"><b data-page-node-id="cpYcf5SikI0VEpr7yNYOWF">"Meniscus and contact-angle effects at the waterline."</b> The wetting condition at the bob is uncontrolled.</li>
+    <li data-page-node-id="WlXnctCoZ2Npw1cqEpn9A5"><b data-page-node-id="smGYzfogledRDkxMdTeSYr">"Is it VIV, or is the pendulum just responding to surface waves you generated?"</b> You never separated the two excitations.</li>
+  </ol>
+  <div class="killer" data-page-node-id="bFFLoCijDA1ZZ1v1QDvyDg"><b data-page-node-id="qvC7HCNDeo6WU9DFOhW9cZ">Worst attack:</b> #1. Blockage is a genuine first-order correction in any lab-scale channel and cannot be removed by technique.</div>
+  <div class="defense" data-page-node-id="lyp3pyBqNQSYH9UlKwsGJ2"><b data-page-node-id="vzJIy9MSBuVEoZILyMbFdL">Countermeasures</b>
+    <ul data-page-node-id="MCID3PqRvUcLd6WHYOvu4r">
+      <li data-page-node-id="oEAoxv48FZAuR5LEtlyNmC">Run <b data-page-node-id="9zVAGgb2Jqpiyd9g4PXsNk">two bob diameters</b> and show both collapse onto St ≈ 0.2 when properly scaled — blockage then becomes a stated correction rather than a refutation.</li>
+      <li data-page-node-id="gGiKJ9rN8wIgjUsAiC7kBr">Measure U with dye PIV (non-intrusive) or upstream of the bob, and report the profile, not a single number.</li>
+      <li data-page-node-id="JMcaY0HFvMr2GiytC1ADZ9">Add a surface-piercing <b data-page-node-id="J5m4NQC1aYvRPFSBQO8eWG">wave damper</b> upstream and downstream to isolate VIV from wave forcing — directly answers #8.</li>
+      <li data-page-node-id="6cZnE4bgXCUXQnbzxZcmqD">Report Re and the blockage ratio explicitly on every plot.</li>
+    </ul>
   </div>
-  <h4 data-page-node-id="fCdG5S3EtgwNpOHegvVkcm">Why it ranks here</h4>
-  <p class="why" data-page-node-id="5MOdMi5IZq0Bt7gXHHlbS4">Alternating-polarity magnets on a rotating disc create a <b data-page-node-id="wHbRXt3HGnckZlPSuxZhNT">travelling periodic potential</b>. If the ball locks into a potential minimum it is dragged <b data-page-node-id="iBkic28QLpCGd85I8aAq1m">with</b> the wave; if the wave outruns it, the kicks average to a push <b data-page-node-id="gFk06AHH8AY7IfTAA6V2cq">against</b> the rotation — exactly slip in an induction motor. A ball moving backwards while the disc moves forwards is one of the best visual hooks on the list. The theory is thinner than the optics problems, which is what holds it to Tier B.</p>
-  <h4 data-page-node-id="8egR0uLcUiOOMBmmXC4k6U">Key weaknesses</h4>
-  <ul data-page-node-id="PP6PQkeoR04qDPlYjK5k1A">
-    <li data-page-node-id="nMLhASBLiwGShq6ie6oPrm"><b data-page-node-id="cCmGBRAIwknYT6AXTjHeiU">The steel ball becomes magnetised.</b> Remanent magnetisation with history dependence means the ball's behaviour depends on what you did to it earlier. Use a fresh or demagnetised ball per run.</li>
-    <li data-page-node-id="0vi8hNpZyjzIf2jdfLaY1w"><b data-page-node-id="4TqgPIjXZzDn1XguGvH8MS">Friction is half the physics</b> and is entirely uncontrolled — plate material, dust, rolling vs sliding.</li>
-    <li data-page-node-id="dRXAwDmP6i49Ov1SNmE1jd"><b data-page-node-id="CgxcrQea5sfVg8nTwQLpaB">Plate thickness sets the gap</b>, and the dipole field falls off steeply (~1/r⁴). Small gap error, large effect.</li>
-    <li data-page-node-id="c6ky9HRCnxAkyHMKo47IUs"><b data-page-node-id="ILOwBTjE5rW58ekq15HPYU">Plate level</b> — gravity biases the ball downhill.</li>
-    <li data-page-node-id="VD4jTLLdnsHIl2mIK2pdqL">Magnet strength varies unit to unit; magnetisation direction has tolerance.</li>
-    <li data-page-node-id="EvY2cErwopNhfuHmwDI7CC">Speed must be closed-loop or continuously measured.</li>
-  </ul>
-  <div class="killer" data-page-node-id="FPKvvADyb0iNaIKTnkkLHY"><b data-page-node-id="2OcYHVhU4WOEIIlknnwDWH">Killer attack:</b> "Your ball has been sitting next to neodymium magnets all afternoon. It is magnetised, and you never controlled for it."</div>
-  <div class="defense" data-page-node-id="GvjME1V7k5kKplYs3Ku2HB"><b data-page-node-id="zmWG9T9OhdPR8cHmQPniXU">Defense:</b> Fresh ball for every trial, or demagnetise between runs, and report the gap (plate thickness) as a stated, measured parameter.</div>
 </div>
 
-<!-- TIER C -->
-<div class="tier-head" data-page-node-id="t10I5ygwf9NnujYzciM6Bi"><span class="dot" style="background:#EF9F27" data-page-node-id="aAZgMCoxbMOHN33ZYxYHlU"></span><h2 data-page-node-id="Tkwczf1uDhhnKvRkWR9XDb">Tier C — take only with a specific edge</h2><span data-page-node-id="SIChiYldDBYz02WBCtbO2Z">workable, but you must control something others won't</span></div>
-
-<div class="card t-c" data-page-node-id="zFHkWVTGVuthQjkjCaVZ32">
-  <div class="top" data-page-node-id="PDQErXz6nPEdkJLy5Iz3Rf"><span class="num" data-page-node-id="g0jAH4gMnGK3sLJfabp3JF">01</span><h2 class="name" data-page-node-id="ZPGD0aGOBXbyL09vf7KzuB">Pinhole sunglasses</h2><span class="val n" data-page-node-id="CLtfTauwdPEVmRF5bDdfS3">−1</span></div>
-  <div class="scores" data-page-node-id="ZNAnbhuhDuzaE4RTCEpOjy">
-    <span class="sc" data-page-node-id="tZtMfaLMkZDyIvlby0hOLK">D <span class="bar d" data-page-node-id="X8eeJ2hW8pvWaejvm4BXZD"><i style="width:60%" data-page-node-id="B6VUMyJQhf87gYJJg7k1MD"></i></span> <b data-page-node-id="5VAEIu6O1Huef00pQcjvOC">6</b></span>
-    <span class="sc" data-page-node-id="1wWIKKDzVVdUBuNIrw5Emx">A <span class="bar a" data-page-node-id="55duu9S9WVVhdxpK6SBxt5"><i style="width:70%" data-page-node-id="RiHgGRIdqo0pBi1MQSqN2k"></i></span> <b data-page-node-id="InZkzStytTx7PDmWBhrlHw">7</b></span>
-    <span class="sc" data-page-node-id="ADU2YcCC8k9nijoecEQEcd">T <span class="bar t" data-page-node-id="rYqPPkQXlB03wZ9wlLHHFC"><i style="width:60%" data-page-node-id="ExF8jse20OPPw26UsonV3p"></i></span> <b data-page-node-id="wjSiiCF3FLiHlSo1DvKBGz">6</b></span>
-    <span class="sc" data-page-node-id="ZsitRmi5py2oFdzVZM2YAl">V <span class="bar v" data-page-node-id="GQZ8gh677aoU0yDHwDvegQ"><i style="width:60%" data-page-node-id="fVybmhvO8WVXmvRLARUzf0"></i></span> <b data-page-node-id="XzOvwaRztHepM7hb4YHl6T">6</b></span>
+<div class="card t-b" data-page-node-id="IfP48AE3WINv8ZtHopEVJr">
+  <div class="top" data-page-node-id="3XmwHJkcq1zpmQCMHXL0E7"><span class="num" data-page-node-id="CqmjCOpzlZFVuPR9QKWa1r">16</span><h2 class="name" data-page-node-id="4jvh80Bo9BCkt8fXjNEAu1">Magnetic carousel</h2><span class="val p" data-page-node-id="Ht2VcAPE3AounsloKE5hTo">+2</span></div>
+  <blockquote data-page-node-id="F8AHEg4fo069m9HG2tnCBR"><b data-page-node-id="eDht30GV6FZR2g0J7hjIcA">16. Magnetic carousel.</b> Several neodymium magnets are attached to a horizontal disc, with adjacent magnets oriented in opposite directions. A fixed non-magnetic plate is placed horizontally above the disc. When the disc rotates about its vertical axis and a steel ball is placed on the plate, the ball may move either in the same direction as, or opposite to, the rotation of the disc. Investigate this phenomenon and determine how the motion depends on relevant parameters.</blockquote>
+  <table class="sc" data-page-node-id="u57XfkDTusHBsQ9HKgvr1H">
+    <tr data-page-node-id="5AB4oaH7bQo92aAFec56aM"><th data-page-node-id="sGnCh5Ydahhu4UPg7oP7M0">Metric</th><th data-page-node-id="xigaOxRtHpcenyXGvRRKAs">Sub-scores</th><th data-page-node-id="ayV87QhUvtN7pNOzU5RqUs"></th></tr>
+    <tr data-page-node-id="eJENme2ecat92X24DWMQ3s"><td class="m" data-page-node-id="LEB7BkQggRbRSntNCbIf8f">D Difficulty</td><td class="subs" data-page-node-id="n1HwRi87xaxT2LvPuUa6ee"><span data-page-node-id="9m5u5jDBrMvZRJbiwtW7Nt">apparatus <span class="mb d" data-page-node-id="5vxJbnbgAivoYGBDTniW9R"><i style="width:50%" data-page-node-id="ngOZXdxE2TBWK4bdaBCK0P"></i></span> 5</span><span data-page-node-id="PL2J36RtWWe0yHkFGxXlzY">reproducibility <span class="mb d" data-page-node-id="0l02kk30Qq9MC5RHXxJgbh"><i style="width:50%" data-page-node-id="yHi4cAHkDMgGbPzJ2Ejk2r"></i></span> 5</span><span data-page-node-id="EE79aqjrHUs4Y5yppE11Rp">measurement <span class="mb d" data-page-node-id="TIPBl9Z2f6POv3IY1cATqS"><i style="width:50%" data-page-node-id="hElw9z3wV7ePnteucOkBQC"></i></span> 5</span></td><td class="n" data-page-node-id="GLNjvHZsRLgVT9YGieZRue">5</td></tr>
+    <tr data-page-node-id="QO4Mvt6mWS2HzNULKexAiA"><td class="m" data-page-node-id="EOAD7fXN1t2xt2RH7tepip">A Attack</td><td class="subs" data-page-node-id="V9HiF2fLD9798PoXbUuujM"><span data-page-node-id="goQ8FiGnERsrrAKANWxtpU">confounds <span class="mb a" data-page-node-id="g3EBWk90EanSzotekQ4rFw"><i style="width:70%" data-page-node-id="huxTNDQPfatYrZYjLjegP9"></i></span> 7</span><span data-page-node-id="wEuTXUaSkGdFevJ9bFXIBq">severity <span class="mb a" data-page-node-id="E1XxeWevAryLm1J2mEL6W3"><i style="width:60%" data-page-node-id="maxDVD8y8MkbOPFj9a30qp"></i></span> 6</span><span data-page-node-id="4xokQzOWE6f8zZHN0v718G">penetration <span class="mb a" data-page-node-id="Pt7DeQu9wkX9QxC2KXYN5T"><i style="width:50%" data-page-node-id="k6XnE4rPVUkeyW3iCIYQZ7"></i></span> 5</span></td><td class="n" data-page-node-id="RVaJd9mlAoQ1xdztHC9pDM">6</td></tr>
+    <tr data-page-node-id="37lcTOYTzWcVnHVZM4gArh"><td class="m" data-page-node-id="XPMtzMY9wYXszyEEjQ4ToK">T Theory</td><td class="subs" data-page-node-id="mQPrAKL2YydoLoNAkf6Z2a"><span data-page-node-id="ql5kHOHd83j9T83pXSiapZ">closed-form <span class="mb t" data-page-node-id="bt7gIvmLoeHrXSKaNg8rTR"><i style="width:40%" data-page-node-id="r7SkVHvn2Sephx3F3J0Zh2"></i></span> 4</span><span data-page-node-id="A4y2q5kZPqT2w1Qw0Civrd">literature <span class="mb t" data-page-node-id="dd3nUtCO511MKUR01aZa8M"><i style="width:40%" data-page-node-id="5CPdbbxUdj7vbyJPJ6eZS1"></i></span> 4</span><span data-page-node-id="g0QPCxp5sBKhDZHT8YEzqL">falsifiable <span class="mb t" data-page-node-id="OZU4dgi77jjFEv40f94XG4"><i style="width:70%" data-page-node-id="9hBUVcNqFs5c8GVxNCMIB1"></i></span> 7</span></td><td class="n" data-page-node-id="PGykdLk66OBZACSBCNytXp">5</td></tr>
+    <tr data-page-node-id="0xnAIc9p5rKsKEX9SvgXl4"><td class="m" data-page-node-id="E5S7oFhEnj4gctfarnAGdS">V Visual</td><td class="subs" data-page-node-id="Ry7AVil4VXeLw05EEHe5NA"><span data-page-node-id="9z7Vo0wa8Aj9rxhMdfSNfI">impact <span class="mb v" data-page-node-id="VAqvTGon3EiHXxVmHnHHwp"><i style="width:90%" data-page-node-id="C64ai2kCdK5LevHdOMp0Fy"></i></span> 9</span><span data-page-node-id="uxAX47yR4KC0izxgVBdDXg">reliability <span class="mb v" data-page-node-id="u7wdQYPjQvowwISm2ZFAnS"><i style="width:80%" data-page-node-id="20oji5imALhHlQOfdGEszh"></i></span> 8</span><span data-page-node-id="HUg0eNUqdAt1RZmqjViy1z">narrative <span class="mb v" data-page-node-id="LI6icRoAZC7Qapt0k9mC0f"><i style="width:70%" data-page-node-id="kTvGosQkGZMMyN33Sx5scn"></i></span> 7</span></td><td class="n" data-page-node-id="FMZVZP1TnAfWrKmA4hnHrK">8</td></tr>
+  </table>
+  <h4 data-page-node-id="qbBPZatrmSCS8YxlNkEeJB">Likely findings</h4>
+  <ul data-page-node-id="7qUY9L9RbiOshztfzD8zxZ">
+    <li data-page-node-id="VArvGbAqbjJSOZTbujOU7X">Alternating polarity means the field pattern repeats every <b data-page-node-id="VvtEM7AqbB5fBHTvxuyAJ3">two</b> magnets, so the travelling potential has period 2× the magnet spacing.</li>
+    <li data-page-node-id="TZiNYRUD3FHakQzVEMfG3f">Two regimes, and the boundary is the result: at low disc speed the ball <b data-page-node-id="qa8uFAmgjzPjkjuKHlLgBG">locks into a potential minimum and co-rotates</b> (synchronous-motor-like); above a critical speed it cannot keep up, slips, and the kicks average to a net push <b data-page-node-id="bSS3j8D5d2wZUkAdhwDmDQ">against</b> the rotation (induction-motor slip). A ball moving backwards while the disc moves forwards is one of the best visual hooks on the list.</li>
+    <li data-page-node-id="bHLvk51cxaYJwzxhai5mmw">The critical speed ω_c is set by F_mag,max ≈ µ_s·mg. Since the dipole force falls steeply with gap (~1/r⁴), <b data-page-node-id="sETDmDhW8K9SJNAjljORSN">ω_c drops sharply as plate thickness increases</b>. Expect a clean ω_c(gap) curve.</li>
+    <li data-page-node-id="rzHFlffkweRDOJrcY58TKf">Intermediate speeds: intermittent motion, the ball jumping between minima, possibly stick-slip.</li>
+    <li data-page-node-id="kyoS7S9GgZBKNXm4ZrCGe2">v_ball vs ω_disc should be piecewise with a clear sign change — that plot is the talk.</li>
+  </ul>
+  <h4 data-page-node-id="V5kWSAxavPgFypbNYE2idL">Attacks</h4>
+  <ol class="atk" data-page-node-id="K30UamBZ1gPcn1ThKGQkPt">
+    <li data-page-node-id="UQcTNyS90JR4C6grgpHLXZ"><b data-page-node-id="LchOVAiuPsgrqwzs5dG1Gr">"That ball has been sitting next to neodymium magnets all afternoon. It is magnetised."</b> Remanent magnetisation with history dependence — its behaviour depends on what you did to it earlier.</li>
+    <li data-page-node-id="axbDxhS61KD6TwRKUvWBQw"><b data-page-node-id="Z2cLlit8D5iO7Hoe8BR1Yh">"Your friction is uncontrolled, and friction is half the physics."</b> Plate material, dust, humidity, rolling vs sliding all move the answer.</li>
+    <li data-page-node-id="eIhQozmGTLhVhQyONoJt20"><b data-page-node-id="sQVdppQzHPcVhldhPkFJu2">"Your plate is not level."</b> Gravity biases the ball downhill and you never checked with a spirit level.</li>
+    <li data-page-node-id="vTVaK9FgoL7qBgBntnjG5w"><b data-page-node-id="hhfT3PxoKe6H1bqIASe5Tu">"Plate thickness sets the gap, and the dipole force goes as ~1/r⁴."</b> A 0.2 mm variation in your plate dominates your result.</li>
+    <li data-page-node-id="Z2LyFd360T3L7543gypuou"><b data-page-node-id="dOBCrehbWQZjkToSQ85ZKK">"Your magnets are not identical."</b> Neo magnets carry ±5–10% strength tolerance plus magnetisation-direction tolerance.</li>
+    <li data-page-node-id="0PuhL4cNJcB5CXLOvod0Rp"><b data-page-node-id="CkgCvHvoHE4efIqJv6pj3K">"Your motor speed droops under load."</b> You set a voltage, not a speed.</li>
+    <li data-page-node-id="VSzKkrApKo1vJ9JKfcBtr0"><b data-page-node-id="TCTMIDb0ACUQsBvAOERTsr">"The ball rolls rather than slides."</b> Your friction model assumed sliding.</li>
+    <li data-page-node-id="k7HEuPzEIvlVWqNOt5hazN"><b data-page-node-id="PxI5aL9AF2o01VybLwCCyl">"Air currents from the spinning disc."</b> You have a fan under the plate.</li>
+  </ol>
+  <div class="killer" data-page-node-id="mhc2fL6VDIZ6S7mASDDt6d"><b data-page-node-id="Gn9B7KdwXOWQoiA8JngCw8">Worst attack:</b> #1 — genuinely nasty because it is true and almost nobody controls for it.</div>
+  <div class="defense" data-page-node-id="ijDO3iQpxuTFR2y4gkWNlF"><b data-page-node-id="W5H70GumJzIgrm3ZZ2KLyH">Countermeasures</b>
+    <ul data-page-node-id="XlSFWcJfs8aXoyilb5yvfm">
+      <li data-page-node-id="5A452CYDbC4wKI9aMaDsCp"><b data-page-node-id="uSwGkFENmYWYJxk7yyMWv5">Fresh ball every trial</b>, or demagnetise between runs, and state which you did.</li>
+      <li data-page-node-id="1hYhHaHY3DtQHDoW2y7r0j">Measure and report the gap (plate thickness) as a stated parameter; run a gap sweep.</li>
+      <li data-page-node-id="oKQspzQ4ZWF3DbejDSM6DS">Level the plate with a spirit level and re-check after every run.</li>
+      <li data-page-node-id="FfMiFtpeJ8CkpwURls7o2N">Closed-loop motor speed, or at minimum a tachometer logged continuously.</li>
+      <li data-page-node-id="LQXJ3r0zSaA8EAx1v67CC9">Enclose the disc, or show that shielding it from airflow changes nothing.</li>
+    </ul>
   </div>
-  <h4 data-page-node-id="EVSAebuaDKeg8WkyLYMzEI">Why</h4>
-  <p class="why" data-page-node-id="AYjkcnY4Raf2G2BGjqKgBm">Two independent effects: light reduction = open-area fraction, and the pinhole effect = increased depth of field. The optimum diameter is a geometric-blur vs diffraction trade-off, <b data-page-node-id="X9XIGde8kzUc3MQ9jeHZjS">d_opt ≈ 1.9√(λf)</b> (Rayleigh). The genuinely interesting trap: <b data-page-node-id="hybdNtlhOD962JxnsHOGYn">a regular pinhole array is a 2D diffraction grating</b>, so white light produces coloured diffraction orders — a periodic array is arguably the wrong answer, and a randomised arrangement may be better. That is a real insight and it is the best thing about this problem.</p>
-  <h4 data-page-node-id="GWn01fVPkPZUKpFkqiIzri">Key weaknesses</h4>
-  <ul data-page-node-id="ucbyUanyXGWWu3wPBDtAuj">
-    <li data-page-node-id="sSAxVDAJzChOUkCefBSDMN"><b data-page-node-id="hfF0dFM0sR6aqMPU4GkS63">The eye model is not an eye.</b> A camera plus a single lens has no curved retina, no accommodation, no chromatic aberration, no pupil that reacts.</li>
-    <li data-page-node-id="qduJtUEZPdQ6G1y4AwdNfT">Your periodic array is a <b data-page-node-id="DX1XG9dImJXGIJ5zPZElHu">diffraction grating</b> — expect colour fringing, and expect someone to point it out.</li>
-    <li data-page-node-id="knC9yhqeK36WxhIyBOx7r8"><b data-page-node-id="wOfo5GIGJHOkixUx0G0n2F">"Optimal" is prescription-dependent</b> — the answer for a −2 D myope is not the answer for a −6 D myope. Generalisation is weak.</li>
-    <li data-page-node-id="wypFwUAhkgfsIP99T6NmZB"><b data-page-node-id="PIRFoXD0kDPxvC5TaU44Ub">Luminance confound:</b> you cut the light, so if you test a real eye the pupil dilates and partly undoes the pinhole effect; and acuity itself varies with luminance (mesopic vs photopic).</li>
-    <li data-page-node-id="7crD7GBSEnZU00jKuC6X3b">Hole quality — burrs scatter light; diameters will not be identical.</li>
-    <li data-page-node-id="4PuiaAGRqPbbK8V1FF7U3v">d_opt is wavelength-dependent; white-light tests blur this.</li>
-  </ul>
-  <div class="killer" data-page-node-id="0bweEChM73p300ANvIpwpu"><b data-page-node-id="Vo6PFCCzKXc9UlRpRSQw5c">Killer attack:</b> "You optimised for one prescription using a camera that is not an eye. What is the general result?"</div>
 </div>
 
-<div class="card t-c" data-page-node-id="g95S7xVcqHJk9IDxMpfJLc">
-  <div class="top" data-page-node-id="V0PPOeJ4ZRweuNVBIVkoBj"><span class="num" data-page-node-id="Y7SmCJ8YYeTWcxgnTv9MyO">03</span><h2 class="name" data-page-node-id="yeXBwuSTxCOaKk86OqH3nS">Snail ball</h2><span class="val n" data-page-node-id="EWM0wm3cuewnNmrJS9NMl5">−1</span></div>
-  <div class="scores" data-page-node-id="6cmMG84Ivsxy9T5Cs9SANL">
-    <span class="sc" data-page-node-id="ihGmWQB6D5pOwe95Hfo8Ng">D <span class="bar d" data-page-node-id="DhrfW7EgumBvCF7OnsmklB"><i style="width:60%" data-page-node-id="oHK9y4bePeU5EH1HfA9b1o"></i></span> <b data-page-node-id="tNUWp4P4TDlztNkylcOy67">6</b></span>
-    <span class="sc" data-page-node-id="159fWwmc4iGbYAq0fE4rym">A <span class="bar a" data-page-node-id="bCetN7lxUCSK1xt0mNbYSH"><i style="width:70%" data-page-node-id="BwPayyvfLA5o5XEpgIHuoI"></i></span> <b data-page-node-id="N5avmwZK13SoFWeAP9pGl3">7</b></span>
-    <span class="sc" data-page-node-id="X2SmHQFjDmrqD2CzXmWK8L">T <span class="bar t" data-page-node-id="i5q6ckfHh5Q31s8sPkPlF8"><i style="width:50%" data-page-node-id="bDYaCzIR6b2Zfbj9GTEYh5"></i></span> <b data-page-node-id="1vsxeSrWtEFoOVLMBf7esP">5</b></span>
-    <span class="sc" data-page-node-id="ewwtERBDvHNeazqKdLDGLA">V <span class="bar v" data-page-node-id="IDEZIwiOersaYMWWW499Xm"><i style="width:70%" data-page-node-id="BF7rIG99bKG4DgBntlrrXo"></i></span> <b data-page-node-id="HchruE0PeomD08bOHi9BS2">7</b></span>
+<!-- ===== TIER C ===== -->
+<div class="tier-head"><span class="dot" style="background:#EF9F27"></span><h2>Tier C — take only with a specific edge</h2><span>workable, but you must control what others won't</span></div>
+
+<div class="card t-c">
+  <div class="top"><span class="num">01</span><h2 class="name">Invent yourself: Pinhole sunglasses</h2><span class="val n">−1</span></div>
+  <blockquote><b>1. Invent yourself: Pinhole sunglasses.</b> Investigate the optimal arrangement of pinholes in an opaque film to produce sunglasses that reduce light intensity and help correct short-sightedness.</blockquote>
+  <table class="sc">
+    <tr><th>Metric</th><th>Sub-scores</th><th></th></tr>
+    <tr><td class="m">D Difficulty</td><td class="subs"><span>apparatus <span class="mb d"><i style="width:60%"></i></span> 6</span><span>reproducibility <span class="mb d"><i style="width:50%"></i></span> 5</span><span>measurement <span class="mb d"><i style="width:70%"></i></span> 7</span></td><td class="n">6</td></tr>
+    <tr><td class="m">A Attack</td><td class="subs"><span>confounds <span class="mb a"><i style="width:80%"></i></span> 8</span><span>severity <span class="mb a"><i style="width:60%"></i></span> 6</span><span>penetration <span class="mb a"><i style="width:70%"></i></span> 7</span></td><td class="n">7</td></tr>
+    <tr><td class="m">T Theory</td><td class="subs"><span>closed-form <span class="mb t"><i style="width:70%"></i></span> 7</span><span>literature <span class="mb t"><i style="width:50%"></i></span> 5</span><span>falsifiable <span class="mb t"><i style="width:50%"></i></span> 5</span></td><td class="n">6</td></tr>
+    <tr><td class="m">V Visual</td><td class="subs"><span>impact <span class="mb v"><i style="width:60%"></i></span> 6</span><span>reliability <span class="mb v"><i style="width:60%"></i></span> 6</span><span>narrative <span class="mb v"><i style="width:60%"></i></span> 6</span></td><td class="n">6</td></tr>
+  </table>
+  <h4>Likely findings</h4>
+  <ul>
+    <li>Two independent effects: light reduction = open-area fraction (≈ (π/4)(d/p)² on a square lattice), and the pinhole effect = increased depth of field.</li>
+    <li>Optimal diameter from the geometric-blur vs diffraction trade-off: <b>d_opt ≈ 1.9√(λf)</b>. At λ = 550 nm and f = 17 mm (the eye), <b>d_opt ≈ 0.18 mm</b>.</li>
+    <li><b>The finding nobody expects:</b> a pinhole cannot give you sharp vision. Diffraction limits it to θ ≈ 1.22λ/d ≈ 3.7 mrad ≈ 12 arcmin, versus 1 arcmin for a normal eye. Best-case pinhole acuity is around <b>20/200</b> on a Snellen chart. Pinhole glasses buy <i>depth of field</i> — everything equally, moderately blurry — not sharpness. A severe myope improves a lot; a mild one may get <i>worse</i>.</li>
+    <li><b>The insight that makes this problem worth taking:</b> a regular pinhole array is a <b>2D diffraction grating</b>, so white light produces coloured diffraction orders. A periodic arrangement is arguably the wrong answer, and a randomised arrangement may beat it. That is a real design conclusion.</li>
+    <li>Expect an optimum spacing-to-diameter ratio <b>p/d ≈ 2–5</b>: denser and diffraction/overlap degrades the image; sparser and you get multiple overlapping images.</li>
+  </ul>
+  <h4>Attacks</h4>
+  <ol class="atk">
+    <li><b>"Your eye model is not an eye."</b> A camera plus one lens has no curved retina, no accommodation, no chromatic aberration, and no pupil that reacts to light.</li>
+    <li><b>"Your regular array is a diffraction grating."</b> You introduced colour fringing and higher orders and never mentioned it.</li>
+    <li><b>"Your optimum is prescription-dependent."</b> −2 D and −6 D give different answers, so you have no general result.</li>
+    <li><b>"You darkened the image, so the pupil dilated — undoing the pinhole effect."</b> On a real eye the two effects fight each other.</li>
+    <li><b>"Acuity depends on luminance."</b> You cut the light, so you moved into mesopic vision where acuity falls for reasons unrelated to optics.</li>
+    <li><b>"Your holes have burrs and are not identical."</b> Burrs scatter light; hand-drilled holes vary in diameter.</li>
+    <li><b>"d_opt is wavelength-dependent and you tested in white light."</b> Your optimum is smeared across the visible spectrum.</li>
+    <li><b>"You reduced the field of view."</b> You improved one metric and ignored another the problem implicitly cares about.</li>
+  </ol>
+  <div class="killer"><b>Worst attack:</b> #1 combined with #3 — "you optimised one prescription on a camera that is not an eye, so what is the general result?"</div>
+  <div class="defense"><b>Countermeasures</b>
+    <ul>
+      <li>Sweep the <b>defocus</b> parameter and report acuity vs defocus rather than a single optimum — that gives you a general result.</li>
+      <li>Compare periodic vs randomised arrays explicitly and <b>show the diffraction orders</b> in the periodic case. Turns #2 into your result.</li>
+      <li>Hold retinal illuminance constant across conditions (compensate with ND filters) to kill #4 and #5.</li>
+      <li>Use precision apertures; microscope-image the holes and report the diameter distribution.</li>
+    </ul>
   </div>
-  <h4 data-page-node-id="hsrbP9GlvAwH2E9Z2QMAlj">Why</h4>
-  <p class="why" data-page-node-id="b0G9GySp3LPDGirZ6JyY7w">The inner heavy ball lags the shell; gravity torque on it is transmitted through viscous shear in the fluid, which dissipates energy, so motion is slow. It is <b data-page-node-id="jGwHrTGBMDf5EjxvId6eFp">uneven</b> because the inner ball periodically repositions relative to the shell — the centre of mass and moment of inertia change through the cycle, so acceleration is not constant.</p>
-  <h4 data-page-node-id="obElRnaqCKF4OfzQHbENlw">Key weaknesses</h4>
-  <ul data-page-node-id="6HezDhKnwblB8iuyiWcLwz">
-    <li data-page-node-id="WpW8Vyt46cO93JTRSzBAOt"><b data-page-node-id="ugYjnLzIhMLkaQZzx421e7">Viscosity is strongly temperature-dependent</b> (glycerol/oil, several % per °C). Room drift destroys reproducibility. This is the number one attack on any viscous problem.</li>
-    <li data-page-node-id="e6T7dCeq1URmuPhK8akVOT"><b data-page-node-id="in5XY4GTtC8TdxgCz9bWGp">Slipping</b> — did it actually roll without slipping? Mark it and check.</li>
-    <li data-page-node-id="R00nqCZb6XEQCAW7M8BIF1"><b data-page-node-id="Wj0jIVQEcWaW0tcxea3IMv">Trapped air bubble</b> changes the dissipation completely.</li>
-    <li data-page-node-id="acLOeiVW0oeamgvQLq4n7t"><b data-page-node-id="oGoP4m2MBbbDGclCPHNC1f">Fill fraction</b> sets the gap between inner ball and shell, which sets the dissipation.</li>
-    <li data-page-node-id="FblOJeYOnT8MtQMUCo4Q4z">Surface roughness of both the inner ball and the shell's inner wall.</li>
-    <li data-page-node-id="qAcwomHvFTCBErdTECwqd1"><b data-page-node-id="f2JdNdcduS1lC3IEA3cLXq">No clean observable for "uneven"</b> — the motion is quasi-periodic, so what is your dependent variable?</li>
-    <li data-page-node-id="m5RGrRsRjl20IQhK9lFr5H">Rolling resistance of the shell itself is a background you must subtract.</li>
-  </ul>
-  <div class="killer" data-page-node-id="tkLCvjKV1mXZ7hhTDDeEMG"><b data-page-node-id="CTGr2Dj9yaug22wnAfyRbP">Killer attack:</b> "Viscosity changes several percent per degree. Did you log the fluid temperature?"</div>
 </div>
 
-<div class="card t-c" data-page-node-id="2Cp9fgYOBex4LaGg6toE0f">
-  <div class="top" data-page-node-id="4LfNlHzhXCIxnRuoDQLpkA"><span class="num" data-page-node-id="qZTfTA40XxfF37mNMA3fGN">07</span><h2 class="name" data-page-node-id="Esns7tDH4c2dNraKkPfVII">Sinking funnel</h2><span class="val n" data-page-node-id="ibOmhy1ZDsw1XjH6bQUQ6N">−2</span></div>
-  <div class="scores" data-page-node-id="dSC9eBc69QGQGJTpRACzFT">
-    <span class="sc" data-page-node-id="FtllsCSEDADaPH40fUMGXQ">D <span class="bar d" data-page-node-id="elEorBnUbkodFpqMuzMiXA"><i style="width:40%" data-page-node-id="CymScoiN7hz5pKACMQO3Q5"></i></span> <b data-page-node-id="8pHq4EVDX98URGtalxAzcB">4</b></span>
-    <span class="sc" data-page-node-id="T3NEcIS59sIhzxvEodbiTo">A <span class="bar a" data-page-node-id="f3nTSVr0xdIJS1DgchNC6W"><i style="width:70%" data-page-node-id="GJyg3leAckck1h7684R7BY"></i></span> <b data-page-node-id="tmNXaeCHw3y9AQNSGDWuD3">7</b></span>
-    <span class="sc" data-page-node-id="enEm4nM5abWF20edXyTJBh">T <span class="bar t" data-page-node-id="mrAPkGekjRHSTzRWhfZCQH"><i style="width:40%" data-page-node-id="MELkB68TohYWDzuDjOISSc"></i></span> <b data-page-node-id="a2nebviHKVom1NHB7TzGk8">4</b></span>
-    <span class="sc" data-page-node-id="L4BDIh2BIESEJ37E65RKdn">V <span class="bar v" data-page-node-id="6DIdCBrldYCHIfKkKDenZH"><i style="width:50%" data-page-node-id="4gaHJF9TZlDQELqqTP0qCG"></i></span> <b data-page-node-id="Px0EJaDLt6BuKHV1WHjwEV">5</b></span>
+<div class="card t-c">
+  <div class="top"><span class="num">03</span><h2 class="name">Snail ball</h2><span class="val n">−1</span></div>
+  <blockquote><b>3. Snail ball.</b> A hollow sphere contains a heavy ball and some viscous fluid. The rolling motion of such a sphere down an inclined plane is uneven and surprisingly slow. Explain and investigate this effect.</blockquote>
+  <table class="sc">
+    <tr><th>Metric</th><th>Sub-scores</th><th></th></tr>
+    <tr><td class="m">D Difficulty</td><td class="subs"><span>apparatus <span class="mb d"><i style="width:60%"></i></span> 6</span><span>reproducibility <span class="mb d"><i style="width:60%"></i></span> 6</span><span>measurement <span class="mb d"><i style="width:60%"></i></span> 6</span></td><td class="n">6</td></tr>
+    <tr><td class="m">A Attack</td><td class="subs"><span>confounds <span class="mb a"><i style="width:70%"></i></span> 7</span><span>severity <span class="mb a"><i style="width:70%"></i></span> 7</span><span>penetration <span class="mb a"><i style="width:70%"></i></span> 7</span></td><td class="n">7</td></tr>
+    <tr><td class="m">T Theory</td><td class="subs"><span>closed-form <span class="mb t"><i style="width:40%"></i></span> 4</span><span>literature <span class="mb t"><i style="width:50%"></i></span> 5</span><span>falsifiable <span class="mb t"><i style="width:50%"></i></span> 5</span></td><td class="n">5</td></tr>
+    <tr><td class="m">V Visual</td><td class="subs"><span>impact <span class="mb v"><i style="width:70%"></i></span> 7</span><span>reliability <span class="mb v"><i style="width:70%"></i></span> 7</span><span>narrative <span class="mb v"><i style="width:70%"></i></span> 7</span></td><td class="n">7</td></tr>
+  </table>
+  <h4>Likely findings</h4>
+  <ul>
+    <li>Mechanism: the inner heavy ball <b>lags</b> the shell. Gravity torque on it is transmitted through viscous shear in the fluid, which dissipates energy continuously — hence slow.</li>
+    <li><b>Uneven</b> because the inner ball periodically repositions relative to the shell; centre of mass and effective moment of inertia change through the cycle, so acceleration is not constant. Expect speed fluctuations of <b>20–50%</b> with a period of order <b>1–3 s</b>.</li>
+    <li>Best quantitative result available: measure the effective moment of inertia and show it is <b>less than the rigid-body value</b> — direct evidence that the inner ball does not co-rotate.</li>
+    <li><b>Clean scaling to test: mean speed ∝ 1/µ.</b> Vary viscosity (different oils, or controlled temperature) and you should get a clean inverse relation. This is the one falsifiable prediction here.</li>
+    <li>Contrast with the solid-sphere baseline: a rolling solid sphere reaches v² = (10/7)gh. The snail ball sits far below that and goes roughly <b>linear in sinθ</b> rather than as √h, because it is viscous-limited rather than inertia-limited.</li>
+  </ul>
+  <h4>Attacks</h4>
+  <ol class="atk">
+    <li><b>"Viscosity changes several percent per degree. Did you log the fluid temperature?"</b> Glycerol and silicone oil are strongly temperature-dependent; room drift alone ruins reproducibility.</li>
+    <li><b>"Did it actually roll without slipping?"</b> You never verified — mark the shell and check.</li>
+    <li><b>"There is a trapped air bubble."</b> It completely changes the dissipation and you cannot see it.</li>
+    <li><b>"Your fill fraction sets the gap, and the gap sets the dissipation."</b> Unreported, and it is the dominant geometric parameter.</li>
+    <li><b>"You have no clean observable for 'uneven'."</b> The motion is quasi-periodic — what is your dependent variable, and what is its error bar?</li>
+    <li><b>"Rolling resistance of the shell itself is a background you never subtracted."</b> Hysteresis loss in the shell dissipates energy too.</li>
+    <li><b>"Surface roughness of the inner ball and the shell's inner wall."</b> Both set the shear and neither is specified.</li>
+    <li><b>"How many trials?"</b> With a stochastic element, three runs cannot support a claim about periodicity.</li>
+  </ol>
+  <div class="killer"><b>Worst attack:</b> #1. Any viscous problem lives or dies on temperature logging, and it is the first thing a good opponent asks.</div>
+  <div class="defense"><b>Countermeasures</b>
+    <ul>
+      <li>Log fluid temperature on every run; better, use a <b>water bath to hold it constant</b>.</li>
+      <li>Run a <b>viscosity sweep</b> (three or four oils) and show v̄ ∝ 1/µ — that scaling is your shield.</li>
+      <li>Degass the fluid and fill under vacuum, or at minimum report the fill fraction and photograph for bubbles.</li>
+      <li>Paint a stripe on the shell and verify rolling without slipping from the video.</li>
+      <li>Define the observable precisely: mean speed, plus amplitude and period of the speed oscillation via FFT.</li>
+    </ul>
   </div>
-  <h4 data-page-node-id="OvDuwe2mtHArhc6FAwP0iA">Why</h4>
-  <p class="why" data-page-node-id="xLplpSAXCKa22x4nQCaDpE">Air is trapped in the cone while water enters the open stem — the oscillation is probably a relaxation cycle: water ingresses, air escapes, the trapped pocket compresses and expands, buoyancy changes, repeat. Plus added mass and vortex shedding. Apparatus is cheap, which is the only reason it is not lower.</p>
-  <h4 data-page-node-id="zZ4R4GvFC4nWiRwwSY7EEJ">Key weaknesses</h4>
-  <ul data-page-node-id="GaFRFzzJcYaBvHLZsxZV6q">
-    <li data-page-node-id="gGcdb1FyJsmp4ErFwZmAYS"><b data-page-node-id="6K5Bl03pz8hPujaYWUOHLp">Two-phase flow in the stem</b> is chaotic and depends on wetting and surface tension.</li>
-    <li data-page-node-id="kJzKTunLFzNuTVAm9xYjc1"><b data-page-node-id="T0HzcnGjbAhRGgSRqxEzWC">Initial conditions dominate the tipping bifurcation</b> — did your release impart rotation or tilt?</li>
-    <li data-page-node-id="wHBWwMAV44nMy9roeiAFGA"><b data-page-node-id="1i1G6AUrRNR4CpBLdLG97d">Funnel geometry</b>: cone angle, stem length, stem bore, mass distribution. Many parameters, hard to vary one at a time.</li>
-    <li data-page-node-id="ov1VfTwrY4gDCTUGdbg6Qt">Tank wall effects unless the tank is much larger than the funnel.</li>
-    <li data-page-node-id="q8itsbwjdfglnRViQaT8iI"><b data-page-node-id="FHBuUHadffD9Th3G8eguL1">Surface tension</b> — water purity and any surfactant change the air pocket behaviour.</li>
-    <li data-page-node-id="SveFHzDUaumLOKBno2bAi0"><b data-page-node-id="5lpiOdD2pTz7bxPERJEdsG">Air compressibility depends on depth</b>, so the restoring "spring constant" changes as it sinks — your damped-oscillator model is only locally valid.</li>
-  </ul>
-  <div class="killer" data-page-node-id="T2v0TNN874wqZMcxmnWSRd"><b data-page-node-id="eW72qMcepbAPMZAW7QHEUf">Killer attack:</b> "Your spring constant changes with depth, so it is not a damped harmonic oscillator. What exactly did you fit?"</div>
 </div>
 
-<div class="card t-c" data-page-node-id="vEe1uiQxXqm8xYJOO99DIX">
-  <div class="top" data-page-node-id="x6QZqT15o9nqi3B579vrmH"><span class="num" data-page-node-id="S8BbWMfRPEYkV1sDIiwgvS">17</span><h2 class="name" data-page-node-id="q647Lu5X8do1PNCPkMri6e">Falling book cover</h2><span class="val n" data-page-node-id="m4EWGkUJ4QMtEAn9F0rA6Y">−2</span></div>
-  <div class="scores" data-page-node-id="pv0cyq3gHfOIaNaghrJa6H">
-    <span class="sc" data-page-node-id="ALcOj3uBXVgTN9WKwMgQbR">D <span class="bar d" data-page-node-id="itQqXD5MoEi9k6YWIKv3Vk"><i style="width:40%" data-page-node-id="suKyOGGwJB1yqYLr0O93ya"></i></span> <b data-page-node-id="ETXKd6NO8K6UCA6ygKUtmX">4</b></span>
-    <span class="sc" data-page-node-id="6C4ft8iKiaWAOvHYAylNoD">A <span class="bar a" data-page-node-id="TZ5nYCdsIriycl2MzpNXSn"><i style="width:70%" data-page-node-id="0ZHotEaKmPu1vhL5iPc50c"></i></span> <b data-page-node-id="0Ei2fB2vvdMw1sD9WGM4BL">7</b></span>
-    <span class="sc" data-page-node-id="HC3w5pODgk0ap9Fi1qFlYt">T <span class="bar t" data-page-node-id="6emyRKGqRmEwog0oQgVw4o"><i style="width:50%" data-page-node-id="OCmyreeylFTDxsFH0sJc1A"></i></span> <b data-page-node-id="WDUp78XASjaABMUdOk7UzU">5</b></span>
-    <span class="sc" data-page-node-id="R7wH2KRwmdKwpStQwFTHDl">V <span class="bar v" data-page-node-id="xg4lR4ww5evxv6tBaZ2Tvt"><i style="width:40%" data-page-node-id="V6LxEdFilCOTbKKGchHTvP"></i></span> <b data-page-node-id="qKXlRSzNmzXR3vapX9yC56">4</b></span>
+<div class="card t-c">
+  <div class="top"><span class="num">07</span><h2 class="name">Sinking funnel</h2><span class="val n">−2</span></div>
+  <blockquote><b>7. Sinking funnel.</b> When a long-stemmed and sufficiently heavy funnel is released vertically into water with the stem pointing downward, it undergoes a series of damped vertical oscillations while gradually sinking. Investigate the motion and stability of the sinking funnel and the conditions under which the funnel tips over.</blockquote>
+  <table class="sc">
+    <tr><th>Metric</th><th>Sub-scores</th><th></th></tr>
+    <tr><td class="m">D Difficulty</td><td class="subs"><span>apparatus <span class="mb d"><i style="width:30%"></i></span> 3</span><span>reproducibility <span class="mb d"><i style="width:50%"></i></span> 5</span><span>measurement <span class="mb d"><i style="width:40%"></i></span> 4</span></td><td class="n">4</td></tr>
+    <tr><td class="m">A Attack</td><td class="subs"><span>confounds <span class="mb a"><i style="width:80%"></i></span> 8</span><span>severity <span class="mb a"><i style="width:70%"></i></span> 7</span><span>penetration <span class="mb a"><i style="width:60%"></i></span> 6</span></td><td class="n">7</td></tr>
+    <tr><td class="m">T Theory</td><td class="subs"><span>closed-form <span class="mb t"><i style="width:40%"></i></span> 4</span><span>literature <span class="mb t"><i style="width:30%"></i></span> 3</span><span>falsifiable <span class="mb t"><i style="width:50%"></i></span> 5</span></td><td class="n">4</td></tr>
+    <tr><td class="m">V Visual</td><td class="subs"><span>impact <span class="mb v"><i style="width:50%"></i></span> 5</span><span>reliability <span class="mb v"><i style="width:50%"></i></span> 5</span><span>narrative <span class="mb v"><i style="width:50%"></i></span> 5</span></td><td class="n">5</td></tr>
+  </table>
+  <h4>Likely findings</h4>
+  <ul>
+    <li>Mechanism: air is trapped in the cone while water enters the open stem. The oscillation is a <b>relaxation cycle</b> — water ingresses, air escapes, the pocket compresses and re-expands, buoyancy changes, repeat.</li>
+    <li>The trapped pocket is a <b>gas spring</b>: stiffness <b>k ≈ γP₀A²/V₀</b>, giving f = (1/2π)√(k/m_eff) of order <b>1–5 Hz</b>.</li>
+    <li><b>The best finding available: the frequency chirps upward as it sinks.</b> As depth z rises, P = P₀ + ρgz shrinks V, so k grows and f rises. A measured chirp is a specific, non-obvious, quantitative signature.</li>
+    <li>Damping from viscous drag on the stem plus the inertance of the water column oscillating in the stem.</li>
+    <li>Tipping: expect a threshold tied to oscillation amplitude relative to the metacentric height, or to the air pocket becoming asymmetric. Needs many trials per condition to locate statistically.</li>
+  </ul>
+  <h4>Attacks</h4>
+  <ol class="atk">
+    <li><b>"Your spring constant changes with depth, so this is not a damped harmonic oscillator."</b> What exactly did you fit, and over what depth range?</li>
+    <li><b>"Two-phase flow in the stem is chaotic."</b> Water-in/air-out depends on wetting and surface tension; it is not deterministic.</li>
+    <li><b>"Your release imparted rotation or tilt."</b> Initial conditions dominate a bifurcation and your release was by hand.</li>
+    <li><b>"Your funnel geometry has five parameters and you varied one."</b> Cone angle, stem length, stem bore, mass, mass distribution.</li>
+    <li><b>"Tank wall effects."</b> Your tank is not much larger than the funnel.</li>
+    <li><b>"Surface tension."</b> Water purity and trace surfactant change the air pocket behaviour entirely; tap water varies day to day.</li>
+    <li><b>"How did you define 'tips over'?"</b> A threshold needs an operational definition and enough trials to locate it — you have neither.</li>
+    <li><b>"Air dissolves in water over time."</b> Long runs lose pocket volume by a mechanism you ignored.</li>
+  </ol>
+  <div class="killer"><b>Worst attack:</b> #1. It is mathematically correct and it invalidates the standard analysis everyone reaches for first.</div>
+  <div class="defense"><b>Countermeasures</b>
+    <ul>
+      <li>Fit only <b>locally</b> — one or two cycles at a time — and <b>plot f versus depth</b>. The chirp then becomes your result rather than your error.</li>
+      <li>Build a mechanical release (electromagnet or clamp) and state zero initial velocity.</li>
+      <li>Use deionised water, log temperature, and keep the water source consistent.</li>
+      <li>Define tipping operationally (e.g. tilt exceeds 45°) and run ≥30 trials per condition to build a tipping probability curve.</li>
+    </ul>
   </div>
-  <h4 data-page-node-id="piUV5z7A2F89U1g1qDdJDG">Why</h4>
-  <p class="why" data-page-node-id="GNvGTD9yHh1bBjNXgt5Osc">Gravity torque vs the spine's restoring torque vs air drag (∝ ω²), which for a large light flap is significant late in the motion. The interesting result is that it is <b data-page-node-id="G92Hqhl7BoITlejCc8CEWk">not</b> simple rigid-body rotation, and you can extract the spine's torque–angle relation by fitting.</p>
-  <h4 data-page-node-id="TUK30gsmmKsw1o0Az6OyCO">Key weaknesses</h4>
-  <ul data-page-node-id="RnOcgJtpXKyGJOxACeeDo3">
-    <li data-page-node-id="Aqqmj7grnMC0wGpMzdW3tS"><b data-page-node-id="zWrH5EheQMobcFg05pzhBb">The spine is not a hinge.</b> It is a viscoelastic, history-dependent joint. Hardback vs paperback vs opened-100-times vs never-opened are all different materials.</li>
-    <li data-page-node-id="MlMUr5YUthhZ0rcVyjj8NK"><b data-page-node-id="26OQBXUrLyOVqZ0Pv1OCFD">Humidity.</b> Paper and board are hygroscopic — stiffness and mass change with RH. In Hong Kong this is a serious, unavoidable problem.</li>
-    <li data-page-node-id="K0XfNyBjUVpHznoC6mya02">The cover is <b data-page-node-id="ALopCkym8BHZliirDWHPZD">not a rigid plate</b> — it flexes and twists.</li>
-    <li data-page-node-id="U3f7yn5OUVA0GgJLvmz47U"><b data-page-node-id="7XSlAaRpc7WwKIBH1gumpz">Air drag is hard to isolate</b> — you cannot easily vary it independently.</li>
-    <li data-page-node-id="ROI5ITtB98h4ypZgpI9bw1">Page count, whether pages stay flat, trapped air between pages.</li>
-    <li data-page-node-id="hn4tHfVKmWXkCpbMdOoX68">Friction between the cover and the pages beneath it.</li>
-  </ul>
-  <div class="killer" data-page-node-id="OfwOF3W7XAfjv2sP1nlX0X"><b data-page-node-id="OwRf7KjUi0ngyuwbsojj0r">Killer attack:</b> "Your book had been opened before. The spine's material properties changed with use, and you never controlled for it."</div>
 </div>
 
-<div class="card t-c" data-page-node-id="vAAS7JHRstVtdf5OGmAgaa">
-  <div class="top" data-page-node-id="gR9BXMuoy8aOJIewdIOBYl"><span class="num" data-page-node-id="9Zz2wujcSR7syZ40fVn1NJ">11</span><h2 class="name" data-page-node-id="gNHBmk6bRFPtUFwaajCkQH">Sound isolation</h2><span class="val n" data-page-node-id="EyEFsWhXwGfE9N9rqbnCuh">−4</span></div>
-  <div class="scores" data-page-node-id="4BmZn99M6ABva1FuLFxVWg">
-    <span class="sc" data-page-node-id="179Il3o0qpCEwoKhsQ1zKW">D <span class="bar d" data-page-node-id="gFiA8HTqP8XnYSg6CAsKjQ"><i style="width:70%" data-page-node-id="pTgf0999zToMJw9AmqDeZY"></i></span> <b data-page-node-id="zfTorseoNmSDzdQ13cp4JV">7</b></span>
-    <span class="sc" data-page-node-id="QJ23Plg6OqHQp9g2N6PCM7">A <span class="bar a" data-page-node-id="p3bJvEUDaDbB8GpJY4pIv1"><i style="width:60%" data-page-node-id="u9RQSChv4XlBCNMG2fRMjB"></i></span> <b data-page-node-id="OEjgxqNxCyi0rX3sWH0rPH">6</b></span>
-    <span class="sc" data-page-node-id="AcMRkA6ZNBBBjyVNt1rLz1">T <span class="bar t" data-page-node-id="Tzq5FaAHps88n43Pb884rz"><i style="width:70%" data-page-node-id="cGreXRpQiid9feA1qW26ad"></i></span> <b data-page-node-id="1jNjcZEcqvL7VEz5tEgerB">7</b></span>
-    <span class="sc" data-page-node-id="xzGIotoYXsczfieBDdk4tk">V <span class="bar v" data-page-node-id="7INinGBDFifXPxsYIlpOt8"><i style="width:20%" data-page-node-id="ZVwvaUi6AkQTHBNOd14sWz"></i></span> <b data-page-node-id="s9pj4R8BbPqIRhSbIFEnIz">2</b></span>
+<div class="card t-c">
+  <div class="top"><span class="num">17</span><h2 class="name">Falling book cover</h2><span class="val n">−2</span></div>
+  <blockquote><b>17. Falling book cover.</b> A book is placed horizontally, and the partially open cover is allowed to fall. Investigate the motion of the falling book cover.</blockquote>
+  <table class="sc">
+    <tr><th>Metric</th><th>Sub-scores</th><th></th></tr>
+    <tr><td class="m">D Difficulty</td><td class="subs"><span>apparatus <span class="mb d"><i style="width:20%"></i></span> 2</span><span>reproducibility <span class="mb d"><i style="width:50%"></i></span> 5</span><span>measurement <span class="mb d"><i style="width:50%"></i></span> 5</span></td><td class="n">4</td></tr>
+    <tr><td class="m">A Attack</td><td class="subs"><span>confounds <span class="mb a"><i style="width:80%"></i></span> 8</span><span>severity <span class="mb a"><i style="width:60%"></i></span> 6</span><span>penetration <span class="mb a"><i style="width:70%"></i></span> 7</span></td><td class="n">7</td></tr>
+    <tr><td class="m">T Theory</td><td class="subs"><span>closed-form <span class="mb t"><i style="width:60%"></i></span> 6</span><span>literature <span class="mb t"><i style="width:40%"></i></span> 4</span><span>falsifiable <span class="mb t"><i style="width:40%"></i></span> 4</span></td><td class="n">5</td></tr>
+    <tr><td class="m">V Visual</td><td class="subs"><span>impact <span class="mb v"><i style="width:40%"></i></span> 4</span><span>reliability <span class="mb v"><i style="width:50%"></i></span> 5</span><span>narrative <span class="mb v"><i style="width:30%"></i></span> 3</span></td><td class="n">4</td></tr>
+  </table>
+  <h4>Likely findings</h4>
+  <ul>
+    <li>Rigid-body baseline: a uniform plate pivoting about the spine has I = mL²/3 and θ̈ = (3g/2L)cos θ. For L = 0.25 m that is <b>≈ 59 rad/s²</b> initially, giving a fall time of order <b>0.3–0.5 s</b>.</li>
+    <li><b>The honest finding: air drag is small.</b> For a typical cover (0.05 kg, 0.045 m²), gravity torque ≈ 0.061 N·m while peak drag torque ≈ 7×10⁻⁴ N·m — about <b>1%</b>. So the dominant deviation from rigid-body motion is <b>the spine, not the air</b>. That is a genuinely interesting discriminating result, because almost everyone assumes the opposite.</li>
+    <li>You can invert the motion to <b>extract the spine's torque–angle relation</b>, including its hysteresis loop. That curve is the deliverable.</li>
+    <li>Expect the fall to be <b>slower than rigid-body</b>, with non-monotonic deceleration and usually an audible slap at the end.</li>
+  </ul>
+  <h4>Attacks</h4>
+  <ol class="atk">
+    <li><b>"Your book had been opened before."</b> The spine is a viscoelastic joint whose properties change with use — you never controlled the opening history.</li>
+    <li><b>"Humidity."</b> Paper and board are hygroscopic; stiffness and mass both change with RH. In Hong Kong this is a serious, unavoidable problem.</li>
+    <li><b>"Your cover is not a rigid plate."</b> It flexes and twists, so a single-degree-of-freedom rigid model is wrong.</li>
+    <li><b>"You cannot vary air drag independently."</b> So you cannot actually isolate the drag term you claim to have measured.</li>
+    <li><b>"Book-to-book variability."</b> n = 1 book means your result is a property of that object, not of a phenomenon.</li>
+    <li><b>"The pages underneath."</b> Trapped air between pages, and friction against the cover, both matter and both vary with page count.</li>
+    <li><b>"What was the initial angle, and does the spine have a preferred resting angle?"</b> You never characterised the initial condition.</li>
+    <li><b>"Why should anyone care?"</b> Narrative is nearly absent here.</li>
+  </ol>
+  <div class="killer"><b>Worst attack:</b> #1 plus #5 together — "you characterised one specific book's spine, not a phenomenon."</div>
+  <div class="defense"><b>Countermeasures</b>
+    <ul>
+      <li>Condition every book identically (e.g. open–close 50 times on a jig) and <b>report RH</b> on every run.</li>
+      <li>Test <b>several books spanning hardcover / paperback / new / broken-in</b>, and present the spine torque curves as a family.</li>
+      <li>Add mass to the cover (taped weights) to separate inertial from dissipative terms.</li>
+      <li>Explicitly compare the air-drag prediction against the measured discrepancy and <b>show drag is ~1%</b> — that negative result is the interesting one.</li>
+    </ul>
   </div>
-  <h4 data-page-node-id="i7n0uQ2Tole6xu4TVjeAtm">Why</h4>
-  <p class="why" data-page-node-id="7zC9hNedQwsJiV3Ce1oTXR">A small aperture transmits far more than its area suggests: it behaves as a resonant neck with acoustic mass, and near resonance transmission loss can fall to ~0 or even go negative, because diffraction lets the hole collect energy from a wider area. Classic Gomperts / Wilson–Soroka territory. <b data-page-node-id="bJ15QtUmANUTr8102CMFqD">The theory is good; the problem is that you need a real acoustic setup and the payoff is a dB plot.</b></p>
-  <h4 data-page-node-id="g0F9zo1TSbSEglR0uGDWpZ">Key weaknesses</h4>
-  <ul data-page-node-id="mPrrOBTAxDFsW1ZJJDOxZ5">
-    <li data-page-node-id="tQxcpSUVbGYMgKJmsAGlOU"><b data-page-node-id="UEzloJjZF0u5tyky9aRNVY">Flanking transmission.</b> Sound goes around your partition, not through the hole. If the box is not demonstrably airtight and rigid, the data is meaningless.</li>
-    <li data-page-node-id="D40TIzobSeeJiBZSJW04ex">Room modes and standing waves at low frequency; background noise floor caps your dynamic range.</li>
-    <li data-page-node-id="xSusfhi7MruBD0TGd9dDoQ">Mic calibration and near-field vs far-field positioning.</li>
-    <li data-page-node-id="6hFMjRyzYWKjHBAu5h0fZ0"><b data-page-node-id="zPCxdyriJOa2l6ce7YxZfl">Aperture depth (panel thickness) matters</b> and is usually forgotten.</li>
-    <li data-page-node-id="SMkAl4JSsLyG8ZuRdLfZD6">The panel itself can vibrate and re-radiate.</li>
-    <li data-page-node-id="xewpy5clqFq8DE0zTCBlVF">V = 2. Judges will not remember it.</li>
-  </ul>
-  <div class="killer" data-page-node-id="fzuhPiNsaAwAeDpSKnwie4"><b data-page-node-id="fBOZPC4M1zzzE7PO9kiPFY">Killer attack:</b> "Prove your box was airtight. Otherwise you measured the seals, not the hole."</div>
 </div>
 
-<!-- TIER D -->
-<div class="tier-head" data-page-node-id="fDyzEKLQEv96XGBZXCMwvH"><span class="dot" style="background:#E24B4A" data-page-node-id="LhiT6ocuJTibbFe2f56uLK"></span><h2 data-page-node-id="Qe1AduibnLyfTEphbM6gPU">Tier D — traps</h2><span data-page-node-id="DNgzIqXoGfuP08U9tzoGnX">ill-defined materials, no theory anchor</span></div>
-
-<div class="card t-d" data-page-node-id="3drWRD1DhNiDFerxqSr10T">
-  <div class="top" data-page-node-id="iBVLII2QK2QN6s4u887XUI"><span class="num" data-page-node-id="n3yJ6YgAj3meAn7X3nmMmk">12</span><h2 class="name" data-page-node-id="7gdhXZMBJgFkiWEpYzdnaQ">Dotted line trick</h2><span class="val n" data-page-node-id="cx08okod2YFQVDNqFeKYXU">−4</span></div>
-  <div class="scores" data-page-node-id="aqugFsOhZoCBoA6A1TH3ZD">
-    <span class="sc" data-page-node-id="rgMoJGtUVG5zj7fADzwdEK">D <span class="bar d" data-page-node-id="xgeJxXzyLQtdeazBhVm3Cu"><i style="width:40%" data-page-node-id="jEQ9vFUzCymOG7RkRIfkOO"></i></span> <b data-page-node-id="flaAn0FLHyHN1vWynNIoKG">4</b></span>
-    <span class="sc" data-page-node-id="sl23hqQtuNiAQU1WuNnb9u">A <span class="bar a" data-page-node-id="oAOtV3AapxEdo9n7Eifc2C"><i style="width:90%" data-page-node-id="6Qr52MD7QmjXL4ObHCkOVD"></i></span> <b data-page-node-id="a4k5BsQbaufFHacOqWxg6L">9</b></span>
-    <span class="sc" data-page-node-id="wQ9SxVrvseGj6bvKguyZEx">T <span class="bar t" data-page-node-id="CbmUDDRcOQGNKLizbQoojs"><i style="width:40%" data-page-node-id="mnBZeUrhHZdmU9P4PCIeC0"></i></span> <b data-page-node-id="HVDszffhqtkOqJ5yZ1LsGg">4</b></span>
-    <span class="sc" data-page-node-id="O0r3wFD0fjVrl1SxZa8hBt">V <span class="bar v" data-page-node-id="HFKMAaMnEOOujV0yd9yNWn"><i style="width:50%" data-page-node-id="zRi4W4kbqnCGtsI5fUy2Uh"></i></span> <b data-page-node-id="kgF7UwSbcLTluiI1S9d8AD">5</b></span>
+<div class="card t-c">
+  <div class="top"><span class="num">11</span><h2 class="name">Sound isolation</h2><span class="val n">−4</span></div>
+  <blockquote><b>11. Sound isolation.</b> The sound isolation of a room may become breached if the door is not shut properly, even if the gap is negligibly small. Investigate how the shape and size of a small opening affect the transmission of sound.</blockquote>
+  <table class="sc">
+    <tr><th>Metric</th><th>Sub-scores</th><th></th></tr>
+    <tr><td class="m">D Difficulty</td><td class="subs"><span>apparatus <span class="mb d"><i style="width:80%"></i></span> 8</span><span>reproducibility <span class="mb d"><i style="width:60%"></i></span> 6</span><span>measurement <span class="mb d"><i style="width:70%"></i></span> 7</span></td><td class="n">7</td></tr>
+    <tr><td class="m">A Attack</td><td class="subs"><span>confounds <span class="mb a"><i style="width:60%"></i></span> 6</span><span>severity <span class="mb a"><i style="width:60%"></i></span> 6</span><span>penetration <span class="mb a"><i style="width:50%"></i></span> 5</span></td><td class="n">6</td></tr>
+    <tr><td class="m">T Theory</td><td class="subs"><span>closed-form <span class="mb t"><i style="width:70%"></i></span> 7</span><span>literature <span class="mb t"><i style="width:70%"></i></span> 7</span><span>falsifiable <span class="mb t"><i style="width:60%"></i></span> 6</span></td><td class="n">7</td></tr>
+    <tr><td class="m">V Visual</td><td class="subs"><span>impact <span class="mb v"><i style="width:20%"></i></span> 2</span><span>reliability <span class="mb v"><i style="width:30%"></i></span> 3</span><span>narrative <span class="mb v"><i style="width:20%"></i></span> 2</span></td><td class="n">2</td></tr>
+  </table>
+  <h4>Likely findings</h4>
+  <ul>
+    <li>The aperture is not a passive hole — it is a <b>resonant neck with acoustic mass</b>. Diffraction lets it collect energy from an area larger than its own, so transmission loss drops far more than the area ratio suggests. Classic Gomperts / Wilson–Soroka territory.</li>
+    <li><b>TL falls roughly as 20·log₁₀ of aperture area</b> — doubling the area costs about 6 dB.</li>
+    <li><b>Shape matters at fixed area:</b> a slit transmits more than a circle, because the higher perimeter-to-area ratio changes the end correction and the viscous losses.</li>
+    <li><b>Depth matters and is usually forgotten:</b> increasing panel thickness lengthens the neck and raises TL. Expect a clean monotonic trend.</li>
+    <li>At very narrow gaps, viscous and thermal boundary-layer losses add resistance and TL rises faster than area alone predicts — a second regime worth mapping.</li>
+    <li>The theory is genuinely good. The problem is that you need a real acoustic setup and the payoff is a dB plot nobody remembers.</li>
+  </ul>
+  <h4>Attacks</h4>
+  <ol class="atk">
+    <li><b>"Prove your box was airtight."</b> Flanking transmission — sound going around the partition — makes the data meaningless if the seals leak.</li>
+    <li><b>"Room modes."</b> At low frequency your field is not diffuse, so your TL depends on where you stood.</li>
+    <li><b>"You hit the noise floor."</b> At high TL you measured background noise, not transmission.</li>
+    <li><b>"Your mic was not calibrated, and near-field vs far-field matters."</b></li>
+    <li><b>"Your panel vibrates and re-radiates."</b> You measured structure-borne transmission, not airborne.</li>
+    <li><b>"Edge diffraction at the panel boundary."</b> Your finite panel is not the infinite baffle in the theory.</li>
+    <li><b>"You varied area and shape together."</b> Two parameters, one conclusion.</li>
+    <li><b>"You never reported the panel thickness."</b> It is first-order and you omitted it.</li>
+  </ol>
+  <div class="killer"><b>Worst attack:</b> #1. If you cannot demonstrate the box is otherwise sealed, the entire dataset is void.</div>
+  <div class="defense"><b>Countermeasures</b>
+    <ul>
+      <li><b>Measure the sealed baseline first</b> and show it is 20+ dB below every aperture case. One plot answers #1.</li>
+      <li>Use an impedance tube with the two-microphone transfer-function method if at all possible — it removes the room entirely.</li>
+      <li>Report thickness, area, shape and perimeter for every case in one table.</li>
+      <li>Vary shape at <b>fixed area</b> and depth, then vary depth at fixed shape — one parameter at a time.</li>
+    </ul>
   </div>
-  <h4 data-page-node-id="0MMFlvllDTdIXaoReNEqt0">Why it is a trap</h4>
-  <p class="why" data-page-node-id="1n9qcfM3SMPcU0WeiJ45Yw">Mechanically it is <b data-page-node-id="uF4t40olCUBwRTwq5LEUf9">stick-slip</b>: the chalk alternately sticks and slips at a frequency set by its stiffness, the normal force, the speed, and the effective mass, depositing material during stick and skipping during slip — so dot spacing = v / f. The complication is a <b data-page-node-id="M2RTFBge1XYmkd9cFg58DW">second, unseparated mechanism</b>: chalk is a brittle porous solid and may simply fracture periodically.</p>
-  <h4 data-page-node-id="vuSbCK5VnJSfKlCgqFF7sX">Key weaknesses</h4>
-  <ul data-page-node-id="xRgeTisGxMtmI8eQGJwLXb">
-    <li data-page-node-id="5QKRDGF3GUntYnxXQ143y8"><b data-page-node-id="T1GKz0fJE3LmtpigS8u4Yt">The chalk wears during the run.</b> Its length, contact geometry and contact area all change continuously, so your controlled variable is not controlled. This alone sinks it.</li>
-    <li data-page-node-id="UaUSyBABNyQ7ysWpB5E6x3"><b data-page-node-id="cSJViP5mIhUMXSx20sQ4GY">Humidity.</b> Chalk is hygroscopic; friction and fracture both change sharply with RH. Log it.</li>
-    <li data-page-node-id="e9zMi2M3amSbXEDTfTzBMn">Chalk composition and porosity are not standardised between sticks, or along one stick.</li>
-    <li data-page-node-id="cF3h6ALPH7K05RFCingJQr"><b data-page-node-id="5YdJqKgznbrB5TGZWtmh4D">The dust layer</b> from previous strokes changes the friction for the next stroke.</li>
-    <li data-page-node-id="6s3qSVbRFBpvyz68QqIPb3">Normal force must be mechanically loaded — hand-dragging is not an experiment.</li>
-    <li data-page-node-id="CD8GBxE5Y3TwYrmW3EVTBG">Chalk angle changes its bending/torsional compliance, which changes as it shortens.</li>
-    <li data-page-node-id="Y0jDfqKGCMjBEl59kjo0X2">Two competing mechanisms you must discriminate between.</li>
-  </ul>
-  <div class="killer" data-page-node-id="dyIczu13EvSvWQsOrOkXup"><b data-page-node-id="fbTvgjXQqBGQ4oRcpaPXFG">Killer attack:</b> "Your chalk got shorter during the measurement, so its stiffness and contact area both changed. Every data point is at a different condition."</div>
 </div>
 
-<div class="card t-d" data-page-node-id="D8jzQFy3Hcg9bjEofw9Epq">
-  <div class="top" data-page-node-id="QTQhbVfCbGQFD1jORetzLB"><span class="num" data-page-node-id="UWXAV7AiCNumyTFzsNHE9c">14</span><h2 class="name" data-page-node-id="A56lNU13Gps1kgFRP3dISp">Non-Newtonian worms</h2><span class="val n" data-page-node-id="AFrMEnQo5qmuwGTTyUtyue">−5</span></div>
-  <div class="scores" data-page-node-id="L2g5fxGsNngnGodEsxlGy9">
-    <span class="sc" data-page-node-id="MDJgsi2MjnwKJHkKOLf9Gd">D <span class="bar d" data-page-node-id="SPU05lOAi6EVSW9OE5EGlo"><i style="width:70%" data-page-node-id="6rXXHFGm3DVAyXfgsWieLD"></i></span> <b data-page-node-id="u96hAOR4YctRPgoFwcFrNR">7</b></span>
-    <span class="sc" data-page-node-id="JKWD5qgUQPnhmHbUHaoIx2">A <span class="bar a" data-page-node-id="0cH2DRD3ZbigJBgW6HK6FJ"><i style="width:90%" data-page-node-id="ap4Eq1HSEJB0F9NCc3HRGe"></i></span> <b data-page-node-id="Gx5GOEN6CX2H0iqsEi03Go">9</b></span>
-    <span class="sc" data-page-node-id="vN1yaqO6FzBVUoooFrL8IY">T <span class="bar t" data-page-node-id="uJA8TByAMEqwucDxvTDJSO"><i style="width:20%" data-page-node-id="SAAgSLW64SkSF7CmHyhCLt"></i></span> <b data-page-node-id="xnb6jGY0M7nNlDD67llN4b">2</b></span>
-    <span class="sc" data-page-node-id="3burfOj0jO2UtFLmXgo0fW">V <span class="bar v" data-page-node-id="Kkkh7tfmDZeLilQPk1zICf"><i style="width:90%" data-page-node-id="iqokXMj8dJOehXDQ2sMFLe"></i></span> <b data-page-node-id="P5VvKPQ8JGTVnGNXlEuQNU">9</b></span>
+<!-- ===== TIER D ===== -->
+<div class="tier-head"><span class="dot" style="background:#E24B4A"></span><h2>Tier D — traps</h2><span>ill-defined materials, no theory anchor</span></div>
+
+<div class="card t-d">
+  <div class="top"><span class="num">12</span><h2 class="name">Dotted line trick</h2><span class="val n">−4</span></div>
+  <blockquote><b>12. Dotted line trick.</b> Under certain conditions, when a piece of chalk is dragged across a blackboard, the resulting trace is not a continuous line but a periodic sequence of dots, even though the motion is uninterrupted. This can happen with other writing materials and surfaces. Investigate the physical parameters that govern this phenomenon.</blockquote>
+  <table class="sc">
+    <tr><th>Metric</th><th>Sub-scores</th><th></th></tr>
+    <tr><td class="m">D Difficulty</td><td class="subs"><span>apparatus <span class="mb d"><i style="width:30%"></i></span> 3</span><span>reproducibility <span class="mb d"><i style="width:50%"></i></span> 5</span><span>measurement <span class="mb d"><i style="width:50%"></i></span> 5</span></td><td class="n">4</td></tr>
+    <tr><td class="m">A Attack</td><td class="subs"><span>confounds <span class="mb a"><i style="width:90%"></i></span> 9</span><span>severity <span class="mb a"><i style="width:90%"></i></span> 9</span><span>penetration <span class="mb a"><i style="width:90%"></i></span> 9</span></td><td class="n">9</td></tr>
+    <tr><td class="m">T Theory</td><td class="subs"><span>closed-form <span class="mb t"><i style="width:40%"></i></span> 4</span><span>literature <span class="mb t"><i style="width:40%"></i></span> 4</span><span>falsifiable <span class="mb t"><i style="width:50%"></i></span> 5</span></td><td class="n">4</td></tr>
+    <tr><td class="m">V Visual</td><td class="subs"><span>impact <span class="mb v"><i style="width:50%"></i></span> 5</span><span>reliability <span class="mb v"><i style="width:50%"></i></span> 5</span><span>narrative <span class="mb v"><i style="width:50%"></i></span> 5</span></td><td class="n">5</td></tr>
+  </table>
+  <h4>Likely findings</h4>
+  <ul>
+    <li>Mechanism is <b>stick-slip</b>: the chalk alternately sticks and slips, depositing material during stick and skipping during slip. Dot spacing <b>s = v / f</b>.</li>
+    <li>Estimate the frequency: chalk as a cantilever beam, k = 3EI/L³. With L = 50 mm, d = 10 mm, E ≈ 5 GPa, m ≈ 5 g you get <b>f ≈ 500 Hz</b>. At v = 0.1 m/s that gives <b>s ≈ 0.2 mm</b> — sub-millimetre dots, which matches what you actually see.</li>
+    <li><b>The killer experiment, and the only thing that would make this problem worth taking:</b> the same stick-slip produces the chalk's squeal, so <b>f_audio × s = v</b>. Record the squeal, measure the dot spacing, and show they agree. Two independent measurements of one frequency is the strongest defence available here.</li>
+    <li>Expect spacing to increase linearly with speed, and to depend on normal force, chalk angle, hardness and humidity.</li>
+    <li>Competing mechanism to discriminate: chalk is a brittle porous solid and may simply <b>fracture periodically</b> rather than stick-slip. The two predict different scalings.</li>
+  </ul>
+  <h4>Attacks</h4>
+  <ol class="atk">
+    <li><b>"Your chalk got shorter during the run."</b> Length, contact geometry and contact area all change continuously, so every data point is at a different condition.</li>
+    <li><b>"Humidity."</b> Chalk is hygroscopic; friction and fracture both change sharply with RH. You did not log it.</li>
+    <li><b>"Chalk composition is not standardised."</b> Not between sticks, and not along one stick.</li>
+    <li><b>"The dust from your previous stroke changed the friction for the next one."</b> Your trials are not independent.</li>
+    <li><b>"You dragged it by hand."</b> Normal force and speed were both uncontrolled.</li>
+    <li><b>"Chalk is a beam — its stiffness matters, and it changes as it shortens."</b> Your frequency model has a time-varying parameter you ignored.</li>
+    <li><b>"You have two mechanisms and did not separate them."</b> Stick-slip and periodic fracture predict different scalings; you only tested one.</li>
+    <li><b>"The board's surface roughness varies across its width."</b> You moved to a fresh spot between trials.</li>
+  </ol>
+  <div class="killer"><b>Worst attack:</b> #1. Unavoidable — the measurement literally destroys the sample — and there is no cheap fix.</div>
+  <div class="defense"><b>Countermeasures</b>
+    <ul>
+      <li><b>Do the audio cross-check (f·s = v).</b> It is the one result that survives the materials swamp, because it is an internal consistency test rather than an absolute measurement.</li>
+      <li>Mechanised carriage with a dead-weight normal load; replace the chalk every N centimetres and report it.</li>
+      <li>Log RH and temperature; ideally run in a controlled-humidity enclosure.</li>
+      <li>Test a non-friable stylus on a rough surface to separate stick-slip from fracture.</li>
+    </ul>
   </div>
-  <h4 data-page-node-id="LApK0z8d2HCp9TRocXk2c2">Why it is a trap</h4>
-  <p class="why" data-page-node-id="akhZCh9SH2YnEtZE8qa6y7">Vertical vibration of a shear-thickening suspension drives a surface instability; local jammed regions persist and get pushed up into fingers. Related to the Faraday instability but with strongly nonlinear, history-dependent rheology. <b data-page-node-id="IvRzKmcj2D5jCSejsS5NAU">Great visuals, almost no theory to hide behind (T = 2)</b> — and that combination is the worst possible one in a physics fight.</p>
-  <h4 data-page-node-id="4G0lOOVSDDthrczTWm7bkv">Key weaknesses</h4>
-  <ul data-page-node-id="HfB6B6nWG8Fc9lfB6UIRq1">
-    <li data-page-node-id="15nmqE5FcDKJ5rcEapa0gR"><b data-page-node-id="5Kd33IB2T3MCkAQHYLDlMA">Cornflour suspension is not an equilibrium material.</b> It settles, dries, absorbs water variably, and remembers its shear history. Every run is a different material.</li>
-    <li data-page-node-id="Xmlv1wMBRG65FYFYWucN75"><b data-page-node-id="Y4DNACGvt9DWYoud0kYFfO">Concentration</b> must be measured by weight, and "cornflour" varies by brand and source.</li>
-    <li data-page-node-id="cn5dxsmxa3EqxDWVaAxezB"><b data-page-node-id="LfFYEP3rJ7GYdwBaKHymjW">Amplitude control.</b> A speaker's displacement varies with frequency at constant drive voltage — you need accelerometer feedback, and most teams fudge this.</li>
-    <li data-page-node-id="YYxHD2vkxhsKjDst8vkSvO">Container shape and layer depth; age of the suspension (minutes matter); temperature.</li>
-    <li data-page-node-id="A6Pi2uci4tVKRFqcuiTz6r">Far-from-equilibrium pattern formation with no clean scaling law.</li>
-  </ul>
-  <div class="killer" data-page-node-id="uLKI3Zwiu3RgiyBKsjoAGp"><b data-page-node-id="hGzcbF6gBnN5GhIfa24z2T">Killer attack:</b> "Rheology of a cornflour suspension is history-dependent and it settles and dries while you work. Show me two identical runs."</div>
 </div>
 
-<div class="card t-d" data-page-node-id="R59ipPmqJVILi2B0C1CuZA">
-  <div class="top" data-page-node-id="JUCV9LIcDxlVPzcTZBNHTU"><span class="num" data-page-node-id="t3UL31FSDO1nqZf5DQsC7p">15</span><h2 class="name" data-page-node-id="aDGkDQPEoLsI0Amh9rYpxv">Cold drink</h2><span class="val n" data-page-node-id="68IE4Dm3dMo44eshujLJIB">−5</span></div>
-  <div class="scores" data-page-node-id="ojcjDUQ785TI3UAOGYF8gy">
-    <span class="sc" data-page-node-id="QXRMRJ0lzex9CgA1lrWP2S">D <span class="bar d" data-page-node-id="Tql0ZpXb36ML3oLD4TVx85"><i style="width:20%" data-page-node-id="s4CoKhVrZOv0iNDVtFpobQ"></i></span> <b data-page-node-id="3jA2SobK62BjHFawDLHrIS">2</b></span>
-    <span class="sc" data-page-node-id="hClFQFAt5Gwd3KVWH0fVML">A <span class="bar a" data-page-node-id="kJBA1xDb0xRsk61aNA4gat"><i style="width:100%" data-page-node-id="bIraLCISNsCaTCMOSBqrhy"></i></span> <b data-page-node-id="t39L9fK5OCZKiJQh4gyLag">10</b></span>
-    <span class="sc" data-page-node-id="GOgQxsENs5Cgj01fGfTtfF">T <span class="bar t" data-page-node-id="AiRRvdS2msfvlXRh8IFOMZ"><i style="width:50%" data-page-node-id="fasealpeBomsMLhg4bI6QE"></i></span> <b data-page-node-id="9kpMXJKyRSudKFMR7xpg2F">5</b></span>
-    <span class="sc" data-page-node-id="Yc1soABJAJQK3biYlBNGlJ">V <span class="bar v" data-page-node-id="8mNgYr1IvA18egAQXqoJ7b"><i style="width:20%" data-page-node-id="SRRHlZpd7UMAvtfjZyj1l7"></i></span> <b data-page-node-id="nE42jtuwqimIr3dlIMzGj3">2</b></span>
+<div class="card t-d">
+  <div class="top"><span class="num">14</span><h2 class="name">Non-Newtonian worms</h2><span class="val n">−5</span></div>
+  <blockquote><b>14. Non-Newtonian worms.</b> A dilatant non-Newtonian fluid (e.g. a suspension of water and cornflour) is vibrated vertically in a reservoir. When certain conditions are met, wormlike structures that rise from the surface may form. Explain and investigate this phenomenon.</blockquote>
+  <table class="sc">
+    <tr><th>Metric</th><th>Sub-scores</th><th></th></tr>
+    <tr><td class="m">D Difficulty</td><td class="subs"><span>apparatus <span class="mb d"><i style="width:70%"></i></span> 7</span><span>reproducibility <span class="mb d"><i style="width:80%"></i></span> 8</span><span>measurement <span class="mb d"><i style="width:70%"></i></span> 7</span></td><td class="n">7</td></tr>
+    <tr><td class="m">A Attack</td><td class="subs"><span>confounds <span class="mb a"><i style="width:90%"></i></span> 9</span><span>severity <span class="mb a"><i style="width:90%"></i></span> 9</span><span>penetration <span class="mb a"><i style="width:100%"></i></span> 10</span></td><td class="n">9</td></tr>
+    <tr><td class="m">T Theory</td><td class="subs"><span>closed-form <span class="mb t"><i style="width:10%"></i></span> 1</span><span>literature <span class="mb t"><i style="width:20%"></i></span> 2</span><span>falsifiable <span class="mb t"><i style="width:30%"></i></span> 3</span></td><td class="n">2</td></tr>
+    <tr><td class="m">V Visual</td><td class="subs"><span>impact <span class="mb v"><i style="width:100%"></i></span> 10</span><span>reliability <span class="mb v"><i style="width:80%"></i></span> 8</span><span>narrative <span class="mb v"><i style="width:90%"></i></span> 9</span></td><td class="n">9</td></tr>
+  </table>
+  <h4>Likely findings</h4>
+  <ul>
+    <li>Typical working suspension: roughly <b>60 wt% cornflour</b> (the usual oobleck). Shear thickening onsets at shear rates of order 1–10 s⁻¹.</li>
+    <li>Worms appear above a critical dimensionless acceleration <b>Γ = Aω²/g</b>, typically <b>Γ ≈ 2–5</b> — the layer must go into partial free fall each cycle. Shaker frequencies in the <b>20–100 Hz</b> range.</li>
+    <li>Worm height grows then saturates; growth rate depends on Γ and layer depth. Worms <b>persist for seconds after shaking stops</b> — a memory effect, and the honest headline.</li>
+    <li><b>The one good control available:</b> a Newtonian oil of matched viscosity does <b>not</b> form worms, showing shear thickening is necessary.</li>
+    <li>Related to the Faraday instability but with history-dependent rheology — the analogy is suggestive, not quantitative.</li>
+  </ul>
+  <h4>Attacks</h4>
+  <ol class="atk">
+    <li><b>"Show me two identical runs."</b> The suspension settles, dries and remembers its shear history — every run is a different material.</li>
+    <li><b>"You did not control the amplitude."</b> A speaker's displacement varies with frequency at constant drive voltage; you need accelerometer feedback, and most teams fudge this.</li>
+    <li><b>"Your concentration was never measured by weight."</b> And cornflour varies by brand and source.</li>
+    <li><b>"It dried out during the session."</b> Over 40 minutes the water content changes measurably.</li>
+    <li><b>"Your container shape and layer depth changed the answer."</b> Both are first-order and often unreported.</li>
+    <li><b>"You have no theory."</b> With T = 2 there is no closed form to hide behind — every objection lands directly.</li>
+    <li><b>"Temperature."</b> The water phase viscosity and the thickening threshold both move with it.</li>
+    <li><b>"Is it even steady?"</b> Far-from-equilibrium pattern formation with no defined steady state — so what is your measured quantity?</li>
+  </ol>
+  <div class="killer"><b>Worst attack:</b> #1, amplified by #6. With no theory shield, a reproducibility objection is fatal rather than merely damaging.</div>
+  <div class="defense"><b>Countermeasures</b>
+    <ul>
+      <li><b>Closed-loop amplitude control</b> with an accelerometer — non-negotiable.</li>
+      <li>Fresh suspension per run, mixed to a measured weight fraction, covered between runs, used within a fixed time window.</li>
+      <li>Run the <b>Newtonian control</b> at matched viscosity to show the effect needs shear thickening.</li>
+      <li>Report the persistence time after shaking stops — a robust observable nobody else will have.</li>
+    </ul>
   </div>
-  <h4 data-page-node-id="GfyW2m3kBLxHYGBTC7atmT">Why it is a trap — the textbook case</h4>
-  <p class="why" data-page-node-id="OXmDnH0c7mXcz86k0z36Yd">Two different questions are conflated in one prompt. <b data-page-node-id="nMCFeeGjs8vOjQ3eWrPv64">Lowest achievable temperature</b> is equilibrium thermodynamics — freezing-point depression, NaCl–H₂O eutectic −21.1 °C at 23.3 wt%, lower still as a ternary with ethanol. <b data-page-node-id="VQlzprM55tI0VBS5LZDu7o">Maximum cooling rate</b> is heat transfer — h·A·ΔT, dominated by convection in the brine and by thermal contact resistance. Two different physics, easy to blur, and the experiment is dominated by neither. <b data-page-node-id="i5PnzmS1kEm1DuVIWPEFwh">Easiest apparatus on the board (D = 2), worst attack surface (A = 10).</b> Exactly the trap you already suspected.</p>
-  <h4 data-page-node-id="K4ppsH4ia2Zd9ISjytEkls">Key weaknesses</h4>
-  <ul data-page-node-id="zVTxW978PnzHC1A5fYP7rc">
-    <li data-page-node-id="YhnIzwZTcr7bafIvxZTrLJ"><b data-page-node-id="pW27qyWi1wMoweyFrz1ZHh">Initial ice temperature.</b> Ice straight from a −18 °C freezer versus ice resting at 0 °C differ enormously in sensible heat, and it dominates early cooling. Almost nobody controls this. <b data-page-node-id="vKTPu5fiPbFmoGoiXiiDcQ">This is the single biggest confound.</b></li>
-    <li data-page-node-id="YP5AcwuoAc3PAG6bax2HYj"><b data-page-node-id="h6wQHEmYsjspheuagVPnZx">Contact.</b> Air gaps between ice and can are insulating; a brine bath and a dry ice/salt mix are completely different heat-transfer regimes.</li>
-    <li data-page-node-id="5KVu141JJxqOeaINRy9RQK"><b data-page-node-id="h2u5I26xkiWWZKD7WhMYmr">Mixing</b> — stirring or not changes h by a large factor.</li>
-    <li data-page-node-id="dgA66Cc6JSGuKEcnhkjDlz"><b data-page-node-id="4hFWHNpN8Gaq03xQHPxM6b">Ice grain size and shape</b> (crushed / cubed / block) sets surface area, hence rate.</li>
-    <li data-page-node-id="hsNOQqk3J0AcJCVJDFqGMF"><b data-page-node-id="A0DkdxY1WjyGEung1I03qr">Salt grain size</b> sets dissolution rate, hence how fast you approach the eutectic.</li>
-    <li data-page-node-id="X4izWtieHZD9PDGceMWzUu">Cooler insulation, lid opening, ambient temperature, meltwater drainage.</li>
-    <li data-page-node-id="TwlI3AR4PytheLcqPxwGh6"><b data-page-node-id="BiKbDY0qqCz0nOjWGDncOt">Alcohol plays several roles at once</b> — it depresses the freezing point, changes heat capacity and density, and evaporates (latent heat).</li>
-    <li data-page-node-id="iWGuO61ESZf2D44HFjE20v"><b data-page-node-id="nOMLYoSETDG35F8VFogBoI">Equilibrium ambiguity.</b> "Lowest achievable temperature" implies equilibrium, but the bath is warming while the drink is cooling — you may be reporting a transient minimum.</li>
-    <li data-page-node-id="rEh0jt7E8SspmwmP4p3v0C">Thermal stratification in the drink: are you measuring the drink or the can wall?</li>
-  </ul>
-  <div class="killer" data-page-node-id="6FBxeHZVXVj2oDAEaeCSUA"><b data-page-node-id="sAGuiHs6zNBzh3pxbc5vkZ">Killer attack:</b> "What temperature was your ice when it came out of the freezer? You did not record it, and it dominates your cooling rate."</div>
 </div>
 
-<div class="card t-d" data-page-node-id="FTEb9N11F12txZk6QiVZPu">
-  <div class="top" data-page-node-id="7z24j5uoMouQv0iFDyGikz"><span class="num" data-page-node-id="Vj2JTa3WY5lhVvTQbQDTfD">10</span><h2 class="name" data-page-node-id="BiHPmHAN0wRY44ryfbgTHu">Air vortex</h2><span class="val n" data-page-node-id="IdDZdx3vrT0CVuFBnmD4or">−6</span></div>
-  <div class="scores" data-page-node-id="61kEN7sbI8IPjDXnmtcULh">
-    <span class="sc" data-page-node-id="SKR5sJJrRgXDrEdsGTYhoD">D <span class="bar d" data-page-node-id="c35rIlmfAlJ5TNF6kcCXcG"><i style="width:70%" data-page-node-id="cTr3RhLT8WDlsUdBbO2TjR"></i></span> <b data-page-node-id="l6Of4b3yl4nd8Md9u2t3p4">7</b></span>
-    <span class="sc" data-page-node-id="fZmRlf9XfhYSdnyouHqosU">A <span class="bar a" data-page-node-id="F4DYlhP2f2cGzJacwMXBwo"><i style="width:90%" data-page-node-id="pUOmt7Fe1xM4Zh64xnr8sK"></i></span> <b data-page-node-id="5Q8u8q8w2JWHXNsYI83hoh">9</b></span>
-    <span class="sc" data-page-node-id="A1EsebAivEZCxfa2qvAU52">T <span class="bar t" data-page-node-id="RGojAVmkE5Vn3Krl64dRg6"><i style="width:30%" data-page-node-id="dDeeCLzpN0f0fR6u8iGfsq"></i></span> <b data-page-node-id="aQnlIe6jBSEaEgDDTx7StQ">3</b></span>
-    <span class="sc" data-page-node-id="YCbqpHPalOZOqOkMGyJGbc">V <span class="bar v" data-page-node-id="l6RlPLvecOUtU5uX8UlIhG"><i style="width:70%" data-page-node-id="Ex0z4U201aMLFFALHbkMFi"></i></span> <b data-page-node-id="z8Z8uxahyHARXym1QJ1Mi4">7</b></span>
+<div class="card t-d">
+  <div class="top"><span class="num">15</span><h2 class="name">Cold drink</h2><span class="val n">−5</span></div>
+  <blockquote><b>15. Cold drink.</b> A can or bottle of drink at room temperature can be cooled in a cooler containing ice. Adding salt and alcohol to the ice can increase the rate of cooling and affect the drink’s final temperature. Investigate how the relevant parameters affect the lowest achievable temperature and the maximum cooling rate.</blockquote>
+  <table class="sc">
+    <tr><th>Metric</th><th>Sub-scores</th><th></th></tr>
+    <tr><td class="m">D Difficulty</td><td class="subs"><span>apparatus <span class="mb d"><i style="width:20%"></i></span> 2</span><span>reproducibility <span class="mb d"><i style="width:30%"></i></span> 3</span><span>measurement <span class="mb d"><i style="width:20%"></i></span> 2</span></td><td class="n">2</td></tr>
+    <tr><td class="m">A Attack</td><td class="subs"><span>confounds <span class="mb a"><i style="width:100%"></i></span> 10</span><span>severity <span class="mb a"><i style="width:100%"></i></span> 10</span><span>penetration <span class="mb a"><i style="width:100%"></i></span> 10</span></td><td class="n">10</td></tr>
+    <tr><td class="m">T Theory</td><td class="subs"><span>closed-form <span class="mb t"><i style="width:60%"></i></span> 6</span><span>literature <span class="mb t"><i style="width:50%"></i></span> 5</span><span>falsifiable <span class="mb t"><i style="width:40%"></i></span> 4</span></td><td class="n">5</td></tr>
+    <tr><td class="m">V Visual</td><td class="subs"><span>impact <span class="mb v"><i style="width:20%"></i></span> 2</span><span>reliability <span class="mb v"><i style="width:30%"></i></span> 3</span><span>narrative <span class="mb v"><i style="width:20%"></i></span> 2</span></td><td class="n">2</td></tr>
+  </table>
+  <h4>Likely findings</h4>
+  <ul>
+    <li><b>Two different questions are conflated in one prompt, and separating them is the single best thing you can do here.</b> "Lowest achievable temperature" is equilibrium thermodynamics (freezing-point depression); "maximum cooling rate" is heat transfer (h·A·ΔT). They have almost nothing to do with each other.</li>
+    <li>Lowest temperature: the <b>NaCl–H₂O eutectic is −21.1 °C at 23.3 wt% NaCl</b>. A ternary with ethanol can go lower, perhaps −30 °C. In practice an ice:salt mix at roughly 3:1 by mass gives a brine around −15 to −18 °C.</li>
+    <li>Cooling rate: for a 330 mL can, mc ≈ 1381 J/K and A ≈ 0.031 m². Stirred brine gives h ≈ 1000 W/m²K so <b>τ ≈ 45 s</b>; still air at h ≈ 10 gives <b>τ ≈ 74 min</b>. That is a <b>~100× difference</b> — a big, clean, defensible number.</li>
+    <li>The lowest achievable temperature is bounded by the eutectic and has essentially <b>nothing to do with the drink</b> — which is itself a worthwhile conclusion.</li>
+  </ul>
+  <h4>Attacks</h4>
+  <ol class="atk">
+    <li><b>"What temperature was your ice when it came out of the freezer?"</b> Ice at −18 °C versus ice resting at 0 °C differ enormously in sensible heat, and it dominates early cooling. <b>The single biggest confound on the entire list.</b></li>
+    <li><b>"Does the ice actually touch the can?"</b> Air gaps are insulating; a brine bath and a dry ice/salt heap are completely different heat-transfer regimes.</li>
+    <li><b>"Did you stir?"</b> Convection changes h by a large factor.</li>
+    <li><b>"Ice grain size and shape."</b> Crushed, cubed and block ice have wildly different surface areas — hence rates.</li>
+    <li><b>"Salt grain size."</b> Dissolution rate sets how fast you approach the eutectic.</li>
+    <li><b>"Alcohol does four different things."</b> It depresses the freezing point, changes heat capacity and density, and evaporates. One variable, four consequences.</li>
+    <li><b>"Is that a steady state or a transient minimum?"</b> The bath is warming while the drink cools — your "lowest achievable temperature" may be an artefact of timing.</li>
+    <li><b>"Are you measuring the drink or the can wall?"</b> The drink stratifies thermally.</li>
+    <li><b>"Cooler insulation, lid opening, ambient temperature, meltwater drainage."</b> All uncontrolled, all first-order.</li>
+  </ol>
+  <div class="killer"><b>Worst attack:</b> #1. Almost nobody records it, and it can move the headline cooling rate by a factor of two.</div>
+  <div class="defense"><b>Countermeasures</b>
+    <ul>
+      <li><b>Condition the ice to 0 °C in an ice-water bath before every run</b>, or measure and record its temperature. This alone removes the largest confound on the board.</li>
+      <li><b>Split the investigation explicitly</b> into equilibrium (final temperature) and transport (rate), and say so in the first slide.</li>
+      <li>Standardise contact: fully submerge in brine, or use a defined ice/salt geometry — never a loose heap.</li>
+      <li>Mechanically stir at a fixed rate, or state "unstirred" and keep it constant.</li>
+      <li>Measure the drink at a defined point with gentle agitation, and log the bath temperature alongside.</li>
+    </ul>
   </div>
-  <h4 data-page-node-id="MZwcv43aIA8PQ2Fkd9jSrv">Why it is a trap</h4>
-  <p class="why" data-page-node-id="9jKnzQPdywFwngqGEMKwme">The stir bar drives bulk rotation and a free-surface vortex (Rankine: forced core, free outer region). At high enough speed the central depression reaches the magnet. Getting a <b data-page-node-id="uzZLqsMgFc8NIBLam2VCJ7">thin</b> channel rather than a broad cone needs a specific balance of viscosity, surface tension and rotation rate. It is a free-boundary two-phase problem, so there is no clean scaling law to anchor to.</p>
-  <h4 data-page-node-id="wM6iunPYU9iyxp3atPqCuc">Key weaknesses</h4>
-  <ul data-page-node-id="G4jTxZhChE8oOfGGMBi8uI">
-    <li data-page-node-id="51bv6ZVx00HQlUhRGpw2eY"><b data-page-node-id="e1kYMjXcIE0zInER0C0xMj">Vessel diameter dominates.</b> The ratio of vessel radius to core radius sets everything; a small vessel is wall-dominated and will not scale up. Fundamental.</li>
-    <li data-page-node-id="QafymwTMrvqBTSUWCRuPAj"><b data-page-node-id="suoMkkof5AFNelHEz1FUrw">Surface tension</b> decides thin-channel versus broad-funnel, and trace detergent contamination changes it completely.</li>
-    <li data-page-node-id="FGCyPs9LxA2hSOrk1zkqhr">Liquid depth and fill level; viscosity and its temperature dependence.</li>
-    <li data-page-node-id="ZRBhDuZYTPUpCa5cWTCeGD">Stir bar shape and size — swap the bar, change the answer.</li>
-    <li data-page-node-id="n74BkAJKqqdTNYbhrUejZo">Speed must be calibrated and does not droop under load.</li>
-    <li data-page-node-id="aZaETDlApVtpz30zeBmREX">Dissolved gas and bubbles; bottom roughness.</li>
-    <li data-page-node-id="zXTZCbVmqkAMjJvw9cpzs3"><b data-page-node-id="Dybx9ifF9kGqfPOpz5aq04">Refraction at the curved vessel wall</b> distorts your image, so your measurement of "thin" is itself suspect.</li>
-  </ul>
-  <div class="killer" data-page-node-id="uBGOEDPX8eqOdxB5VgLScd"><b data-page-node-id="rytc3yBWmpOXQfLKIEnadN">Killer attack:</b> "Your vessel is only a few times wider than the vortex core. You measured your beaker."</div>
 </div>
 
-<div class="card t-d" data-page-node-id="HdsVDPaUGJsvnfZ5fx2U7x">
-  <div class="top" data-page-node-id="sjH8J2SCwroFMbsYCYBkh3"><span class="num" data-page-node-id="23yHtCXzdB9w2VV5yRSLS9">08</span><h2 class="name" data-page-node-id="bmNuoNxDpaMQKiUEH9jhJg">Upward-driven disc</h2><span class="val n" data-page-node-id="UAqHiADXFBYbQyqk8fZHqb">−8</span></div>
-  <div class="scores" data-page-node-id="rWCSB2Ba7rjVPsnGrKR6Nm">
-    <span class="sc" data-page-node-id="mkfKlnu6cxDCjP772RVnah">D <span class="bar d" data-page-node-id="PmrXhpsrZJs3uZiod9YBhD"><i style="width:80%" data-page-node-id="2orrp1HANgZGyFzwJDdIuJ"></i></span> <b data-page-node-id="h1SLIdJqVDKnETNUSfl8rF">8</b></span>
-    <span class="sc" data-page-node-id="idHnyuS72SSAst4D8CdURf">A <span class="bar a" data-page-node-id="T5NI51edyMVYmoF4WMOqX9"><i style="width:80%" data-page-node-id="lew6vFbJp6bvHYmmYjizFq"></i></span> <b data-page-node-id="eeE1M0FhBwKE5Jh8GdmjxV">8</b></span>
-    <span class="sc" data-page-node-id="XpVBC0gdE5RT5rs8JzH3hF">T <span class="bar t" data-page-node-id="zYXpHfrjQZ0dUPaNb1hl4A"><i style="width:40%" data-page-node-id="IJciaM0TF32Uhuf8i4JUFY"></i></span> <b data-page-node-id="K5Ca0D0NrEQruRDpY1OSS0">4</b></span>
-    <span class="sc" data-page-node-id="u0zQzj0o0GHO3YTQ9BkTTD">V <span class="bar v" data-page-node-id="xYqKx5DijyCzraDy58CX4A"><i style="width:40%" data-page-node-id="Xvub0Vk6vwa4tt9lxPMdOF"></i></span> <b data-page-node-id="M2RSoG4ySTduOQ3ixN0qnO">4</b></span>
+<div class="card t-d">
+  <div class="top"><span class="num">10</span><h2 class="name">Air vortex</h2><span class="val n">−6</span></div>
+  <blockquote><b>10. Air vortex.</b> Place a small rod-shaped magnet on the bottom of a vessel filled with liquid and set it into rotation using a magnetic stirrer. Above a certain rotation speed, a thin air channel forms, extending from the liquid surface down to the rotating magnet itself. Investigate and explain this phenomenon.</blockquote>
+  <table class="sc">
+    <tr><th>Metric</th><th>Sub-scores</th><th></th></tr>
+    <tr><td class="m">D Difficulty</td><td class="subs"><span>apparatus <span class="mb d"><i style="width:70%"></i></span> 7</span><span>reproducibility <span class="mb d"><i style="width:70%"></i></span> 7</span><span>measurement <span class="mb d"><i style="width:70%"></i></span> 7</span></td><td class="n">7</td></tr>
+    <tr><td class="m">A Attack</td><td class="subs"><span>confounds <span class="mb a"><i style="width:90%"></i></span> 9</span><span>severity <span class="mb a"><i style="width:80%"></i></span> 8</span><span>penetration <span class="mb a"><i style="width:100%"></i></span> 10</span></td><td class="n">9</td></tr>
+    <tr><td class="m">T Theory</td><td class="subs"><span>closed-form <span class="mb t"><i style="width:30%"></i></span> 3</span><span>literature <span class="mb t"><i style="width:30%"></i></span> 3</span><span>falsifiable <span class="mb t"><i style="width:40%"></i></span> 4</span></td><td class="n">3</td></tr>
+    <tr><td class="m">V Visual</td><td class="subs"><span>impact <span class="mb v"><i style="width:70%"></i></span> 7</span><span>reliability <span class="mb v"><i style="width:70%"></i></span> 7</span><span>narrative <span class="mb v"><i style="width:70%"></i></span> 7</span></td><td class="n">7</td></tr>
+  </table>
+  <h4>Likely findings</h4>
+  <ul>
+    <li>The stir bar drives bulk rotation; the surface takes the solid-body paraboloid <b>z(r) = Ω²r²/(2g)</b>. The Rankine structure is a forced (solid-body) core inside r_c and a free vortex outside.</li>
+    <li><b>Critical speed is the headline number:</b> the central depression reaches the bottom when Ω²R²/(2g) = H, so <b>Ω_crit = √(2gH)/R</b>. For H = 5 cm, R = 3 cm that is ≈ 33 rad/s, about <b>315 rpm</b> — comfortably within a lab stirrer's range.</li>
+    <li>Expect the channel radius to <b>shrink as Ω increases</b> past threshold, and Ω_crit to scale as √H/R — probably the cleanest result available.</li>
+    <li>The core is stabilised by the secondary (Ekman) flow driven by the bottom boundary layer — which is why the bottom matters at all.</li>
+    <li>But it is a free-boundary two-phase problem, so <b>there is no clean scaling law to anchor the whole thing</b>, and that is fatal in a fight.</li>
+  </ul>
+  <h4>Attacks</h4>
+  <ol class="atk">
+    <li><b>"Your vessel is only a few times wider than your vortex core — you measured your beaker."</b> The vessel-radius-to-core-radius ratio sets everything, and wall effects dominate.</li>
+    <li><b>"Surface tension."</b> Thin-channel versus broad-funnel is decided by it, and trace detergent contamination changes it completely.</li>
+    <li><b>"Liquid depth and fill level."</b> Both first-order, both often unreported.</li>
+    <li><b>"Viscosity, and its temperature dependence."</b> A stirrer's motor heats the plate.</li>
+    <li><b>"You changed the stir bar."</b> Bar shape and size change the answer.</li>
+    <li><b>"Your stirrer speed is not calibrated and droops under load."</b></li>
+    <li><b>"Dissolved gas and bubbles."</b> Nucleation on the magnet changes the channel formation.</li>
+    <li><b>"Refraction at the curved vessel wall."</b> Your measurement of "thin" is itself distorted by the glass.</li>
+    <li><b>"No scaling law."</b> With T = 3 you have nothing to deflect any of the above.</li>
+  </ol>
+  <div class="killer"><b>Worst attack:</b> #1. Unlike most confounds it is not fixable by better technique — it is a statement that your geometry is wrong.</div>
+  <div class="defense"><b>Countermeasures</b>
+    <ul>
+      <li>Run a <b>vessel-diameter series</b> and show Ω_crit ∝ 1/R. If the scaling holds, the wall effect becomes part of your model rather than an objection.</li>
+      <li>Use a rectangular tank and image through flat walls to kill refraction.</li>
+      <li>Tachometer on the stirrer (optical or via the drive magnet), logged continuously.</li>
+      <li>Deionised water, fresh for every run, surfactant-free glassware.</li>
+    </ul>
   </div>
-  <h4 data-page-node-id="afQHwjFcBdUzBabZKcvlfv">Why it is the worst problem on the board</h4>
-  <p class="why" data-page-node-id="XG4h5aRumri2IXXRhJSogk">The disc is pinched between two wheels, one driven, so the drive is transmitted by <b data-page-node-id="aZylVeCfgM8tR5kYo0oEly">dry friction</b>. It is a pendulum with a velocity-dependent driving force, giving stick-slip and self-excited oscillation — the same mechanism as a bowed string or a squealing brake (negative slope of the friction–velocity curve). Interesting physics, but the entire phenomenon is mediated by a quantity you cannot reproduce.</p>
-  <h4 data-page-node-id="XwTEAdFiWuzSXrNeDIEs21">Key weaknesses</h4>
-  <ul data-page-node-id="j5szVTyOZsDDN8PYrxSZzD">
-    <li data-page-node-id="nbwyBDIxdCHQkEzEWHHb3P"><b data-page-node-id="AgIfpus8VgGyNGzyF2VWuy">Friction is irreproducible.</b> It varies with humidity, temperature, wear and contamination — and it changes during your own experiment. This is a tribology swamp.</li>
-    <li data-page-node-id="v7MDnDd25cMzJpCaCNeFtn"><b data-page-node-id="5WC7bd6xGtZImuPil9KxPW">There are two contacts, not one.</b> The undriven wheel is a second friction source most analyses ignore.</li>
-    <li data-page-node-id="YO8m7IJXIkmpqDFF9c0BHa"><b data-page-node-id="Rh6qzLHG0JE6IjVffxpVAC">Wheel wear</b> changes the contact as you run.</li>
-    <li data-page-node-id="rH3OmMAcO33xMB6tYtuFcA"><b data-page-node-id="P2uql5LtJVpzoLYAGTalvF">Normal force:</b> how do you set it and hold it constant?</li>
-    <li data-page-node-id="7GliMg31GsvRemEfpj2Oup"><b data-page-node-id="J6Vz8pNE8TAnK0Z1EFx8Hg">Motor speed droops under load</b> — needs closed-loop control or continuous measurement.</li>
-    <li data-page-node-id="AMeRf4ny4IlzLt7mXeZINO">Disc flatness and runout inject periodic forcing at the rotation frequency you may mistake for the effect.</li>
-    <li data-page-node-id="v4D8EqutXjDiC8Ih9SId04">You cannot easily tell sticking from slipping without instrumentation.</li>
-  </ul>
-  <div class="killer" data-page-node-id="Vztk06JRDbmEbTfWW2wVPH"><b data-page-node-id="8eTonoIgAKVlcjCt3glpN9">Killer attack:</b> "The friction coefficient at your contact changed as the wheel warmed and wore. Reproduce yesterday's result."</div>
 </div>
 
-<footer data-page-node-id="saBm35L11mmpCXjjwPlfs9">
-  17 problems · scored on difficulty (D), attack surface (A), theoretical anchoring (T), visual payload (V).<br data-page-node-id="4v2WIB8jxqeZvGrgfNIYhk">
-  Pick value = (T + V) − (D + A). Higher is better. Negative means the problem costs you more than it pays.
+<div class="card t-d">
+  <div class="top"><span class="num">08</span><h2 class="name">Upward-driven disc</h2><span class="val n">−8</span></div>
+  <blockquote><b>8. Upward-driven disc.</b> A circular disc is suspended from the point where it is sandwiched between two wheels, making it free to oscillate as a pendulum. One of the wheels is driven by a motor and thus exerts an upward driving force on the disc. Investigate the motion of the disc.</blockquote>
+  <table class="sc">
+    <tr><th>Metric</th><th>Sub-scores</th><th></th></tr>
+    <tr><td class="m">D Difficulty</td><td class="subs"><span>apparatus <span class="mb d"><i style="width:80%"></i></span> 8</span><span>reproducibility <span class="mb d"><i style="width:90%"></i></span> 9</span><span>measurement <span class="mb d"><i style="width:70%"></i></span> 7</span></td><td class="n">8</td></tr>
+    <tr><td class="m">A Attack</td><td class="subs"><span>confounds <span class="mb a"><i style="width:80%"></i></span> 8</span><span>severity <span class="mb a"><i style="width:90%"></i></span> 9</span><span>penetration <span class="mb a"><i style="width:80%"></i></span> 8</span></td><td class="n">8</td></tr>
+    <tr><td class="m">T Theory</td><td class="subs"><span>closed-form <span class="mb t"><i style="width:40%"></i></span> 4</span><span>literature <span class="mb t"><i style="width:40%"></i></span> 4</span><span>falsifiable <span class="mb t"><i style="width:40%"></i></span> 4</span></td><td class="n">4</td></tr>
+    <tr><td class="m">V Visual</td><td class="subs"><span>impact <span class="mb v"><i style="width:40%"></i></span> 4</span><span>reliability <span class="mb v"><i style="width:40%"></i></span> 4</span><span>narrative <span class="mb v"><i style="width:40%"></i></span> 4</span></td><td class="n">4</td></tr>
+  </table>
+  <h4>Likely findings</h4>
+  <ul>
+    <li>The disc is a pendulum suspended at the contact point; the drive is transmitted by <b>dry friction</b> from the driven wheel.</li>
+    <li><b>Two regimes, and the transition is the result:</b> at low wheel speed the disc sticks, is carried up, then slips back — a <b>relaxation / stick-slip oscillation</b>. At high speed the friction force becomes roughly constant (kinetic) and the disc settles at a <b>static deflection angle</b> where tangential friction balances the gravity torque.</li>
+    <li>Expect a <b>critical wheel speed</b> separating oscillation from steady deflection — that is the plot to build the talk around.</li>
+    <li>Negative damping from velocity-weakening friction (the negative slope of the µ–v curve) gives <b>self-excited oscillation</b> growing into a limit cycle. Same mechanism as a bowed string or a squealing brake.</li>
+    <li>Interesting physics — but every observable is mediated by a quantity you cannot reproduce.</li>
+  </ul>
+  <h4>Attacks</h4>
+  <ol class="atk">
+    <li><b>"Reproduce yesterday's friction coefficient."</b> It varies with humidity, temperature, wear and contamination, and it drifts during your own run.</li>
+    <li><b>"There are two contacts, not one."</b> The undriven wheel is a second friction source your model omits entirely.</li>
+    <li><b>"The wheel wore during the experiment."</b> The contact changes as you run.</li>
+    <li><b>"How did you set and hold the normal force?"</b> It is the most important parameter and it is uncontrolled.</li>
+    <li><b>"Your motor speed droops under load."</b> You set a voltage, not a speed.</li>
+    <li><b>"Disc runout injects periodic forcing at the rotation frequency."</b> You may have measured eccentricity, not the phenomenon.</li>
+    <li><b>"You cannot tell sticking from slipping."</b> Without instrumentation you are guessing at the mechanism.</li>
+    <li><b>"Why did you choose this?"</b> Even a successful investigation has no visual or narrative payoff.</li>
+  </ol>
+  <div class="killer"><b>Worst attack:</b> #1. Friction is the mechanism here, so irreproducible friction is not a correction to your result — it <i>is</i> your result being noise.</div>
+  <div class="defense"><b>Countermeasures</b>
+    <ul>
+      <li>There is no good defence. If forced onto this problem: instrument the normal force with a load cell, close the loop on motor speed, replace the wheel surface on a schedule, log humidity, and <b>report everything as distributions over many trials</b> rather than single curves.</li>
+      <li>Best available move: reframe around the <b>regime transition</b> (oscillation → static deflection), because a qualitative transition is more robust than any quantitative friction value.</li>
+    </ul>
+  </div>
+</div>
+
+<footer>
+  17 problems · D = difficulty (apparatus · reproducibility · measurement) · A = attack surface (confounds · severity · shield penetration) · T = theory (closed-form · literature · falsifiable signature) · V = visual (impact · reliability · narrative).<br>
+  Pick value = (T + V) − (D + A). Attacks are written in opponent voice; countermeasures are the minimum work needed to neutralise them.
 </footer>
 
 </div>
